@@ -72,11 +72,11 @@ public class RechargeActivity extends BaseActivity implements UserBalanceCallBac
         MyImageView.create(titleLayout, new ConstraintBuilder(19).leftCenterV().leftMargin(8), R.drawable.img_coin);
 
         MyTextView myTextView = MyTextView.create(titleLayout, new ConstraintBuilder().ww().leftCenterV().leftMargin(31));
-        myTextView.initText("我的金币", 9, R.color.color_434343);
+
 
 
         myCoin = MyTextView.create(titleLayout, new ConstraintBuilder().ww().rightCenterV().rightMargin(8));
-        myCoin.initText("我的金币", 11, R.color.color_434343);
+
 
 
         addView(titleLayout);

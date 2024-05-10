@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class Balance implements Serializable {
 
-    private Long goldNum; //金币数量
-    private Long integralNum; //积分数量
+    private Long goldNum; 
+    private Long integralNum; 
 
     public Long getGoldNum() {
         return goldNum;

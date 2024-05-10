@@ -18,7 +18,7 @@ public class CheckInInfoResponse implements Serializable {
 
     public  String getCheckBtnStr(){
 
-        return isCheck() ? "已签到" : "签到";
+
 
     }
     public Integer getSignFlag() {

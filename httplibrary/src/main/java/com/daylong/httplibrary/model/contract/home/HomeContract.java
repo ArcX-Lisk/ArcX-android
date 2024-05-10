@@ -28,7 +28,7 @@ public interface HomeContract {
     abstract class HomeBannerPresenter extends BasePresenter<HomeModel, HomeView> {
 
         public abstract void getHomeBanner();
-        //请求用户信息
+        
 
     }
 }

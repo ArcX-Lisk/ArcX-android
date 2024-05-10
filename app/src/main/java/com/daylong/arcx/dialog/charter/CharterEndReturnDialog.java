@@ -27,7 +27,7 @@ import net.daylong.baselibrary.view.layout.LinearLayoutView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 包机结束提示
+
  */
 public class CharterEndReturnDialog extends BaseMvpFragmentDialog<CharterPresenter, CharterModel> implements CharterContract.CharterView {
 
@@ -74,7 +74,7 @@ public class CharterEndReturnDialog extends BaseMvpFragmentDialog<CharterPresent
 
         MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(17));
         myTextView.setId(View.generateViewId());
-        myTextView.initText("包机结算", 11, R.color.color_434343, true);
+
 
         ConstraintBuilder constraintBuilder = new ConstraintBuilder(23);
 
@@ -93,15 +93,15 @@ public class CharterEndReturnDialog extends BaseMvpFragmentDialog<CharterPresent
             }
         });
 
-        LinearLayoutView itemView = getItemView(myTextView, "包机余额：", charterBalance);
-        LinearLayoutView itemView2 = getItemView(itemView, "包机返还：", returnNum);
-        LinearLayoutView itemView3 = getItemView(itemView2, "合计获得：", totalNum);
+
+
+
         contentView.addView(itemView);
         contentView.addView(itemView2);
         contentView.addView(itemView3);
 
         DefaultConfirmDialogBtn defaultConfirmDialogBtn = new DefaultConfirmDialogBtn(getContext(), itemView3.getId(),14);
-        defaultConfirmDialogBtn.setText("取消");
+
         defaultConfirmDialogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,7 +110,7 @@ public class CharterEndReturnDialog extends BaseMvpFragmentDialog<CharterPresent
         });
 
         DefaultCancelDialogBtn defaultCancelDialogBtn = new DefaultCancelDialogBtn(getContext(), itemView3.getId(),14);
-        defaultCancelDialogBtn.setText("确认");
+
 
         defaultCancelDialogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,7 +146,7 @@ public class CharterEndReturnDialog extends BaseMvpFragmentDialog<CharterPresent
     }
 
 
-    //返回
+    
 
     @Override
     public void initData() {

@@ -11,7 +11,7 @@ import okhttp3.Response;
 import retrofit2.http.Body;
 
 /**
- * 参数拦截器
+
  */
 public class CommonParamInterceptor implements Interceptor {
     private static final String REQUEST_METHOD_POST = "POST";
@@ -34,7 +34,7 @@ public class CommonParamInterceptor implements Interceptor {
     }
 
     /**
-     * 添加GET方法基础参数
+
      *
      * @param request
      * @return
@@ -43,8 +43,8 @@ public class CommonParamInterceptor implements Interceptor {
 
 
         HttpUrl.Builder builder = request.url().newBuilder();
-        //builder.addQueryParameter("channelCode", BaseApplication.getInstance().getChannel());//渠道
-//        builder.addQueryParameter("mobilePlatform", "1");//用户ID
+        
+
         //if (UserCache.getInstance().getAccToken() != null) {
         //    builder.addQueryParameter("accessToken", UserCache.getInstance().getAccToken());
         //
@@ -52,13 +52,13 @@ public class CommonParamInterceptor implements Interceptor {
 
         //builder.addQueryParameter("versionCode", String.valueOf(SystemUtil.getVersionCode()));
         //builder.addQueryParameter("language", MultiLanguageUtils.getCurrentLanguage());
-        //builder.addQueryParameter("versionChannel", BaseApplication.isCN());//1-中国，2-海外
-        //builder.addQueryParameter("devId", DeviceIdUtil.getDeviceId());//1-中国，2-海外
+        
+        
         //String productId = AppSharedPreferencesManage.getInstance().getProductId();
 
 
         //if (!TextUtils.isEmpty(productId)) {
-        //    builder.addQueryParameter("productId", productId);//设备ID
+        
         //
         ////}
         //HttpUrl newUrl =
@@ -70,7 +70,7 @@ public class CommonParamInterceptor implements Interceptor {
     }
 
     /**
-     * 添加POST方法基础参数
+
      *
      * @param request
      * @return
@@ -79,10 +79,10 @@ public class CommonParamInterceptor implements Interceptor {
 
         boolean isAddProductId = false;
         /**
-         * request.body() instanceof FormBody 为true的条件为：
-         * 在ApiService 中将POST请求中设置
-         * 1，请求参数注解为@FieldMap
-         * 2，方法注解为@FormUrlEncoded
+
+
+
+
          */
         RequestBody body = request.body();
 
@@ -91,7 +91,7 @@ public class CommonParamInterceptor implements Interceptor {
             FormBody.Builder builder = new FormBody.Builder();
 
             //for (int i = 0; i < formBody.size(); i++) {
-            //    //@FieldMap 注解 Map元素中 key 与 value 皆不能为null,否则会出现NullPointerException
+            
             //    if (formBody.value(i) != null) {
             //
             //        String name = formBody.name(i);
@@ -105,17 +105,17 @@ public class CommonParamInterceptor implements Interceptor {
             //
             //
             //}
-//            添加版本号
+
 //            builder.add("version", SystemUtil.getVersionName());
-////            平台ID
+
 //            builder.add("language", MultiLanguageUtils.getCurrentLanguage());
 //
-//            builder.add("channelCode", BaseApplication.getInstance().getChannel());//渠道
+
 //            builder.add("mobilePlatform", "1");
-//            builder.add("versionChannel", BaseApplication.isCN());//1-中国，2-海外
+
 //            builder.add("versionCode", String.valueOf(SystemUtil.getVersionCode()));
-//            builder.add("devId", DeviceIdUtil.getDeviceId());//1-中国，2-海外
-//            //获取游戏设备ID
+
+
 //
 //
 //
@@ -126,7 +126,7 @@ public class CommonParamInterceptor implements Interceptor {
 //
 //            }
 //            if (UserCache.getInstance().getAccToken() != null) {
-//                builder.add("versionCode", UserCache.getInstance().getAccToken());//用户ID
+
 //
 //            }
 //            formBody = builder.build();

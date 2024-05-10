@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 音乐管理
+
  */
 public class SoundPoolManager {
     private static SoundPoolManager soundPoolManager;
     private static SoundPool soundPool;
-    private static Map<Integer, Integer> soundEffectMap; //保存资源 ID  关联在家音效的Id
-    private static Map<Integer, Integer> soundEffectPlayIdMap; //播放ID  关联音效缓存资源ID
+    private static Map<Integer, Integer> soundEffectMap; 
+    private static Map<Integer, Integer> soundEffectPlayIdMap; 
 
 
     public static synchronized SoundPoolManager getInstance() {
@@ -30,13 +30,13 @@ public class SoundPoolManager {
         return soundPoolManager;
     }
 
-    //创建播放器
+    
     private static void crateSoundPool() {
         SoundPool.Builder builder = new SoundPool.Builder();
         AudioAttributes.Builder attrBuilder = new AudioAttributes.Builder();
         attrBuilder.setLegacyStreamType(AudioManager.STREAM_MUSIC);
         builder.setAudioAttributes(attrBuilder.build());
-        //最多同时可以播放路数
+        
         builder.setMaxStreams(10);
         soundPool = builder.build();
         soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
@@ -57,7 +57,7 @@ public class SoundPoolManager {
     }
 
     /**
-     * 播放音效
+
      *
      * @param rawId
      */
@@ -66,7 +66,7 @@ public class SoundPoolManager {
     }
 
     /**
-     * 播放音效
+
      *
      * @param rawId
      */
@@ -77,7 +77,7 @@ public class SoundPoolManager {
         if (soundEffectMap.containsKey(rawId)) {
             Integer musicId = soundEffectMap.get(rawId);
             if (musicId != null) {
-                //停止当前音效
+                
 
                 if (soundEffectPlayIdMap.containsKey(musicId)) {
                     Integer playId = soundEffectPlayIdMap.get(musicId);
@@ -95,7 +95,7 @@ public class SoundPoolManager {
 
 
     /**
-     * 获取音乐
+
      *
      * @param rawId
      * @return
@@ -108,7 +108,7 @@ public class SoundPoolManager {
     }
 
     /**
-     * 停止播放音效
+
      *
      * @param rawId
      */
@@ -127,7 +127,7 @@ public class SoundPoolManager {
 
 
     public void closeSoundEffectPlayIdMap() {
-        //清除
+        
         soundPool.release();
         soundEffectPlayIdMap.clear();
     }

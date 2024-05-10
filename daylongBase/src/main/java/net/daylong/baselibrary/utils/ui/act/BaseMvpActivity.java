@@ -14,11 +14,11 @@ public abstract class BaseMvpActivity<P extends BasePresenter, M extends IBaseMo
 
 
     /**
-     * presenter 具体的presenter由子类确定
+
      */
     protected P mPresenter;
     /**
-     * model 具体的model由子类确定
+
      */
     protected M mModel;
     @Override
@@ -38,7 +38,7 @@ public abstract class BaseMvpActivity<P extends BasePresenter, M extends IBaseMo
     }
 
     /**
-     * 初始化presenter
+
      *
      * @return
      */

@@ -53,7 +53,7 @@ public class MyTextWatcher implements TextWatcher {
 //        if (StringUtils.isNubAndDot(text)) {
 //            int num = (int) (Double.parseDouble(text) * 100);
 //            int minInput = configureInfo.getMaxInput(id,price);
-//            MyLogUtil.e("rag==>正常当前:" + num + "<最大>" + minInput);
+
 //            if (num > minInput) {
 //                editText.setText(String.valueOf((int) minInput));
 //                editText.setSelection(editText.getText().length());
@@ -62,7 +62,7 @@ public class MyTextWatcher implements TextWatcher {
 //
 //
 //        } else {
-//            MyLogUtil.e("rag==>不正常");
+
 //
 //
 //        }

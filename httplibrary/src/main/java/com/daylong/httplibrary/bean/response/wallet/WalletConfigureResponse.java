@@ -59,7 +59,7 @@ public class WalletConfigureResponse implements Serializable {
      * a
      *
      * @param id
-     * @param curBalance 当前余额
+
      * @return
      */
     public int getMaxInput(int id, double curBalance) {

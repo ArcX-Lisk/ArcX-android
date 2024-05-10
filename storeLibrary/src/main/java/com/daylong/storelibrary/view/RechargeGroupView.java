@@ -22,9 +22,9 @@ public class RechargeGroupView extends NestedScrollView {
         rootView.setLayoutParams(new ConstraintBuilder(188, 408).center().buildPayoutParams());
 
         setOverScrollMode(View.OVER_SCROLL_NEVER);
-        //垂直方向的水平滚动条是否显示
+        
         setVerticalScrollBarEnabled(false);
-        //水平方向的水平滚动条是否显示
+        
         setHorizontalScrollBarEnabled(false);
 
 

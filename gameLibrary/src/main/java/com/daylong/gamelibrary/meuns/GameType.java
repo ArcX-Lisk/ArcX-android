@@ -3,16 +3,16 @@ package com.daylong.gamelibrary.meuns;
 import java.io.Serializable;
 
 public enum GameType implements Serializable {
-    PUSH_COIN_MACHINE(1, "推币机", 2001, 60, 10)//
-    , DOLL_MACHINE(2, "娃娃机", 2003, 30, 10)//
-    , BALL_MACHINE(3, "礼品机", 2005, 60, 30)//
+
+
+
     ;
 
     private int id;
     private String desc;
-    private int cmd; //命令
-    private int gameTime; //游戏时间
-    private int toastTime; //提示时间
+    private int cmd; 
+    private int gameTime; 
+    private int toastTime; 
 
     GameType(int id, String desc, int cmd, int gameTime, int toastTime) {
         this.id = id;

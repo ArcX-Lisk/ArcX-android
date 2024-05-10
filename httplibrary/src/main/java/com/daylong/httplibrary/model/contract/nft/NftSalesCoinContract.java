@@ -33,7 +33,7 @@ public interface NftSalesCoinContract {
 
         public abstract void getNftSalesCoinInfo();
         public abstract void  exchangeCoin(String nftCd, long usdtAmt, long usdtExc);
-        //请求用户信息
+        
 
     }
 }

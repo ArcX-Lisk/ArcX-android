@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.ViewGroup;
 
 /**
- * 竖屏刷新
+
  */
 public class BaseVerticalRefreshRecycler extends BaseRefreshRecycler {
 

@@ -6,7 +6,7 @@ import net.daylong.baselibrary.bean.CanvasImageBean;
 import net.daylong.baselibrary.view.BaseNumberView;
 
 /**
- * 金币奖励
+
  */
 public class CoinRewardNumberView extends BaseNumberView {
 

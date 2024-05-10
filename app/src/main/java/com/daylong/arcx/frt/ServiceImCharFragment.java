@@ -54,7 +54,7 @@
 //            imChatRv.finishRefresh();
 //            return;
 //        }
-//        // 如果是第一次加载
+
 //        boolean isOneLoad = lastId == 0;
 //        Collections.reverse(ServiceMsgResponses);
 //        if (ServiceMsgResponses.size() > 0) {
@@ -107,7 +107,7 @@
 //    private void createInput() {
 //
 //        momentsInputView = ImServiceInputMsgView.create(rootView);
-//        momentsInputView.setHintTextAndColor("说点啥", R.color.color_666);
+
 //        momentsInputView.setOnSendActionListener(new InputEditTextView.OnSendActionListener() {
 //            @Override
 //            public void sendMsg(CommentResponse o) {
@@ -118,7 +118,7 @@
 //        });
 //    }
 //
-//    //    接受Im信息
+
 //    @Subscribe(threadMode = ThreadMode.MAIN)
 //    public void onMessageEvent(KeyboardVisibleEvent event) {
 //        momentsInputView.setInput(event);

@@ -72,9 +72,9 @@ public abstract class IPushCoinGameActivity extends BaseGameActivity {
     public void gameInfo(GameInfoBean gameInfoBean) {
         super.gameInfo(gameInfoBean);
 
-        //空闲
+        
         if (gameStatus == GameStatus.FREE) {
-            //移除当前玩家
+            
             if (curGamingUserMsg != null) {
                 curGamingUserMsg = null;
             }
@@ -91,7 +91,7 @@ public abstract class IPushCoinGameActivity extends BaseGameActivity {
 
         } else {
             if (gameStatus == GameStatus.GAME) {
-                // 同一个用户
+                
                 if (curGamingUserMsg != null && curGamingUserMsg.getUserId() == curGamingUserMsg.getUserId()) {
                     return;
                 }
@@ -131,7 +131,7 @@ public abstract class IPushCoinGameActivity extends BaseGameActivity {
 
     }
 
-    //触摸投币
+    
     @Override
     public void onPushCoin() {
         if (gameStatus != null && gameStatus == GameStatus.GAME) {
@@ -150,7 +150,7 @@ public abstract class IPushCoinGameActivity extends BaseGameActivity {
         }
 
     }
-    //关闭自动
+    
     @Override
     public void onCloseAuto() {
 
@@ -159,6 +159,6 @@ public abstract class IPushCoinGameActivity extends BaseGameActivity {
             WebSocketMrg.getInstance().sendMsg(new GameOperateDefaultRequest(GameOperateType.CANCEL_AUTO_PUSH_COIN));
 
         }
-        // 获得币
+        
     }
 }

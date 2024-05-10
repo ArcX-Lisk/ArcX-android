@@ -21,7 +21,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //import net.daylong.metapusherbaselibrary.dialog.BaseFragmentDialog;
 //
 ///**
-// * 包机结束
+
 // */
 //public class ExitArcadeGameDialog extends BaseFragmentDialog {
 //
@@ -61,7 +61,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //        LeftLayoutC.centerH(layoutParams);
 //
 //        BaseButton button = BaseButton.create(constraintLayout, layoutParams);
-//        button.setText("确认");
+
 //        button.setTextColor(getContext().getColor(R.color.color_333));
 //        button.setGravity(Gravity.CENTER);
 //        button.setBackgroundResource(R.drawable.ic_dialog_default_btn_bg);
@@ -86,7 +86,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //        LeftLayoutC.centerH(layoutParamsWW);
 //
 //        MyTextView textView = MyTextView.create(constraintLayout, layoutParamsWW);
-//        textView.setText("确认退出后,结算分数稍后到账,您可体验其他机器");
+
 //        textView.setTextSize(8);
 //        textView.getPaint().setFakeBoldText(true);
 //

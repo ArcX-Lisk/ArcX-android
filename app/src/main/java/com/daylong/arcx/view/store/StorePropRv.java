@@ -24,7 +24,7 @@ import net.daylong.baselibrary.view.recycler.BaseRecyclerView;
 import java.util.List;
 
 /**
- * 充值道具
+
  */
 public class StorePropRv extends BaseRecyclerView {
     private StorePropAdapter storeCoinAdapter;

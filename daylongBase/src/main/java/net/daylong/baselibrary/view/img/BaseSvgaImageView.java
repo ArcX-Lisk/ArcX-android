@@ -35,7 +35,7 @@ public class BaseSvgaImageView extends SVGAImageView implements SVGACallback {
     }
 
     /**
-     * 无线循环
+
      *
      * @param viewGroup
      * @param builder
@@ -58,7 +58,7 @@ public class BaseSvgaImageView extends SVGAImageView implements SVGACallback {
 
 
     /**
-     * svga  执行的次数 默认为 -1 无限循环
+
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class BaseSvgaImageView extends SVGAImageView implements SVGACallback {
     public BaseSvgaImageView(@NonNull Context context) {
         super(context);
         svgaParser = SVGAParser.Companion.shareParser();
-        //只播放一起
+        
         setLoops(loopsCount());
         setCallback(this);
         setClearsAfterDetached(true);
@@ -112,7 +112,7 @@ public class BaseSvgaImageView extends SVGAImageView implements SVGACallback {
         super.onDetachedFromWindow();
     }
 
-    //动画结束后触发
+    
     @Override
     public void onFinished() {
         if (onAnimListener != null) {
@@ -141,23 +141,23 @@ public class BaseSvgaImageView extends SVGAImageView implements SVGACallback {
 
     }
 
-    //动画暂停后触发。
+    
     @Override
     public void onPause() {
 
     }
 
-    //动画重复时触发。
+    
     @Override
     public void onRepeat() {
 
     }
 
     /**
-     * 动画播放到特定帧后触发。
+
      *
-     * @param i 帧
-     * @param v 百分比
+
+
      */
     @Override
     public void onStep(int i, double v) {
@@ -165,7 +165,7 @@ public class BaseSvgaImageView extends SVGAImageView implements SVGACallback {
     }
 
     /**
-     * 播放SVGA url
+
      *
      * @param svgaUrl
      * @param svgaImageView

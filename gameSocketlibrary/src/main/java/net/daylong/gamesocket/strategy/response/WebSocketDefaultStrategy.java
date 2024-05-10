@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 返回错误
+
  */
 public class WebSocketDefaultStrategy implements WebSocketDefaultListener {
 
 
     private final List<WebSocketDefaultListener> webSocketDefaultListenerList = new ArrayList<WebSocketDefaultListener>();
 
-    // 注册回调事件
+    
     public void register(WebSocketDefaultListener iSocketResponseStrategy) {
         webSocketDefaultListenerList.add(iSocketResponseStrategy);
     }

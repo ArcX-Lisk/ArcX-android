@@ -4,11 +4,11 @@ import net.daylong.baselibrary.utils.StringUtils;
 
 public class NftSalesCoinInfoResponse {
 
-    private String nftCd; //NFT编号
-    private Long usdtExc; //USDT兑换值
-    private double usdtBl; //玩家USDT余额
-    private long maxUsdt; //可购买的上限USDT
-    private long maxVl;//上限储币量
+    private String nftCd; 
+    private Long usdtExc; 
+    private double usdtBl; 
+    private long maxUsdt; 
+    private long maxVl;
 
     public String getUsdtToCoin() {
         return "1USDT=" + StringUtils.numFormatDot(usdtExc) + " coins";

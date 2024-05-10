@@ -2,13 +2,13 @@ package com.daylong.httplibrary.bean.response.user;
 
 public class TaskInfoResponse {
 
-    private Integer taskId; //任务ID
-    private String taskImgUrl; //任务图片
-    private String taskDesc; //任务描述
-    private Integer completeNum; //已完成数量
-    private Integer totalNum; //总数
-    private Integer completeFlag; //是否已完成
-    private Integer receiveFlag;//是否已领取
+    private Integer taskId; 
+    private String taskImgUrl; 
+    private String taskDesc; 
+    private Integer completeNum; 
+    private Integer totalNum; 
+    private Integer completeFlag; 
+    private Integer receiveFlag;
 
     public boolean isCompleteFlag() {
         return completeFlag == 1;
@@ -18,7 +18,7 @@ public class TaskInfoResponse {
         return receiveFlag == 1;
     }
 
-    //已完成
+    
     public boolean isComplete() {
         return isCompleteFlag() && isReceiveFlag();
     }
@@ -94,13 +94,13 @@ public class TaskInfoResponse {
 
     public String getBtnText() {
         if (isComplete()) {
-            return "已完成";
+
         } else {
             if (isCompleteFlag()) {
-                return "领取";
+
 
             } else {
-                return "去完成";
+
             }
         }
     }

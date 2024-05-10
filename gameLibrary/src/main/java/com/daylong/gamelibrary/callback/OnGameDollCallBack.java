@@ -9,10 +9,10 @@ public interface OnGameDollCallBack {
 
 
     /**
-     * 娃娃机回调
+
      *
-     * @param isCatch 是否抓中
-     * @param awardBeans 抓中列表
+
+
      *
      */
     void catchReturn(boolean isCatch, ArrayList<AwardBean> awardBeans);

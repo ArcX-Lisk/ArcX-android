@@ -7,8 +7,8 @@ import com.daylong.basecache.MMKVManager;
 public class WebSocketCache {
 
     //webSocket
-    String WEB_SOCKET_NUM = "wsn"; //计算
-    String version_Code = "pn"; //计算
+    String WEB_SOCKET_NUM = "wsn"; 
+    String version_Code = "pn"; 
     public static WebSocketCache instance;
 
     //    private

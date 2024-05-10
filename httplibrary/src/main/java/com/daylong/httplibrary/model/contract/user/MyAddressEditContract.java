@@ -10,7 +10,7 @@ import net.daylong.baselibrary.http.view.IViewBaseModel;
 import io.reactivex.Observable;
 
 /**
- * 我的地址
+
  */
 public interface MyAddressEditContract {
     interface MyAddressEditModel extends IViewBaseModel {

@@ -21,13 +21,13 @@ public class AppManager {
     private static AppManager sAppManager;
 
     /**
-     * 私有化
+
      */
     private AppManager() {
     }
 
     /**
-     * 单例
+
      *
      * @return
      */
@@ -43,7 +43,7 @@ public class AppManager {
     }
 
     /**
-     * 添加Activity到堆栈
+
      */
     public void addActivity(Activity activity) {
         if (sActivityStack == null) {
@@ -53,7 +53,7 @@ public class AppManager {
     }
 
     /**
-     * 获取当前Activity（堆栈中最后一个压入的）
+
      */
     public BaseActivity getCurrentActivity() {
         try {
@@ -68,7 +68,7 @@ public class AppManager {
 
 
     /**
-     * 获取当前Activity（堆栈中最后一个压入的）
+
      */
     public Activity getLastActivity() {
         if (sActivityStack != null) {
@@ -90,9 +90,9 @@ public class AppManager {
     }
 
     /**
-     * 判断某activity是否处于栈顶
+
      *
-     * @return true在栈顶 false不在栈顶
+
      */
     public boolean isActivityTop(Class cls, Context context) {
         ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
@@ -108,7 +108,7 @@ public class AppManager {
     }
 
     /**
-     * 结束指定的Activity
+
      */
     public void finishActivity(Activity activity) {
         if (activity != null && sActivityStack != null) {
@@ -119,14 +119,14 @@ public class AppManager {
     }
 
     /**
-     * 结束当前Activity（堆栈中最后一个压入的）
+
      */
     public void finishActivity() {
         finishActivity(sActivityStack.lastElement());
     }
 
     /**
-     * 结束指定类名的Activity
+
      */
     public void finishActivity(Class<?> cls) {
         for (int i = 0; i < sActivityStack.size(); i++) {
@@ -137,7 +137,7 @@ public class AppManager {
     }
 
     /**
-     * 结束所有Activity除了指定的activity
+
      */
     public void finishAllActivityExcept(Class<?> cls) {
         for (int i = 0; i < sActivityStack.size(); i++) {
@@ -150,7 +150,7 @@ public class AppManager {
     }
 
     /**
-     * 结束所有Activity除了指定的activity
+
      */
     public void finishAllActivityExcept(List<Class<?>> clsList) {
         for (int i = 0; i < sActivityStack.size(); i++) {
@@ -170,7 +170,7 @@ public class AppManager {
     }
 
     /**
-     * 结束所有Activity
+
      */
     public void finishAllActivity() {
         for (int i = 0; i < sActivityStack.size(); i++) {
@@ -182,7 +182,7 @@ public class AppManager {
     }
 
     /**
-     * 返回到指定的activity
+
      *
      * @param cls
      */
@@ -196,7 +196,7 @@ public class AppManager {
     }
 
     /**
-     * 回到首頁
+
      */
     public void returnToHome() {
 
@@ -218,7 +218,7 @@ public class AppManager {
 
 
     /**
-     * 是否已经打开指定的activity
+
      *
      * @param cls
      * @return
@@ -235,14 +235,14 @@ public class AppManager {
     }
 
     /**
-     * 退出应用程序
+
      *
-     * @param context      上下文
-     * @param isBackground 是否有后台运行
+
+
      */
     public void exitApp(Context context, boolean isBackground) {
         finishAllActivity();
-        // 注意，如果您有后台程序运行，请不要支持此句子
+        
         if (!isBackground) {
             try {
                 ActivityManager activityManager = (ActivityManager) context
@@ -259,7 +259,7 @@ public class AppManager {
     }
 
     /**
-     * 退出应用程序
+
      */
     public void exitApp() {
 
@@ -268,7 +268,7 @@ public class AppManager {
 
 
     /*
-     * 判断设备 是否使用代理上网
+
      * */
     private boolean isWifiProxy() {
 

@@ -20,14 +20,14 @@ public abstract class BaseHomeNav extends ConstraintLayoutView implements View.O
 
 
     /**
-     * 背景
+
      *
      * @return
      */
     protected abstract Integer getBgRegId();
 
     /**
-     * 招牌
+
      *
      * @return
      */
@@ -62,22 +62,22 @@ public abstract class BaseHomeNav extends ConstraintLayoutView implements View.O
     @Override
     public boolean onTouch(View view, MotionEvent event) {
 
-        Drawable buttonBackground = getBackground(); // 获取按钮的背景Drawable
+        Drawable buttonBackground = getBackground(); 
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                buttonBackground.setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); // 灰色效果
+                buttonBackground.setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); 
                 setBackgroundDrawable(buttonBackground);
                 break;
 
-            //松开
+            
             case MotionEvent.ACTION_UP:
-                //移出
+                
             case MotionEvent.ACTION_CANCEL:
-                //松手时间差
+                
                 long curTime = System.currentTimeMillis();
 
-                buttonBackground.clearColorFilter(); // 清除灰色效果
+                buttonBackground.clearColorFilter(); 
                 setBackgroundDrawable(buttonBackground);
                 if (curTime - clickTime < 1000) {
                     return false;

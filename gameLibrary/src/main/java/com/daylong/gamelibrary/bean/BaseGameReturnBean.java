@@ -4,7 +4,7 @@ import com.daylong.httplibrary.bean.response.user.UserInfoResponse;
 
 import java.io.Serializable;
 
-//返回信息
+
 public class BaseGameReturnBean extends UserInfoResponse  implements Serializable {
 
     private int devId;

@@ -52,7 +52,7 @@ public class MyPendingItemsFragment extends BaseListFragment<MyPendingItemsPrese
         super.initView(view, savedInstanceState);
 
         btnNewAddress = BaseButton.create(rootView, new ConstraintBuilder(108, 28).bottomCenterH().bottomMargin(25));
-        btnNewAddress.initBtn("提货", 10, R.color.color_434343, true);
+
         btnNewAddress.setGravity(Gravity.CENTER);
         btnNewAddress.setBackgroundResource(R.drawable.shape_r_30_bg_c48);
         btnNewAddress.setOnClickListener(new View.OnClickListener() {

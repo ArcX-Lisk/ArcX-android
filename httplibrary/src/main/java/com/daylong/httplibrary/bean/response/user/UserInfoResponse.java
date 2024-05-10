@@ -9,10 +9,10 @@ public class UserInfoResponse implements Serializable, IUserInfo {
 
 
     private String email;
-    private Long plyId; // 用户ID
-    private String plyNm; // 昵称
-    private String plyPct; //头像
-    private Integer svTp; //服务端类型
+    private Long plyId; 
+    private String plyNm; 
+    private String plyPct; 
+    private Integer svTp; 
     public String getEmail() {
         return email;
     }

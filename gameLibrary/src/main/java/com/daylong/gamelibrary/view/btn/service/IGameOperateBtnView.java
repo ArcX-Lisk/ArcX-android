@@ -33,21 +33,21 @@ public abstract class IGameOperateBtnView extends MyImageBtn {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
 
-                Drawable buttonBackground = getDrawable(); // 获取按钮的背景Drawable
+                Drawable buttonBackground = getDrawable(); 
 
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        buttonBackground.setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); // 灰色效果
+                        buttonBackground.setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); 
                         setImageDrawable(buttonBackground);
                         sendMsg();
                         break;
 
-                    //松开
+                    
                     case MotionEvent.ACTION_UP:
-                        //移出
+                        
                     case MotionEvent.ACTION_CANCEL:
-                        //松手时间差
-                        buttonBackground.clearColorFilter(); // 清除灰色效果
+                        
+                        buttonBackground.clearColorFilter(); 
                         setImageDrawable(buttonBackground);
                         sendStop();
                         break;
@@ -68,12 +68,12 @@ public abstract class IGameOperateBtnView extends MyImageBtn {
     }
 
     public void setDown(boolean isDown) {
-        Drawable buttonBackground = getDrawable(); // 获取按钮的背景Drawable
+        Drawable buttonBackground = getDrawable(); 
 
         if (isDown) {
-            buttonBackground.setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); // 灰色效果
+            buttonBackground.setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); 
         } else {
-            buttonBackground.clearColorFilter(); // 清除灰色效果
+            buttonBackground.clearColorFilter(); 
         }
         setEnabled(!isDown);
         setClickable(!isDown);

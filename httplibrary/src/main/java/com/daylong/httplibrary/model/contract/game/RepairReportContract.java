@@ -8,7 +8,7 @@ import net.daylong.baselibrary.http.response.IBaseView;
 
 import io.reactivex.Observable;
 
-//福利
+
 public interface RepairReportContract {
     interface RepairReportModel extends IBaseModel {
 

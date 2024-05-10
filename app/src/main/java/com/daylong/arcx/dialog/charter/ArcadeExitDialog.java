@@ -50,12 +50,12 @@ public class ArcadeExitDialog extends BaseFragmentDialog {
 
         MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(17));
         myTextView.setId(View.generateViewId());
-        myTextView.initText("提示", 11, R.color.color_434343, true);
+
 
         MyTextView tvDesc = MyTextView.create(contentView, new ConstraintBuilder().ww().topToBottom(myTextView).topMargin(6));
         tvDesc.setPadding(AppUtil.getSize(10), 0, AppUtil.getSize(10), 0);
         tvDesc.setId(View.generateViewId());
-        tvDesc.initText("退出后,结算分数稍后到账,您可以体验其他机器", 9, R.color.color_434343, true);
+
         tvDesc.setGravity(Gravity.CENTER_HORIZONTAL);
         tvDesc.setId(View.generateViewId());
 
@@ -71,7 +71,7 @@ public class ArcadeExitDialog extends BaseFragmentDialog {
 
 
         DefaultCancelDialogBtn defaultCancelDialogBtn = new DefaultCancelDialogBtn(getContext(), new ConstraintBuilder(64, 27).bottomCenterH().bottomMargin(18));
-        defaultCancelDialogBtn.setText("确认");
+
 
         defaultCancelDialogBtn.setOnClickListener(new View.OnClickListener() {
             @Override

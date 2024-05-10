@@ -7,14 +7,14 @@ import com.daylong.musiclibrary.service.IPlay;
 
 
 /**
- * 音乐管理
+
  */
 public class MediaPlayerMrg implements IPlay {
 
     private static MediaPlayerMrg instance;
     private AssetMediaPlayer assetMediaPlayer;
 
-    //是否开启音效
+    
     private boolean isOpenMusic;
 
     public void setOpenMusic(boolean openMusic) {
@@ -40,7 +40,7 @@ public class MediaPlayerMrg implements IPlay {
 
     }
 
-    //初始化背景音乐
+    
     @Override
     public void initBgMusic(String[] bgMusic) {
         assetMediaPlayer.initBgMusic(bgMusic);

@@ -23,7 +23,7 @@ public class BaseHttpStatus implements Serializable {
         return CODE_SUCCESS;
     }
 
-    private static final String CODE_SUCCESS = "1";//成功的code
+    private static final String CODE_SUCCESS = "1";
 
     public String getCode() {
         return errorCode;
@@ -42,9 +42,9 @@ public class BaseHttpStatus implements Serializable {
     }
 
     /**
-     * API是否请求失败
+
      *
-     * @return 失败返回true, 成功返回false
+
      */
     public boolean isOk() {
         return CODE_SUCCESS.equals(getCode());

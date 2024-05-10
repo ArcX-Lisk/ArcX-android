@@ -39,7 +39,7 @@ public abstract class BaseListFragment<P extends BasePresenter, M extends IBaseM
     protected int page = 1;
 
     /**
-     * 是否启动拉下刷新
+
      *
      * @return
      */
@@ -48,7 +48,7 @@ public abstract class BaseListFragment<P extends BasePresenter, M extends IBaseM
     }
 
     /**
-     * 是否启动加载更多
+
      *
      * @return
      */
@@ -87,7 +87,7 @@ public abstract class BaseListFragment<P extends BasePresenter, M extends IBaseM
         if (isLoadMore()) {
             smartRefreshLayout.setOnLoadMoreListener(this);
             ClassicsFooter classicsFooter = new ClassicsFooter(getContext());
-            //取消加载提示
+            
             classicsFooter.setAccentColor(Color.TRANSPARENT);
             classicsFooter.setPrimaryColor(Color.TRANSPARENT);
             smartRefreshLayout.setRefreshFooter(classicsFooter);
@@ -117,7 +117,7 @@ public abstract class BaseListFragment<P extends BasePresenter, M extends IBaseM
 
 
     /**
-     * 没有更多数据
+
      */
     public void finishNoMoreData() {
         smartRefreshLayout.finishLoadMore();

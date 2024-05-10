@@ -22,7 +22,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 
 
 /**
- * 游戏设置
+
  */
 public class ArcadeGameSettingDialog extends AttachPopupView {
     private BaseGameActivity activity;

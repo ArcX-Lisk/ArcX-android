@@ -4,7 +4,7 @@ import net.daylong.baselibrary.utils.StringUtils;
 
 public class NftExchangeResponse {
 
-    private Long gdAmt; //USDT兑换值
+    private Long gdAmt; 
 
     public NftExchangeResponse() {
     }

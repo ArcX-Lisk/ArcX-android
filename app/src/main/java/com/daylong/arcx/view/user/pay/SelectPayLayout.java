@@ -28,7 +28,7 @@ public class SelectPayLayout extends ConstraintLayout implements View.OnClickLis
 
 
         MyTextView myTextView = MyTextView.create(content, new ConstraintBuilder().ww().topCenterH().topMargin(10).buildPayoutParams());
-        myTextView.initText("充值方式", 9, R.color.color_434343);
+
 
         MyImageView btnPay = MyImageView.create(content, new ConstraintBuilder(108, 28).topCenterH().topMargin(30));
         btnPay.setOnClickListener(this);
@@ -48,7 +48,7 @@ public class SelectPayLayout extends ConstraintLayout implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        ToastUtil.show("支付:"+goldListDTO.getAwardNum());
+
 
     }
 

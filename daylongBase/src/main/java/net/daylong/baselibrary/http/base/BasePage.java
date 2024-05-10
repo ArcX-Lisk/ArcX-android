@@ -71,7 +71,7 @@ public class BasePage<T> {
 
 
         /**
-         * 是否第一页
+
          * @return
          */
         public boolean isRefresh(){
@@ -79,7 +79,7 @@ public class BasePage<T> {
         }
 
         /**
-         * 能否加载更多，是否最后一页
+
          * @return
          */
         public boolean isCanLoadMore(){

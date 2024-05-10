@@ -12,7 +12,7 @@ import com.daylong.gamelibrary.view.btn.service.IGameOperateView;
 import net.daylong.baselibrary.utils.ui.layout.ConstraintBuilder;
 
 /**
- * 街机遥控
+
  */
 public class ArcadeOperateView extends IGameOperateView {
 

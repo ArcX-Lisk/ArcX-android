@@ -3,11 +3,11 @@ package net.daylong.baselibrary.constants;
 public interface CacheConstants {
     String USER_INFO = "userInfo";
     String USER_ID = "userId";
-    String ACCESS_TOKEN = "accessToken"; //请求Token
-    String REFRESH_TOKEN = "refreshToken"; //刷新Token
+    String ACCESS_TOKEN = "accessToken"; 
+    String REFRESH_TOKEN = "refreshToken"; 
 
 
     //webSocket
-    String WEB_SOCKET_NUM = "wsn"; //计算
+    String WEB_SOCKET_NUM = "wsn"; 
 
 }

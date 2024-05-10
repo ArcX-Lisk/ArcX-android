@@ -33,7 +33,7 @@ import java.lang.reflect.Method;
 public class SystemUtil {
 
     /**
-     * 获取状态栏高度
+
      *
      * @param context
      * @return
@@ -49,36 +49,36 @@ public class SystemUtil {
 
 
     /**
-     * 获取屏幕宽度
+
      *
-     * @return 屏幕宽度
+
      */
     public static int getWinWidth() {
         return BaseApplication.getInstance().getContext().getResources().getDisplayMetrics().widthPixels;
     }
 
     /**
-     * 1 個像素
+
      *
-     * @return 屏幕宽度
+
      */
     public static float getWinWidth1PX() {
         return (getWinWidth() * 1.0f) / 188;
     }
 
     /**
-     * 获取屏幕宽度
+
      *
-     * @return 屏幕宽度
+
      */
     public static int getWinWidth(Context context) {
         return context.getResources().getDisplayMetrics().widthPixels;
     }
 
     /**
-     * 获取屏幕高度
+
      *
-     * @return 屏幕高度
+
      */
     public static int getWinHeight() {
         return BaseApplication.getInstance().getContext().getResources().getDisplayMetrics().heightPixels;
@@ -86,7 +86,7 @@ public class SystemUtil {
 
 
     /**
-     * 检查存储卡状态
+
      *
      * @return
      */
@@ -129,9 +129,9 @@ public class SystemUtil {
     }
 
     /**
-     * 获取系统时间
+
      *
-     * @return long 类型的系统时间
+
      */
     public static long getTimeLong() {
         return System.currentTimeMillis();
@@ -148,7 +148,7 @@ public class SystemUtil {
 
 
     /**
-     * 获得版本
+
      *
      * @return
      */
@@ -175,7 +175,7 @@ public class SystemUtil {
     }
 
     /**
-     * 获得版本
+
      *
      * @return
      */
@@ -198,7 +198,7 @@ public class SystemUtil {
 
 
     /**
-     * 获得系统亮度
+
      *
      * @return
      */
@@ -225,7 +225,7 @@ public class SystemUtil {
 
 
     /**
-     * 获取是否存在NavigationBar
+
      *
      * @param context
      * @return
@@ -253,21 +253,21 @@ public class SystemUtil {
     }
 
     /**
-     * 是否有刘海屏
+
      *
      * @return
      */
     public static boolean hasNotchInScreen(Activity activity) {
 
-        // android  P 以上有标准 API 来判断是否有刘海屏
+        
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
 //            DisplayCutout displayCutout = activity.getWindow().getDecorView().getRootWindowInsets().getDisplayCutout();
 //            if (displayCutout != null) {
-//                // 说明有刘海屏
+
 //                return true;
 //            }
 //        } else {
-        // 通过其他方式判断是否有刘海屏  目前官方提供有开发文档的就 小米，vivo，华为（荣耀），oppo
+        
         String manufacturer = Build.MANUFACTURER;
 
         if (TextUtils.isEmpty(manufacturer)) {
@@ -288,7 +288,7 @@ public class SystemUtil {
     }
 
     /**
-     * 判断vivo是否有刘海屏
+
      * https://swsdl.vivo.com.cn/appstore/developer/uploadfile/20180328/20180328152252602.pdf
      *
      * @param activity
@@ -306,7 +306,7 @@ public class SystemUtil {
     }
 
     /**
-     * 判断oppo是否有刘海屏
+
      * https://open.oppomobile.com/wiki/doc#id=10159
      *
      * @param activity
@@ -317,7 +317,7 @@ public class SystemUtil {
     }
 
     /**
-     * 判断xiaomi是否有刘海屏
+
      * https://dev.mi.com/console/doc/detail?pId=1293
      *
      * @param activity
@@ -335,7 +335,7 @@ public class SystemUtil {
     }
 
     /**
-     * 判断华为是否有刘海屏
+
      * https://devcenter-test.huawei.com/consumer/cn/devservice/doc/50114
      *
      * @param activity
@@ -395,7 +395,7 @@ public class SystemUtil {
     }
 
     /**
-     * 全屏
+
      */
     public static void fullScreen(Activity activity) {
         activity.getWindow().getDecorView().setSystemUiVisibility(
@@ -407,7 +407,7 @@ public class SystemUtil {
     }
 
     /**
-     * 是否横坡
+
      *
      * @return
      */
@@ -422,7 +422,7 @@ public class SystemUtil {
 
 
     /**
-     * 比例
+
      *
      * @return
      */
@@ -433,7 +433,7 @@ public class SystemUtil {
     }
 
     /**
-     * 比例
+
      *
      * @return
      */

@@ -34,26 +34,26 @@ public class DateUtil {
         return System.currentTimeMillis();
     }
 
-    //    放假日期
+    
     private static String[] holidayDate = {
-            "01-01",//元旦
-            "01-24", "01-25", "01-26", "01-27", "01-28", "01-29", "01-30", //春节
-            "04-04", "04-05", "04-06",//清明
-            "05-01", "05-02", "05-03", "05-04", "05-05",//劳动节
-            "06-25", "06-26", "06-27", //端午节
-            "10-01", "10-02", "10-03", "10-04", "10-05", "10-06", "10-07", "10-08",//国庆+中秋
+            "01-01",
+            "01-24", "01-25", "01-26", "01-27", "01-28", "01-29", "01-30", 
+            "04-04", "04-05", "04-06",
+            "05-01", "05-02", "05-03", "05-04", "05-05",
+            "06-25", "06-26", "06-27", 
+            "10-01", "10-02", "10-03", "10-04", "10-05", "10-06", "10-07", "10-08",
     };
-    //    加班日期
+    
     private static String[] OTDate = {
-            "01-19", "02-01",//春节
-            "04-26", "05-09",//劳动节
-            "06-28",//端午
-            "09-27", "10-10",//国庆+中秋
+            "01-19", "02-01",
+            "04-26", "05-09",
+            "06-28",
+            "09-27", "10-10",
 
     };
 
     /**
-     * 字符串转时间
+
      *
      * @param str
      * @param format
@@ -132,7 +132,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得当前日期的字符串格式
+
      *
      * @param format
      * @return
@@ -144,7 +144,7 @@ public class DateUtil {
 
 
     /**
-     * 格式到天
+
      *
      * @param time
      * @return
@@ -164,7 +164,7 @@ public class DateUtil {
 
 
     /**
-     * 格式到分
+
      *
      * @param time
      * @return
@@ -179,7 +179,7 @@ public class DateUtil {
     }
 
     /**
-     * 格式到分
+
      *
      * @param time
      * @return
@@ -193,7 +193,7 @@ public class DateUtil {
     }
 
     /**
-     * 格式到毫秒
+
      *
      * @param time
      * @return
@@ -208,7 +208,7 @@ public class DateUtil {
     }
 
     /**
-     * 格式到毫秒
+
      *
      * @param time
      * @return
@@ -219,12 +219,12 @@ public class DateUtil {
     }
 
     /**
-     * 字符串转换到时间格式
+
      *
-     * @param dateStr   需要转换的字符串
-     * @param formatStr 需要格式的目标字符串 举例 yyyy-MM-dd
-     * @return Date 返回转换后的时间
-     * @throws ParseException 转换异常
+
+
+
+
      */
     public static Date StringToDate(String dateStr, String formatStr) {
         DateFormat sdf = new SimpleDateFormat(formatStr);
@@ -239,7 +239,7 @@ public class DateUtil {
 
 
     /**
-     * 把字符串转化为时间格式
+
      *
      * @param timestamp
      * @return
@@ -254,7 +254,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得当前日期时间 日期时间格式yyyy-MM-dd HH:mm:ss
+
      *
      * @return
      */
@@ -271,7 +271,7 @@ public class DateUtil {
     }
 
     /**
-     * 格式化日期时间 日期时间格式yyyy-MM-dd HH:mm:ss
+
      *
      * @return
      */
@@ -282,7 +282,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得当前时间 时间格式HH:mm:ss
+
      *
      * @return
      */
@@ -293,7 +293,7 @@ public class DateUtil {
     }
 
     /**
-     * 格式化时间 时间格式HH:mm:ss
+
      *
      * @return
      */
@@ -304,7 +304,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得当前时间的<code>java.util.Date</code>对象
+
      *
      * @return
      */
@@ -319,9 +319,9 @@ public class DateUtil {
     }
 
     /**
-     * 获得当前时间的毫秒数
+
      * <p>
-     * 详见{@link System#currentTimeMillis()}
+
      *
      * @return
      */
@@ -330,7 +330,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得当前Chinese月份
+
      *
      * @return
      */
@@ -339,7 +339,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得月份中的第几天
+
      *
      * @return
      */
@@ -348,7 +348,7 @@ public class DateUtil {
     }
 
     /**
-     * 今天是星期的第几天
+
      *
      * @return
      */
@@ -357,7 +357,7 @@ public class DateUtil {
     }
 
     /**
-     * 今天是年中的第几天
+
      *
      * @return
      */
@@ -366,7 +366,7 @@ public class DateUtil {
     }
 
     /**
-     * 判断原日期是否在目标日期之前
+
      *
      * @param src
      * @param dst
@@ -377,7 +377,7 @@ public class DateUtil {
     }
 
     /**
-     * 判断原日期是否在目标日期之后
+
      *
      * @param src
      * @param dst
@@ -388,7 +388,7 @@ public class DateUtil {
     }
 
     /**
-     * 判断两日期是否相同
+
      *
      * @param date1
      * @param date2
@@ -399,11 +399,11 @@ public class DateUtil {
     }
 
     /**
-     * 判断某个日期是否在某个日期范围
+
      *
-     * @param beginDate 日期范围开始
-     * @param endDate   日期范围结束
-     * @param src       需要判断的日期
+
+
+
      * @return
      */
     public static boolean between(Date beginDate, Date endDate, Date src) {
@@ -411,38 +411,38 @@ public class DateUtil {
     }
 
     /**
-     * 获得当前月的最后一天
+
      * <p>
-     * HH:mm:ss为0，毫秒为999
+
      *
      * @return
      */
     public static Date lastDayOfMonth() {
         Calendar cal = calendar();
-        cal.set(Calendar.DAY_OF_MONTH, 0); // M月置零
-        cal.set(Calendar.HOUR_OF_DAY, 0);// H置零
-        cal.set(Calendar.MINUTE, 0);// m置零
-        cal.set(Calendar.SECOND, 0);// s置零
-        cal.set(Calendar.MILLISECOND, 0);// S置零
-        cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) + 1);// 月份+1
-        cal.set(Calendar.MILLISECOND, -1);// 毫秒-1
+        cal.set(Calendar.DAY_OF_MONTH, 0); 
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) + 1);
+        cal.set(Calendar.MILLISECOND, -1);
         return cal.getTime();
     }
 
     /**
-     * 获得当前月的第一天
+
      * <p>
-     * HH:mm:ss SS为零
+
      *
      * @return
      */
     public static Date firstDayOfMonth() {
         Calendar cal = calendar();
-        cal.set(Calendar.DAY_OF_MONTH, 1); // M月置1
-        cal.set(Calendar.HOUR_OF_DAY, 0);// H置零
-        cal.set(Calendar.MINUTE, 0);// m置零
-        cal.set(Calendar.SECOND, 0);// s置零
-        cal.set(Calendar.MILLISECOND, 0);// S置零
+        cal.set(Calendar.DAY_OF_MONTH, 1); 
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
         return cal.getTime();
     }
 
@@ -454,7 +454,7 @@ public class DateUtil {
 
 
     /**
-     * 是否周末
+
      *
      * @return
      */
@@ -465,7 +465,7 @@ public class DateUtil {
     }
 
     /**
-     * 是否周末
+
      *
      * @return
      */
@@ -478,9 +478,9 @@ public class DateUtil {
     }
 
     /**
-     * 获得周五日期
+
      * <p>
-     * 注：日历工厂方法{@link #calendar()}设置类每个星期的第一天为Monday，US等每星期第一天为sunday
+
      *
      * @return
      */
@@ -489,9 +489,9 @@ public class DateUtil {
     }
 
     /**
-     * 获得周六日期
+
      * <p>
-     * 注：日历工厂方法{@link #calendar()}设置类每个星期的第一天为Monday，US等每星期第一天为sunday
+
      *
      * @return
      */
@@ -500,7 +500,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得周日日期 注：日历工厂方法{@link #calendar()}设置类每个星期的第一天为Monday，US等每星期第一天为sunday
+
      *
      * @return
      */
@@ -509,7 +509,7 @@ public class DateUtil {
     }
 
     /**
-     * 将字符串日期时间转换成java.util.Date类型 日期时间格式yyyy-MM-dd HH:mm:ss
+
      *
      * @param datetime
      * @return
@@ -519,7 +519,7 @@ public class DateUtil {
     }
 
     /**
-     * 将字符串日期转换成java.util.Date类型 日期时间格式yyyy-MM-dd
+
      *
      * @param date
      * @return
@@ -530,7 +530,7 @@ public class DateUtil {
     }
 
     /**
-     * 将字符串日期转换成java.util.Date类型 时间格式 HH:mm:ss
+
      *
      * @param time
      * @return
@@ -541,7 +541,7 @@ public class DateUtil {
     }
 
     /**
-     * 根据自定义pattern将字符串日期转换成java.util.Date类型
+
      *
      * @param datetime
      * @param pattern
@@ -555,25 +555,25 @@ public class DateUtil {
     }
 
     /**
-     * 把秒格式化为分种小时
+
      *
      * @param second
      * @return
      */
     public static String parseSecond(int second) {
         if (second >= 60) {
-            return second / 60 + "分";
+
         } else if (second >= 60 * 60) {
-            return second / 60 * 60 + "时";
+
         } else if (second >= 60 * 60 * 24) {
-            return second / 60 * 60 + "天";
+
         } else {
-            return second + "秒";
+
         }
     }
 
     /**
-     * 把秒格式化为分种小时
+
      *
      * @param second
      * @return
@@ -591,7 +591,7 @@ public class DateUtil {
     }
 
     /**
-     * 把秒格式化为分种小时
+
      *
      * @param second
      * @return
@@ -618,7 +618,7 @@ public class DateUtil {
 
 
     /**
-     * 比较时间大小
+
      *
      * @param begin
      * @param end
@@ -645,7 +645,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得年份
+
      *
      * @param date
      * @return
@@ -657,7 +657,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得月份
+
      *
      * @param date
      * @return
@@ -669,7 +669,7 @@ public class DateUtil {
     }
 
     /**
-     * 获得星期几
+
      *
      * @param date
      * @return
@@ -682,7 +682,7 @@ public class DateUtil {
 
 
     /**
-     * 获得天数差
+
      *
      * @param begin
      * @param end
@@ -710,12 +710,12 @@ public class DateUtil {
 
         StringBuilder result = new StringBuilder();
         if (totalYears > 0) {
-            result.append(totalYears).append("年");
+
             if (remainingMonths > 0 || remainingDays > 0) {
-                result.append(remainingMonths).append("月").append(remainingDays).append("天");
+
             }
         } else if (remainingDays > 0) {
-            result.append(remainingDays).append("天")
+
                     .append(appendZeroPadded(remainingHours)).append(":")
                     .append(appendZeroPadded(remainingMinutes)).append(":")
                     .append(appendZeroPadded(remainingSeconds));
@@ -858,7 +858,7 @@ public class DateUtil {
         return hour + minute + ":" + second;
     }
 
-    //   格式化时分秒
+    
     public static String getTimeHMS(int second) {
 
         if (second < 10) {
@@ -911,17 +911,17 @@ public class DateUtil {
     }
 
     /**
-     * 一小时的秒数
+
      */
     private static final int HOUR_SECOND = 60 * 60;
 
     /**
-     * 一分钟的秒数
+
      */
     private static final int MINUTE_SECOND = 60;
 
     /**
-     * 根据秒数获取时间串
+
      *
      * @param second (eg: 100s)
      * @return (eg : 00 : 01 : 40)
@@ -951,7 +951,7 @@ public class DateUtil {
     }
 
     /**
-     * 根据秒数获取时间串
+
      *
      * @param second (eg: 100s)
      * @return (eg : 01 : 40)
@@ -980,9 +980,9 @@ public class DateUtil {
 
 
     /**
-     * 倒计时时间 获取今天剩余时间
+
      *
-     * @param currentTime 当前时间爱你
+
      * @return
      */
     public static int getToDayTimeLeftByCurrentTime(long currentTime) {
@@ -999,7 +999,7 @@ public class DateUtil {
     }
 
     /**
-     * 格式到毫秒  yyyy-MM-dd HH:mm:ss
+
      *
      * @param time
      * @return
@@ -1012,7 +1012,7 @@ public class DateUtil {
     }
 
     /**
-     * 格式到毫秒  yyyy-MM-dd HH:mm:ss
+
      *
      * @param time
      * @return
@@ -1026,7 +1026,7 @@ public class DateUtil {
 
 
     /**
-     * 獲取剩餘時間
+
      *
      * @param currentTime
      * @return
@@ -1036,21 +1036,21 @@ public class DateUtil {
         calendar.setTime(new Date(System.currentTimeMillis()));
         long timeInMillis = calendar.getTimeInMillis();
 
-        System.out.println("当前时间->" + formatDateToMinuteHMS(timeInMillis));
-        //偏移到上个月
-//       设置为1号
-        calendar.add(Calendar.DAY_OF_MONTH, +1);//设置为1号,当前日期既为本月第一天
-//        设置 0 时 0分 0秒
+
+        
+
+        calendar.add(Calendar.DAY_OF_MONTH, +1);
+
         calendar.set(Calendar.HOUR_OF_DAY, 0);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         long timeInMillis1 = calendar.getTimeInMillis();
-        System.out.println("当前时间->" + formatDateToMinuteHMS(timeInMillis1));
+
 
 
         String timeHMS = getTimeHMS((int) ((timeInMillis1 - timeInMillis) / 1000));
 
-        System.out.println("剩餘時間->" + timeHMS);
+
 
         return timeHMS;
     }
@@ -1058,7 +1058,7 @@ public class DateUtil {
     public static String calculateTimeDifference(int timeDifference) {
 
         if (timeDifference <= 0) {
-            return "刚刚";
+
         }
 
         long minutes = TimeUnit.SECONDS.toMinutes(timeDifference);
@@ -1067,15 +1067,15 @@ public class DateUtil {
         long months = days / 30;
 
         if (months > 0) {
-            return months + "个月";
+
         } else if (days > 0) {
-            return days + "天";
+
         } else if (hours > 0) {
-            return hours + "小时";
+
         } else if (minutes > 0) {
-            return minutes + "分钟";
+
         } else {
-            return timeDifference + "秒";
+
         }
     }
 }

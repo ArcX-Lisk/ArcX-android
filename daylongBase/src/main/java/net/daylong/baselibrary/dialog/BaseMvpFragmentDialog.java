@@ -14,11 +14,11 @@ import net.daylong.baselibrary.http.response.IBaseView;
 import net.daylong.baselibrary.utils.ui.act.BaseActivity;
 public abstract class BaseMvpFragmentDialog<P extends BasePresenter, M extends IBaseModel> extends BaseFragmentDialog implements IBaseView {
     /**
-     * presenter 具体的presenter由子类确定
+
      */
     protected P mPresenter;
     /**
-     * model 具体的model由子类确定
+
      */
     protected M mModel;
 
@@ -34,7 +34,7 @@ public abstract class BaseMvpFragmentDialog<P extends BasePresenter, M extends I
     }
 
     /**
-     * 初始化presenter
+
      *
      * @return
      */

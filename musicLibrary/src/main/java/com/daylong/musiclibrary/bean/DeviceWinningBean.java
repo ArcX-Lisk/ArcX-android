@@ -4,14 +4,14 @@ package com.daylong.musiclibrary.bean;
 import com.daylong.musiclibrary.emums.DeviceWinningType;
 
 /**
- * 设备中奖
+
  */
 public class DeviceWinningBean {
-    private Integer devId; //设备ID
-    private Integer devAwdTp; //中奖类型
-    private Integer awdAmt; //中奖数量
-    private Integer stFlg; // 是否开始中奖
-    private Integer awardMulti; // 中奖得分倍
+    private Integer devId; 
+    private Integer devAwdTp; 
+    private Integer awdAmt; 
+    private Integer stFlg; 
+    private Integer awardMulti; 
 
     public Integer getAwardMulti() {
         return awardMulti;
@@ -63,7 +63,7 @@ public class DeviceWinningBean {
     }
 
     /**
-     * 龙珠
+
      *
      * @return
      */

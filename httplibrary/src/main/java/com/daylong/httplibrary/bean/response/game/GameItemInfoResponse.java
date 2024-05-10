@@ -7,12 +7,12 @@ import java.util.List;
 
 public class GameItemInfoResponse implements Serializable {
 
-    private Integer devId; //设备ID
-    private String devNm; //设备名称
-    private String devPct;//设备图片
-    private Integer csAmt; //消耗数量
+    private Integer devId; 
+    private String devNm; 
+    private String devPct;
+    private Integer csAmt; 
 
-    private List<UserInfoResponse> plyTbln;//游戏玩家列表
+    private List<UserInfoResponse> plyTbln;
 
 
     public Integer getProductId() {

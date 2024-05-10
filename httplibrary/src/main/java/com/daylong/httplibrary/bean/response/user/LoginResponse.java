@@ -5,11 +5,11 @@ import java.io.Serializable;
 public class LoginResponse implements Serializable {
 
 
-    private String aesTkn; //调用凭证
-    private Long aesOt;//调用凭证过期时间
-    private String refTkn; //刷新凭证
-    private Long refOt; //刷新凭证过期时间
-    private Long arcxUid;//玩家ID
+    private String aesTkn; 
+    private Long aesOt;
+    private String refTkn; 
+    private Long refOt; 
+    private Long arcxUid;
 
     public String getAccessToken() {
         return aesTkn;

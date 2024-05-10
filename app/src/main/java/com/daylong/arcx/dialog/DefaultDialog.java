@@ -57,7 +57,7 @@ public class DefaultDialog extends BaseFragmentDialog {
 
         DefaultDialogBtn defaultDialogBtn = new DefaultDialogBtn(getContext());
 
-        defaultDialogBtn.setText("领取");
+
         defaultDialogBtn.setLayoutParams(new ConstraintBuilder(109, 37).bottomCenterH().bottomMargin(76).buildPayoutParams());
         rootView.addView(defaultDialogBtn);
         defaultDialogBtn.setOnClickListener(new View.OnClickListener() {

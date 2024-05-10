@@ -59,14 +59,14 @@ public class InvitationActivity extends BaseMvpActivity<InvitationPresenter, Inv
 
         MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().mm().height(14).leftTop().topMargin(21));
         myTextView.setGravity(Gravity.CENTER);
-        myTextView.initText("我的邀请码", 9, R.color.color_434343, false);
+
 
         tvCode = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(72));
         tvCode.initText("", 17, R.color.color_434343, true);
 
 
         BaseButton baseButton = BaseButton.create(rootView, new ConstraintBuilder(45, 13).right().centerV(baseTitleView.getId()).rightMargin(7));
-        baseButton.initBtn("填写邀请码", 9, R.color.color_434343);
+
         baseButton.setGravity(Gravity.CENTER);
         baseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +94,7 @@ public class InvitationActivity extends BaseMvpActivity<InvitationPresenter, Inv
         } else {
             if (btnBind == null) {
                 btnBind = BaseButton.create(contentView, new ConstraintBuilder(108, 28).bottomCenterH().bottomMargin(31));
-                btnBind.initBtn("邀请", 10, R.color.color_434343);
+
                 btnBind.setBackgroundResource(R.drawable.shape_invitation_btn_bg);
                 btnBind.setGravity(Gravity.CENTER);
                 btnBind.setOnClickListener(new View.OnClickListener() {

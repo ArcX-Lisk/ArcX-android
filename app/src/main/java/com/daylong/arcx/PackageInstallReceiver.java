@@ -12,8 +12,8 @@ public class PackageInstallReceiver extends BroadcastReceiver {
         Log.e("rag--?onReceive", "onReceive" + action.toString());
         if (action.equals(Intent.ACTION_PACKAGE_ADDED)) {
             String packageName = intent.getData().getSchemeSpecificPart();
-            if (packageName.equals("com.daylong.arcx")) {  // 替换成您的应用程序包名
-                // TODO: 在这里添加启动您的应用程序的代码
+            if (packageName.equals("com.daylong.arcx")) {  
+                
                 Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage(packageName);
                 context.startActivity(launchIntent);
             }

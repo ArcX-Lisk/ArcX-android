@@ -11,16 +11,16 @@ import net.daylong.baselibrary.http.view.IViewBaseView;
 import io.reactivex.Observable;
 
 /**
- * 转移钱包
+
  */
 public interface ToExternalContract {
     interface ToExternalModel extends IViewBaseModel {
 
         /**
-         * 提现
+
          *
-         * @param tkTp 提现类型
-         * @param amt  提下今日
+
+
          * @return
          */
         Observable<BaseResponse<WalletResponse>> postToExternal(int tkTp, int amt, String ads);

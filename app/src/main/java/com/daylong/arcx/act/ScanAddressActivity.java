@@ -52,9 +52,9 @@ public class ScanAddressActivity extends BaseActivity implements QRCodeView.Dele
                     @Override
                     public void accept(Boolean aBoolean) throws Exception {
                         if (aBoolean) {
-                            cp.startCamera(); // 打开后置摄像头开始预览，但是并未开始识别
-//        mZXingView.startCamera(Camera.CameraInfo.CAMERA_FACING_FRONT); // 打开前置摄像头开始预览，但是并未开始识别
-                            cp.startSpotAndShowRect(); // 显示扫描框，并开始识别
+                            cp.startCamera(); 
+
+                            cp.startSpotAndShowRect(); 
 
                         }
 

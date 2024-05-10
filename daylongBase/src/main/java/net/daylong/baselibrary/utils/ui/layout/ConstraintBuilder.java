@@ -33,7 +33,7 @@ public class ConstraintBuilder {
     }
 
 
-    // 增加错误检查和异常处理
+    
     public ConstraintBuilder margin(float left, float top, float right, float bottom) {
         try {
             if (left < 0 || top < 0 || right < 0 || bottom < 0) {
@@ -49,7 +49,7 @@ public class ConstraintBuilder {
         return this;
     }
 
-    // 增加错误检查和异常处理
+    
     public ConstraintBuilder margin(float margin) {
 
         return margin(margin, margin, margin, margin);
@@ -77,7 +77,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 设置高度 高度沾满
+
      *
      * @param wight
      * @return
@@ -89,7 +89,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder mm() {
         payoutParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.MATCH_PARENT);
@@ -98,7 +98,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder mm0() {
         payoutParams = new ConstraintLayout.LayoutParams(0, 0);
@@ -107,9 +107,9 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 横屏沾满 设置高度
+
      *
-     * @param height 高度
+
      * @return
      */
     public ConstraintBuilder m(float height) {
@@ -155,7 +155,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder centerHorizontally() {
         left();
@@ -164,7 +164,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder centerH() {
         left();
@@ -173,7 +173,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder centerH(View view) {
         left(view.getId());
@@ -182,7 +182,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder height(float height) {
         payoutParams.height = AppUtil.getSize(height);
@@ -190,7 +190,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder NotSizeHeight(int height) {
         payoutParams.height = height;
@@ -198,7 +198,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder width(float width) {
         payoutParams.width = AppUtil.getSize(width);
@@ -206,7 +206,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public ConstraintBuilder centerHorizontally(int id) {
         left(id);
@@ -215,7 +215,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 居中
+
      */
 
 
@@ -237,7 +237,7 @@ public class ConstraintBuilder {
 
 
     /**
-     * 通過Id居中
+
      */
     public ConstraintBuilder centerById(int id) {
         left(id);
@@ -248,7 +248,7 @@ public class ConstraintBuilder {
     }
 
     /**
-     * 通過Id居中
+
      */
     public ConstraintBuilder horizontalChainStyle() {
         payoutParams.horizontalChainStyle = ConstraintLayout.LayoutParams.CHAIN_PACKED;

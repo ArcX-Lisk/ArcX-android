@@ -33,9 +33,9 @@ public class RechargeGroupView extends NestedScrollView {
         rootView.setOrientation(LinearLayout.VERTICAL);
         rootView.setGravity(Gravity.CENTER_HORIZONTAL);
         setOverScrollMode(View.OVER_SCROLL_NEVER);
-        //垂直方向的水平滚动条是否显示
+        
         setVerticalScrollBarEnabled(false);
-        //水平方向的水平滚动条是否显示
+        
         setHorizontalScrollBarEnabled(false);
 
 

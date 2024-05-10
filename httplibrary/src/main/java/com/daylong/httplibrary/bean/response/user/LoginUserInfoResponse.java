@@ -126,17 +126,17 @@ public class LoginUserInfoResponse extends UserInfoResponse {
     }
 
     public static class AtbTblnDTO implements Serializable {
-        //        玩家属性类型
+        
         private Integer atbTp;
-        // 等级
+        
         private Integer lv;
-        //下一等级
+        
         private Integer nxLv;
-        //是否可升级
+        
         private Integer upFlg;
-        //商品类型
+        
         private Integer cmdTp;
-        //商品数量
+        
         private Integer csAmt;
         private String lvAmt;
         private String nxLvAmt;
@@ -166,7 +166,7 @@ public class LoginUserInfoResponse extends UserInfoResponse {
 
 
         /**
-         * 图片Id
+
          *
          * @return
          */
@@ -179,7 +179,7 @@ public class LoginUserInfoResponse extends UserInfoResponse {
         }
 
         /**
-         * 图片Id
+
          *
          * @return
          */

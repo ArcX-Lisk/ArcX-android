@@ -34,11 +34,11 @@ public class OnClickTouchListener implements View.OnTouchListener {
                 }
                 break;
 
-            //松开
+            
             case MotionEvent.ACTION_UP:
-                //移出
+                
             case MotionEvent.ACTION_CANCEL:
-                //松手时间差
+                
                 if (isClick) {
                     v.setAlpha(1.0f);
                     if (onClickListener != null) {

@@ -11,7 +11,7 @@ import net.daylong.baselibrary.utils.ui.layout.ConstraintBuilder;
 import net.daylong.baselibrary.utils.ui.layout.cl.ConstraintLayoutView;
 
 /**
- * 遥控
+
  */
 public class RemoteControlView extends ConstraintLayoutView {
     private IGameOperateBtnView topBtn;

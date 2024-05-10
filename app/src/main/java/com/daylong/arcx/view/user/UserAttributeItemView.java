@@ -19,7 +19,7 @@ import net.daylong.baselibrary.view.textview.MyTextView;
 import java.util.List;
 
 /**
- * 用户属性
+
  */
 public class UserAttributeItemView extends ConstraintLayoutView {
 

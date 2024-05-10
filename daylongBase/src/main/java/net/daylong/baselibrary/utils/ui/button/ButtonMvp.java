@@ -15,11 +15,11 @@ import net.daylong.baselibrary.utils.sys.AppUtil;
 public abstract class ButtonMvp<P extends BasePresenter, M extends IBaseModel> extends androidx.appcompat.widget.AppCompatButton implements IBaseView {
 
     /**
-     * presenter 具体的presenter由子类确定
+
      */
     protected P mPresenter;
     /**
-     * model 具体的model由子类确定
+
      */
     protected M mModel;
 
@@ -44,7 +44,7 @@ public abstract class ButtonMvp<P extends BasePresenter, M extends IBaseModel> e
 
 
     /**
-     * 初始化presenter
+
      *
      * @return
      */

@@ -32,7 +32,7 @@ public class BasePageDataResponse<T,B> {
         this.time = time;
     }
 
-    private static final int CODE_SUCCESS = 1;//成功的code
+    private static final int CODE_SUCCESS = 1;
 
     public BasePageDataResponse(int status, String errorMsg, List<T> list) {
         this.status = status;
@@ -71,7 +71,7 @@ public class BasePageDataResponse<T,B> {
 
 
     /**
-     * 是否请求数据成功
+
      *
      * @return
      */

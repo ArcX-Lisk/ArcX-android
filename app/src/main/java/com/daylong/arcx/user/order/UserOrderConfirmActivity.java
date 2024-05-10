@@ -66,7 +66,7 @@ public class UserOrderConfirmActivity extends BaseMvpActivity<OrderPostPresenter
         ConstraintLayout addressContent = new ConstraintBuilder().mm().build(this);
 
         tvAddress = MyTextView.create(addressContent, new ConstraintBuilder().ww().leftCenterV().leftMargin(9));
-        tvAddress.initText("请添加您的地址", 9, R.color.color_ff3737, true);
+
 
         cardView.addView(addressContent);
         cardView.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +85,7 @@ public class UserOrderConfirmActivity extends BaseMvpActivity<OrderPostPresenter
 
 
         BaseButton btnNewAddress = BaseButton.create(rootView, new ConstraintBuilder(108, 28).bottomCenterH().bottomMargin(25));
-        btnNewAddress.initBtn("提货", 10, R.color.color_434343, true);
+
         btnNewAddress.setGravity(Gravity.CENTER);
         btnNewAddress.setBackgroundResource(R.drawable.shape_r_30_bg_c48);
         btnNewAddress.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +94,7 @@ public class UserOrderConfirmActivity extends BaseMvpActivity<OrderPostPresenter
 
 
                 if (address == null) {
-                    ToastUtil.show("请选择地址");
+
 
                     return;
                 }
@@ -141,7 +141,7 @@ public class UserOrderConfirmActivity extends BaseMvpActivity<OrderPostPresenter
             if (resultCode == RESULT_OK) {
                 address = (MyAddressResponse) data.getSerializableExtra("address");
                 tvAddress.initText(address.getInfo(), 6, R.color.color_434343);
-                // 处理返回的数据
+                
             }
         }
     }
@@ -154,7 +154,7 @@ public class UserOrderConfirmActivity extends BaseMvpActivity<OrderPostPresenter
 
     @Override
     public void onOrderPostSuc() {
-        ToastUtil.show("提货成功");
+
         finish();
     }
 }

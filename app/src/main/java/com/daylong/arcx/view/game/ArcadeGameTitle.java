@@ -45,7 +45,7 @@ public class ArcadeGameTitle extends PushCoinGameTitle {
     @Override
     protected void back() {
         if (ICharterFlightButton != null && ICharterFlightButton.isChatter()) {
-            //显示结束 包机
+            
             CharterEndToastDialog.showDialog(activity.getSupportFragmentManager());
         } else {
 

@@ -41,7 +41,7 @@ import org.w3c.dom.Text;
 import java.io.Serializable;
 
 /**
- * 提现
+
  */
 public class WithdrawalActivity extends BaseMvpActivity<WithdrawalPresenter, WithdrawalModel> implements WithdrawalContract.WithdrawalView {
 
@@ -91,7 +91,7 @@ public class WithdrawalActivity extends BaseMvpActivity<WithdrawalPresenter, Wit
         MyTextView tvAsset = MyTextView.create(rootView, new ConstraintBuilder().ww().leftTop(contentBg).leftTopMargin(8, 11));
         tvAsset.initText("Asset", 8, net.daylong.daylongbase.R.color.color_333, true);
 
-        //类型
+        
         DefaultView typeItemBg = DefaultView.create(rootView, new ConstraintBuilder(172, 22).topMargin(4).topToBottom(tvAsset).centerH());
         typeItemBg.setBackgroundResource(R.drawable.shape_r8_fff);
         MyImageView itemIcon = MyImageView.create(rootView, new ConstraintBuilder(18).leftCenterV(typeItemBg).leftMargin(5), walletType.getRegId());
@@ -133,7 +133,7 @@ public class WithdrawalActivity extends BaseMvpActivity<WithdrawalPresenter, Wit
         myBtn.initBtn("ALL", 7, R.color.color_ff6d3b, true);
 
 
-        //网络
+        
         DefaultView networkBg = DefaultView.create(rootView, new ConstraintBuilder(172, 50).topMargin(5).topToBottom(editText).centerH());
         networkBg.setBackgroundResource(R.drawable.shape_r8_fff);
 

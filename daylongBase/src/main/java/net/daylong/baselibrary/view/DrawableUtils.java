@@ -112,7 +112,7 @@ public class DrawableUtils {
         if (drawable != null) {
             setViewDrawables(view, null, null, null, drawable);
         } else {
-            Log.e("错误：", "没有找到" + topResId);
+
         }
 
 
@@ -124,7 +124,7 @@ public class DrawableUtils {
             setViewDrawables(view, null, null, null, drawable);
 
         } else {
-            Log.e("错误：", "没有找到" + topResId);
+
         }
 
     }

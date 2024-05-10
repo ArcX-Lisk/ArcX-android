@@ -70,12 +70,12 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
 
     public void removerOnGameDollCallBack() {
         this.onGameDollCallBack = null;
-        // 移除数据
+        
         if (dollOperateTypes != null) {
             dollOperateTypes.clear();
         }
 
-        //移除
+        
         dollOperateTypes = null;
 
     }
@@ -86,7 +86,7 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
 
     }
 
-    // 注册回调事件
+    
     public void register(OnGameWebSocketCallBack callBack) {
         onGameWebSocketCallBacks.add(callBack);
     }
@@ -103,7 +103,7 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
     @Override
     public void addCmd() {
 
-        //设置需要游戏接受的内容
+        
         for (GameCmdType value : GameCmdType.values()) {
             addCmd(value.getReturnCdm());
         }
@@ -113,7 +113,7 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
 
     @Override
     public void issue(Integer cmd, JSONObject msg) {
-        MyLogUtil.e("rag==回调收到>" + cmd + "<>" + msg);
+
 
         if (activity != null) {
             activity.runOnUiThread(new Runnable() {
@@ -124,25 +124,25 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
 
                     int productId = serverMsg.optInt("devId");
                     int operateType = serverMsg.optInt("hdlTp", -1);
-                    //余额
+                    
                     int goldNum = serverMsg.optInt("gdAmt", -1);
-                    //积分
+                    
                     int integralNum = serverMsg.optInt("axcAmt", -1);
                     GameOperateType operateState = GameOperateType.getOperateState(operateType);
 
 
                     if (goldNum != -1) {
                         WebSocketUserStrategy.getInstance().forCallBack(goldNum, integralNum);
-                        MyLogUtil.e("rag==>余额:" + goldNum + "<积分:>" + integralNum);
+
 
                     }
                     String desc = GameCmdType.getGameReturnCmdType(cmd).getDesc();
-                    MyLogUtil.e("rag==>" + desc + "<类型>" + (operateState != null ? operateState.getDesc() : "房间") + "信息:" + msg);
+
 
 //
                     if (operateState == null) {
-                        MyLogUtil.e("rag==房间操作>" + msg);
-                        //默认
+
+                        
 
 
                         if (cmd.equals(GameCmdType.S2C_KICK_OUT_PRODUCT.getReturnCdm())) {
@@ -154,8 +154,8 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
                         }
 
                         for (OnGameWebSocketCallBack onGameWebSocketCallBack : onGameWebSocketCallBacks) {
-                            //房间操作
-//                房间信息
+                            
+
                             Integer returnCdm = GameCmdType.C2S_ROOM_MSG.getReturnCdm();
                             if (returnCdm.equals(cmd)) {
                                 onGameWebSocketCallBack.gameInfo(JsonUtil.fromJsonToObject(msg.toString(), GameInfoReturnResponse.class).getServerMsg());
@@ -165,7 +165,7 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
                                 long endTime = serverMsg.optLong("endTime", 0);
                                 onGameWebSocketCallBack.onChart(charterBalance, leftTime, endTime);
                             }  else if (cmd.equals(GameCmdType.C2S_ENERGY_MSG.getReturnCdm())) {
-                                //能量返回
+                                
 
                                 onGameWebSocketCallBack.onEnergy(serverMsg.optInt("cnAmt", 0)
                                         , serverMsg.optInt("ttAmt", 0)
@@ -176,7 +176,7 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
 
 
                     } else {
-                        //  开始游戏
+                        
                         if (operateState == GameOperateType.START
                                 || operateState == GameOperateType.PUSH_COIN
                                 || operateState == GameOperateType.GET_COIN
@@ -189,7 +189,7 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
                                 } else if (operateState == GameOperateType.PUSH_COIN) {
                                     userBalanceCallBack.onRefreshTime();
                                 } else if (operateState == GameOperateType.CHARTER_SETTLEMENT) {
-                                    //包机结算
+                                    
                                     JSONObject charterSettlementMsg = serverMsg.optJSONObject("charterSettlementMsg");
                                     long charterBalance = charterSettlementMsg.optLong("charterBalance");
                                     long returnNum = charterSettlementMsg.optLong("returnNum");
@@ -202,7 +202,7 @@ public class WebSocketGameStrategy extends ISocketResponseStrategy {
                                         userBalanceCallBack.onCoinReturn(fallNum);
                                     }
                                 }
-                                MyLogUtil.e("rag==游戏操作>" + msg);
+
 
                             }
                         }

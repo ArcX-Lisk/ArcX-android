@@ -7,7 +7,7 @@ import android.view.animation.ScaleAnimation;
 import com.lxj.xpopup.animator.PopupAnimator;
 
 /**
- * 默认弹出动画
+
  */
 public class DialogDefaultOpenAnimator extends PopupAnimator {
     @Override

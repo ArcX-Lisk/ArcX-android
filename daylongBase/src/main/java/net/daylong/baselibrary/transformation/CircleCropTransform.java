@@ -19,7 +19,7 @@ import java.security.MessageDigest;
 /**
  * 2022/01/18 14:52.
  * <p>
- * Glide圆形
+
  */
 public class CircleCropTransform extends BitmapTransformation {
 
@@ -31,17 +31,17 @@ public class CircleCropTransform extends BitmapTransformation {
     }
 
     /**
-     * @param borderSize 边框宽度(px)
-     * @param borderColor 边框颜色
+
+
      */
     public CircleCropTransform(float borderSize, int borderColor) {
         this(TypedValue.COMPLEX_UNIT_DIP, borderSize, borderColor);
     }
 
     /**
-     * @param unit        borderSize 单位
-     * @param borderSize 边框宽度(px)
-     * @param borderColor 边框颜色
+
+
+
      */
     public CircleCropTransform(int unit, float borderSize, int borderColor) {
         DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();

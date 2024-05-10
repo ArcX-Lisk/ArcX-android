@@ -92,12 +92,12 @@ public abstract class BaseRtcObserver<T> implements Observer<BaseRtcResponse<T>>
     }
 
     /**
-     * 请求开始返回
+
      */
     protected abstract void onStart();
 
     /**
-     * 请求数据成功返回
+
      *
      * @param data
      * @throws Exception
@@ -110,7 +110,7 @@ public abstract class BaseRtcObserver<T> implements Observer<BaseRtcResponse<T>>
 
 
     /**
-     * 请求token过期返回
+
      *
      * @throws Exception
      */
@@ -120,7 +120,7 @@ public abstract class BaseRtcObserver<T> implements Observer<BaseRtcResponse<T>>
 
 
     /**
-     * 请求数据失败返回
+
      *
      * @param message
      */
@@ -132,7 +132,7 @@ public abstract class BaseRtcObserver<T> implements Observer<BaseRtcResponse<T>>
     }
 
     /**
-     * 请求数据失败返回
+
      *
      * @param
      */
@@ -141,7 +141,7 @@ public abstract class BaseRtcObserver<T> implements Observer<BaseRtcResponse<T>>
     }
 
     /**
-     * 请求完成返回
+
      */
     protected abstract void onFinish();
 

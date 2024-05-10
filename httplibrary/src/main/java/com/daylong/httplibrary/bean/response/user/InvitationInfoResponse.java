@@ -2,11 +2,11 @@ package com.daylong.httplibrary.bean.response.user;
 
 public class InvitationInfoResponse {
 
-    private String invoteCode;//邀请码
-    private Integer bindFlag; //是否已经绑定
-    private String shareUrl; //分享链接
-    private String shareTitle; //分享标题
-    private String shareDesc; //分享描述
+    private String invoteCode;
+    private Integer bindFlag; 
+    private String shareUrl; 
+    private String shareTitle; 
+    private String shareDesc; 
 
     public String getInvoteCode() {
         return "ID：" + invoteCode;

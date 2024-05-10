@@ -38,19 +38,19 @@ public class AliPay {
                         @Override
                         public void run() {
                             /**
-                             对于支付结果，请商户依赖服务端的异步通知结果。同步通知结果，仅作为支付结束的通知。
+
                              */
-                            String resultInfo = payResult.getResult();// 同步返回需要验证的信息
+                            String resultInfo = payResult.getResult();
                             String resultStatus = payResult.getResultStatus();
-                            // 判断resultStatus 为9000则代表支付成功
+                            
                             if (TextUtils.equals(resultStatus, "9000")) {
                                 String payRequest = msgMap.get("payRequest");
 
                                 PayRequest payRequest1 = JsonUtil.fromJsonToObject(payRequest, PayRequest.class);
                                 PayListenerMrg.getInstance().onPaySuc(payRequest1.getPayCommodityType(), msgMap.get("odNo"), payRequest1);
-                                ToastUtil.show("支付成功");
+
                             } else {
-                                ToastUtil.show("支付失败");
+
                                 PayListenerMrg.getInstance().onPayFail();
                             }
                         }
@@ -70,7 +70,7 @@ public class AliPay {
 
     public void pay(PayRequest payRequest) {
 
-        // 提交获取阿里订单信息
+        
 
 
         RetrofitFactory.getInstance().createApi(PayApi.class).aliPay(payRequest)
@@ -101,7 +101,7 @@ public class AliPay {
                                 mHandler.sendMessageDelayed(msg,1000);
                             }
                         };
-                        // 必须异步调用
+                        
                         Thread payThread = new Thread(payRunnable);
                         payThread.start();
 

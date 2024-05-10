@@ -2,7 +2,7 @@ package com.daylong.httplibrary;
 
 
 /**
- * 生成订单
+
  */
 public class PayOrderBean {
 

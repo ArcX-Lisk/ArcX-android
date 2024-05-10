@@ -33,6 +33,6 @@ public class ArcadeOpenBtn extends ArcadeBaseView {
 
     @Override
     protected String getBtnName() {
-        return "开炮";
+
     }
 }

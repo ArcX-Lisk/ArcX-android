@@ -4,7 +4,7 @@ import com.daylong.gamelibrary.meuns.GameCmdType;
 import com.daylong.gamelibrary.request.BaseGameRequest;
 
 /**
- * 包机
+
  */
 public class CharterGameInfoRequest extends BaseGameRequest {
 

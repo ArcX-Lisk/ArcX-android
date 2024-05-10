@@ -15,11 +15,11 @@ import java.util.Random;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * 飘动的动画
+
  */
 public class FloatingGoldCoinsGroup implements FloatGameNumTextView.OnAnimEndListener {
 
-    //    队列
+    
     private LinkedBlockingQueue<FloatGameNumTextView> textViewBlockingQueue;
     private ViewGroup viewGroup;
 

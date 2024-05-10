@@ -65,7 +65,7 @@ public class NumTextView extends BaseTextView {
 
 
     /**
-     * 设置数字 有, 号分割
+
      *
      * @param num
      */
@@ -73,7 +73,7 @@ public class NumTextView extends BaseTextView {
         if (num >= 0) {
             setText(StringUtils.numFormatDot(num));
         } else {
-            MyLogUtil.e("报错-" + "num 数值出错:num=" + num + ":num 只能为大于等于0的数值");
+
         }
     }
 

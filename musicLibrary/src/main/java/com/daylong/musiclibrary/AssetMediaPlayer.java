@@ -20,10 +20,10 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class AssetMediaPlayer implements
         MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener, IPlay {
 
-    public MediaPlayer mediaPlayer; // 媒体播放器
+    public MediaPlayer mediaPlayer; 
     private AssetManager assetManager;
     private List<String> defaultMusicList = new ArrayList<>();
-    //队列音效
+    
     private LinkedBlockingQueue<String> blockingQueueMusic = new LinkedBlockingQueue<String>();
     private Set<String> notLoopingName = new HashSet<>();
 
@@ -34,29 +34,29 @@ public class AssetMediaPlayer implements
         this.prefix = prefix;
     }
 
-    // 初始化播放器
+    
     public AssetMediaPlayer(Context context) {
         try {
             assetManager = context.getAssets();
             mediaPlayer = new MediaPlayer();
-            // 设置播放类型 设置类型
+            
             mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            // 加载完毕回调
+            
             mediaPlayer.setOnPreparedListener(this);
-            //流媒体播放结束监听
+            
             mediaPlayer.setOnCompletionListener(this);
             notLoopingName.add(MediaPlayerType.RANKING_MVP.getMusicName());
             notLoopingName.add(MediaPlayerType.PRIZE_WHEEL_GRAND.getMusicName());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        // 每一秒触发一次
+        
 
     }
 
 
     /**
-     * 添加默认音乐 播放其他营销之后结束后重新播放 默认音效
+
      *
      * @param defaultMusicList
      */
@@ -67,10 +67,10 @@ public class AssetMediaPlayer implements
 
 
     /**
-     * 播放
+
      */
     public void play() {
-        //随机播放音乐
+        
         if (TextUtils.equals(playMusicName, "start")) {
             return;
         }
@@ -83,7 +83,7 @@ public class AssetMediaPlayer implements
     }
 
 
-    //判断是否正在播放中
+    
     public boolean isPlay() {
         return mediaPlayer.isPlaying();
     }
@@ -95,7 +95,7 @@ public class AssetMediaPlayer implements
     private String playMusicName;
 
     /**
-     * 播放音效
+
      */
     public void play(String musicName, float volume) {
         try {
@@ -106,7 +106,7 @@ public class AssetMediaPlayer implements
             }
             playMusicName = musicName;
             this.volume = volume;
-            //重置MediaPlayer至未初始化状态。
+            
             mediaPlayer.reset();
             String musicPath;
 
@@ -120,7 +120,7 @@ public class AssetMediaPlayer implements
             AssetFileDescriptor assetFileDescriptor = assetManager.openFd(musicPath);
             mediaPlayer.setDataSource(assetFileDescriptor.getFileDescriptor(), assetFileDescriptor.getStartOffset(), assetFileDescriptor.getLength());
             mediaPlayer.setVolume(volume, volume);
-            //异步加载声音
+            
             mediaPlayer.prepareAsync();
             // music/egypt/sound_egypt_start
             // music/egypt/sound_egypt_start.mp3
@@ -130,7 +130,7 @@ public class AssetMediaPlayer implements
     }
 
     /**
-     * 播放音效
+
      */
 
     @Override
@@ -152,7 +152,7 @@ public class AssetMediaPlayer implements
     }
 
     /**
-     * 停止音乐
+
      */
     @Override
     public void stop() {
@@ -168,9 +168,9 @@ public class AssetMediaPlayer implements
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying())
                 mediaPlayer.stop();
-            //重置MediaPlayer至未初始化状态。
+            
             mediaPlayer.reset();
-            //回收流媒体
+            
             mediaPlayer.release();
             mediaPlayer = null;
         }
@@ -178,12 +178,12 @@ public class AssetMediaPlayer implements
 
 
     /**
-     * 是否循环
+
      */
     private boolean isLoopPlay = true;
 
     /**
-     * 是否循环播放··
+
      *
      * @param loopPlay
      */
@@ -192,10 +192,10 @@ public class AssetMediaPlayer implements
     }
 
 
-    //加载完毕声音回调
+    
     @Override
     public void onPrepared(MediaPlayer mp) {
-        //加载成功
+        
 
 
         int duration = mp.getDuration();
@@ -235,7 +235,7 @@ public class AssetMediaPlayer implements
 
 
     /**
-     * 播放音乐
+
      */
     public void playMusic() {
         mediaPlayer.start();

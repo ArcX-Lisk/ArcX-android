@@ -4,10 +4,10 @@ import com.daylong.gamelibrary.bean.bean.CharterSettlementMsg;
 
 public class GameOperateRequestParam extends BaseGameRequestParam {
 
-    private Integer fallNum; //得到的币
-    private Integer goldNum; //余额
+    private Integer fallNum; 
+    private Integer goldNum; 
 
-    private CharterSettlementMsg charterSettlementMsg; //包机结算信息
+    private CharterSettlementMsg charterSettlementMsg; 
 
     public Integer getFallNum() {
         return fallNum;

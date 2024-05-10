@@ -10,7 +10,7 @@ import net.daylong.baselibrary.http.view.IViewBaseView;
 
 import io.reactivex.Observable;
 
-//包机
+
 public interface CharterContract {
     interface CharterModel extends IViewBaseModel {
 

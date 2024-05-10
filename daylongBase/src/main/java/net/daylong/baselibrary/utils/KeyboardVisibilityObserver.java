@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 键盘弹出/收起监听
+
  * Created by hucanhui on 18/11/14.
  */
 public class KeyboardVisibilityObserver {

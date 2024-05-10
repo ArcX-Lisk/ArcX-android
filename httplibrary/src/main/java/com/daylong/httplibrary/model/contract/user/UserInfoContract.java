@@ -40,7 +40,7 @@ public interface UserInfoContract {
         public abstract void updateLevel(int atbTp);
         public abstract void  updatePassword(String email, String password, String code);
 
-        //请求用户信息
+        
 
     }
 }

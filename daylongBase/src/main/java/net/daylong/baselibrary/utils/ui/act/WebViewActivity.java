@@ -23,7 +23,7 @@ import net.daylong.baselibrary.listener.MyWebViewClient;
 
 /**
  * @author
- * @Company 广州大龙网络科技有限公司
+
  * @Description
  * @Date 2020/1/9
  * @Version 1.0
@@ -73,30 +73,30 @@ public class WebViewActivity extends BaseActivity {
 
         url = intent.getStringExtra("url");
 
-        //重新加载 点击网页里面的链接还是在当前的webview里跳转。不跳到浏览器那边
+        
         mWebView.setWebViewClient(new MyWebViewClient());
-        //支持js
-        //支持js
-        // 解决图片不显示
+        
+        
+        
         mWebView.getSettings().setBlockNetworkImage(false);
         mWebView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
-        //自适应屏幕
+        
         mWebView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         mWebView.getSettings().setLoadWithOverviewMode(true);
-        //设置可以支持缩放
+        
         mWebView.getSettings().setSupportZoom(false);
-        //扩大比例的缩放
+        
         mWebView.getSettings().setUseWideViewPort(false);
-        //设置是否出现缩放工具
+        
         mWebView.getSettings().setBuiltInZoomControls(false);
         mWebView.getSettings().setDomStorageEnabled(true);
         mWebView.setWebChromeClient(new WebChromeClient() {
             @Override
             public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-                // 处理按钮点击事件
+                
                 if (message.equals("Button was clicked")) {
-                    // 在这里处理按钮点击事件
-                    ToastUtil.show("点击了确认按钮");
+                    
+
                 }
                 return super.onJsAlert(view, url, message, result);
             }

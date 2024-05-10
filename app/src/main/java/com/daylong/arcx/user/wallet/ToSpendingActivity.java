@@ -36,7 +36,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 转移
+
  */
 public class ToSpendingActivity extends BaseMvpActivity<ToSpendingPresenter, ToSpendingModel> implements ToSpendingContract.ToSpendingView {
 
@@ -83,7 +83,7 @@ public class ToSpendingActivity extends BaseMvpActivity<ToSpendingPresenter, ToS
         MyTextView tvAsset = MyTextView.create(rootView, new ConstraintBuilder().ww().leftTop(contentBg).leftTopMargin(8, 11));
         tvAsset.initText("Asset", 8, net.daylong.daylongbase.R.color.color_333, true);
 
-        //类型
+        
         DefaultView typeItemBg = DefaultView.create(rootView, new ConstraintBuilder(172, 22).topMargin(4).topToBottom(tvAsset).centerH());
         typeItemBg.setBackgroundResource(R.drawable.shape_r8_fff);
         MyImageView itemIcon = MyImageView.create(rootView, new ConstraintBuilder(18).leftCenterV(typeItemBg).leftMargin(5), walletType.getRegId());

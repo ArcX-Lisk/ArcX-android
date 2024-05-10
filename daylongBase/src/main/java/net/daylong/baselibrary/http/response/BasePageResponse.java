@@ -16,7 +16,7 @@ public class BasePageResponse<T> {
 
 
 
-    private static final int CODE_SUCCESS = 1;//成功的code
+    private static final int CODE_SUCCESS = 1;
 
     public long getTime() {
         return serverDate;
@@ -64,7 +64,7 @@ public class BasePageResponse<T> {
 
 
     /**
-     * 是否请求数据成功
+
      *
      * @return
      */

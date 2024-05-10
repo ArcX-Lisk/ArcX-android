@@ -3,9 +3,9 @@ package com.daylong.gamelibrary.bean.bean;
 public class CharterSettlementMsg {
 
 
-    private Integer charterBalance; //包机余额
-    private Integer returnNum; //包机返还
-    private Integer totalNum; //合计获得
+    private Integer charterBalance; 
+    private Integer returnNum; 
+    private Integer totalNum; 
 
     public Integer getCharterBalance() {
         return charterBalance;

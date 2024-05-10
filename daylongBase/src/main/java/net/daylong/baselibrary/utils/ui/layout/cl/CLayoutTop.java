@@ -4,7 +4,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Constraints;
 
 /**
- * 左边对齐
+
  */
 public class CLayoutTop {
 
@@ -104,7 +104,7 @@ public class CLayoutTop {
 
 
     /**
-     * 控件再右边 头部边距和右边边距
+
      *
      * @param params
      * @return
@@ -121,7 +121,7 @@ public class CLayoutTop {
     //--------------------------------------
 
     /**
-     * 上下居中
+
      *
      * @return
      */
@@ -133,7 +133,7 @@ public class CLayoutTop {
     }
 
     /**
-     * 上下居中
+
      *
      * @return
      */
@@ -143,7 +143,7 @@ public class CLayoutTop {
     }
 
     /**
-     * 上下居中
+
      *
      * @return
      */
@@ -156,7 +156,7 @@ public class CLayoutTop {
 
 
     /**
-     * 上下居中
+
      *
      * @return
      */
@@ -168,7 +168,7 @@ public class CLayoutTop {
     }
 
     /**
-     * 上下居中
+
      *
      * @return
      */

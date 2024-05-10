@@ -4,8 +4,8 @@ package com.daylong.userlibrary.enums;
 import com.daylong.httplibrary.bean.request.user.LoginRequest;
 
 public enum LoginType {
-    TOURIST(1, "游客登陆")//
-    , WECHAT(3, "微信登录")//
+
+
     ;
 
     private int id;

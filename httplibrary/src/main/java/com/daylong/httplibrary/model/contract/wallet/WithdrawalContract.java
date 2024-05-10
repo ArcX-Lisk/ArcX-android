@@ -9,16 +9,16 @@ import net.daylong.baselibrary.http.view.IViewBaseView;
 import io.reactivex.Observable;
 
 /**
- * 提现请求
+
  */
 public interface WithdrawalContract {
     interface WithdrawalModel extends IViewBaseModel {
 
         /**
-         * 提现
+
          *
-         * @param tkTp 提现类型
-         * @param amt  提下今日
+
+
          * @return
          */
         Observable<BaseResponse<Object>> postWithdrawal(int tkTp, double amt);

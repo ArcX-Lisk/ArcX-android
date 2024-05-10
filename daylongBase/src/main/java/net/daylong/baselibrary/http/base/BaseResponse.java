@@ -1,7 +1,7 @@
 package net.daylong.baselibrary.http.base;
 public class BaseResponse<T> {
 
-    private static final String CODE_SUCCESS = "1";//成功的code
+    private static final String CODE_SUCCESS = "1";
     private int errorCode;
     private String errorDesc;
     private T serverMsg;
@@ -43,7 +43,7 @@ public class BaseResponse<T> {
     }
 
     /**
-     * 是否请求数据成功
+
      *
      * @return
      */

@@ -8,9 +8,9 @@ public class SocketLogUtil {
     private static final String  TAG = "webSocket->";
 
     /**
-     * 打印日志(Verbose)
+
      *
-     * @param msg 内容
+
      */
     public static void v(String msg) {
         if (sDebug) {
@@ -19,9 +19,9 @@ public class SocketLogUtil {
     }
 
     /**
-     * 打印日志(Debug)
+
      *
-     * @param msg 内容
+
      */
     public static void d(String msg) {
         if (sDebug) {
@@ -31,9 +31,9 @@ public class SocketLogUtil {
 
 
     /**
-     * 打印日志(Info)
+
      *
-     * @param msg 内容
+
      */
     public static void i(String msg) {
         if (sDebug) {
@@ -42,9 +42,9 @@ public class SocketLogUtil {
     }
 
     /**
-     * 打印日志(Warm)
+
      *
-     * @param msg 内容
+
      */
     public static void w(String msg) {
         if (sDebug) {
@@ -55,9 +55,9 @@ public class SocketLogUtil {
 
 
     /**
-     * 打印日志(Error)
+
      *
-     * @param msg 内容
+
      */
     public static void e(String msg) {
         if (sDebug) {

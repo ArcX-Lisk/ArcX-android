@@ -43,7 +43,7 @@ public class MyInputFilter implements InputFilter {
             String lastText = dest.toString();
 
             /**
-             * 如果是删除不做处理
+
              */
             if (endText.length() > lastText.length()) {
                 return null;
@@ -54,19 +54,19 @@ public class MyInputFilter implements InputFilter {
                     dest.subSequence(dend, dest.length()).toString();
 
 
-            //最小的输入内容
+            
             int minInput = configureInfo.getMinInput(id);
 
 
 //            if (!TextUtils.isEmpty(resultingTxt) && StringUtils.isNumber(resultingTxt)) {
 //
 //
-//                MyLogUtil.e("ag--input-->" + resultingTxt + "<最小>" + minInput);
-//                //输入的
+
+
 //                int i = Integer.parseInt(resultingTxt) * 100;
-//                //可以输入最大值
+
 //                int maxInput = configureInfo.getMaxInput(id, price);
-//                //余额
+
 //                if (i > maxInput) {
 //                    editText.setText(String.valueOf((int) maxInput));
 //                    editText.setSelection(editText.getText().length());

@@ -1,7 +1,7 @@
 package com.daylong.httplibrary.bean.request;
 
 /**
- * 请求设备信息
+
  */
 public class GameInfoRequest {
     private int eqmId;

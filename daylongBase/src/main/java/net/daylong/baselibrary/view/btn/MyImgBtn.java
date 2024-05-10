@@ -48,19 +48,19 @@ public class MyImgBtn extends androidx.appcompat.widget.AppCompatImageButton imp
         if (onImageClickListener == null) {
             return false;
         }
-        Drawable buttonBackground = getDrawable(); // 获取按钮的背景Drawable
+        Drawable buttonBackground = getDrawable(); 
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                buttonBackground .setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); // 灰色效果
+                buttonBackground .setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); 
                 setImageDrawable(buttonBackground);
                 break;
 
-            //松开
+            
             case MotionEvent.ACTION_UP:
-                //移出
+                
             case MotionEvent.ACTION_CANCEL:
-                //松手时间差
+                
                 long curTime = System.currentTimeMillis();
 
                 if (curTime - clickTime < 1000) {
@@ -68,7 +68,7 @@ public class MyImgBtn extends androidx.appcompat.widget.AppCompatImageButton imp
                 }
                 clickTime = curTime;
 
-                buttonBackground.clearColorFilter(); // 清除灰色效果
+                buttonBackground.clearColorFilter(); 
                 setImageDrawable(buttonBackground);
                 onImageClickListener.onClick(this);
                 break;

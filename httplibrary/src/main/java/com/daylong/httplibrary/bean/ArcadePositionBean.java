@@ -5,7 +5,7 @@ import com.daylong.httplibrary.bean.response.user.UserInfoResponse;
 import java.io.Serializable;
 
 /**
- * 街机游戏
+
  */
 public class ArcadePositionBean implements Serializable {
     private int productId;

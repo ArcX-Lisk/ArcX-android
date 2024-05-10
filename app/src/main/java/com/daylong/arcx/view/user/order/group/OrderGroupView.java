@@ -40,10 +40,10 @@ public class OrderGroupView extends RadioGroup implements RadioGroup.OnCheckedCh
         setOrientation(HORIZONTAL);
         setGravity(Gravity.CENTER);
         setId(View.generateViewId());
-        taskDay = TaskRadioBtn.create(this, "待发货", 0);
+
         taskDay.setId(net.daylong.daylongbase.R.id.base_view_1);
 
-        taskWeek = TaskRadioBtn.create(this, "已邮寄", 20);
+
         taskWeek.setId(net.daylong.daylongbase.R.id.base_view_2);
         taskDay.setChecked(true);
         setOnCheckedChangeListener(this);
@@ -71,14 +71,14 @@ public class OrderGroupView extends RadioGroup implements RadioGroup.OnCheckedCh
     private int tabCurrent;
 
     public void getFragment(int checkedId) {
-        //如果是周任务
+        
 
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
 
         fragment = (BaseFragment) fragmentManager.findFragmentByTag(checkedId + "");
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if (fragment == null) {
-            //首页
+            
             if (checkedId == net.daylong.daylongbase.R.id.base_view_1) {
                 fragment = new MyPendingItemsFragment();
 
@@ -90,7 +90,7 @@ public class OrderGroupView extends RadioGroup implements RadioGroup.OnCheckedCh
             fragmentTransaction.show(fragment);
             fragment.onFragmentEnter();
         }
-        //获取当前显示的Fragment
+        
         BaseFragment CurrentFragment = (BaseFragment) fragmentManager.findFragmentByTag(tabCurrent + "");
         if (tabCurrent != 0 && CurrentFragment != null && tabCurrent != checkedId) {
             fragmentTransaction.hide(CurrentFragment);

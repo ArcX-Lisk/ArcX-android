@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 public class BaseHttpRtcStatus implements Serializable {
 
-    private static final int CODE_SUCCESS = 0;//成功的code
+    private static final int CODE_SUCCESS = 0;
     private int errcode;
     private String errmsg;
 
@@ -32,9 +32,9 @@ public class BaseHttpRtcStatus implements Serializable {
     }
 
     /**
-     * API是否请求失败
+
      *
-     * @return 失败返回true, 成功返回false
+
      */
     public boolean isOk() {
         return CODE_SUCCESS == 0;

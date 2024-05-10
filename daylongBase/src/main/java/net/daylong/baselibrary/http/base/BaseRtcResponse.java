@@ -1,7 +1,7 @@
 package net.daylong.baselibrary.http.base;
 public class BaseRtcResponse<T> {
 
-    private static final int CODE_SUCCESS = 0;//成功的code
+    private static final int CODE_SUCCESS = 0;
     private int errcode;
     private String errmsg;
     private T remotesdp;
@@ -48,7 +48,7 @@ public class BaseRtcResponse<T> {
     }
 
     /**
-     * 是否请求数据成功
+
      *
      * @return
      */

@@ -1,7 +1,7 @@
 package com.daylong.gamelibrary.callback;
 
 /**
- * 游戏倒计时
+
  */
 public interface GameCountListener {
 

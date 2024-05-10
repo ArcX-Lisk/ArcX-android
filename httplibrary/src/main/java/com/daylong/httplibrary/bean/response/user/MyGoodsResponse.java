@@ -4,10 +4,10 @@ public class MyGoodsResponse {
 
 
     private long awardId; //id
-    private String awardName; //奖励名称
-    private String awardImgUrl; //奖励图片
-    private Integer awardNum; //奖励数量
-    private String trackingNo; //快递单号
+    private String awardName; 
+    private String awardImgUrl; 
+    private Integer awardNum; 
+    private String trackingNo; 
 
     public long getAwardId() {
         return awardId;

@@ -44,7 +44,7 @@ public class BaseMsg<T extends BaseParam> {
 
 
     /**
-     * 返回string
+
      *
      * @return
      */

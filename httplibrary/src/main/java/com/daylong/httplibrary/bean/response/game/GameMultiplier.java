@@ -25,8 +25,8 @@ public class GameMultiplier implements Serializable {
     }
 
     public static class MulTblnDTO implements Serializable {
-        private Integer mulAmt; //价格
-        private Integer lmFlg; //是否限制
+        private Integer mulAmt; 
+        private Integer lmFlg; 
 
         public Integer getMulAmt() {
             return mulAmt;

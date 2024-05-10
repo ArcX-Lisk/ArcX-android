@@ -38,7 +38,7 @@ public class StringUtils {
     }
 
     /**
-     * 判断字符串是否有值，如果为null或者是空字符串或者只有空格或者为"null"字符串，则返回true，否则则返回false
+
      */
     public static boolean isEmpty(String value) {
         return !(value != null && !"".equalsIgnoreCase(value.trim())
@@ -46,10 +46,10 @@ public class StringUtils {
     }
 
     /**
-     * 判断字符串是否为纯数字
+
      *
-     * @param str 字符串
-     * @return 是否纯数字
+
+
      */
     public static boolean isNumber(String str) {
         for (int i = 0; i < str.length(); i++) {
@@ -61,20 +61,20 @@ public class StringUtils {
     }
 
     /**
-     * 判断字符串是否为纯数字
+
      *
-     * @param str 字符串
-     * @return 是否纯数字
+
+
      */
     public static boolean isNubAndDot(String str) {
         return str.matches("\\d+(\\.\\d+)?");
     }
 
     /**
-     * 判断手机号字符串是否合法
+
      *
-     * @param phoneNumber 手机号字符串
-     * @return 手机号字符串是否合法
+
+
      */
     public static boolean isPhoneNumberValid(String phoneNumber) {
         boolean isValid = false;
@@ -89,11 +89,11 @@ public class StringUtils {
     }
 
     /**
-     * 判断手机号字符串是否合法
+
      *
-     * @param areaCode    区号
-     * @param phoneNumber 手机号字符串
-     * @return 手机号字符串是否合法
+
+
+
      */
     public static boolean isPhoneNumberValid(String areaCode, String phoneNumber) {
         if (TextUtils.isEmpty(phoneNumber)) {
@@ -120,11 +120,11 @@ public class StringUtils {
     }
 
     /**
-     * 判断字符串是否是手机号格式
+
      *
-     * @param areaCode    区号
-     * @param phoneNumber 手机号字符串
-     * @return 字符串是否是手机号格式
+
+
+
      */
     public static boolean isPhoneFormat(String areaCode, String phoneNumber) {
         if (TextUtils.isEmpty(phoneNumber)) {
@@ -147,10 +147,10 @@ public class StringUtils {
     }
 
     /**
-     * 判断字符串是否是邮箱
+
      *
      * @param email email
-     * @return 字符串是否是邮箱
+
      */
     public static boolean isEmail(String email) {
         String str = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(" +
@@ -161,7 +161,7 @@ public class StringUtils {
     }
 
     /**
-     * 是否英语
+
      *
      * @param charaString
      * @return
@@ -189,7 +189,7 @@ public class StringUtils {
     }
 
     /**
-     * 区分数字,
+
      *
      * @param number
      * @return
@@ -200,7 +200,7 @@ public class StringUtils {
     }
 
     /**
-     * 区分数字,
+
      *
      * @param number
      * @return
@@ -211,7 +211,7 @@ public class StringUtils {
     }
 
     /**
-     * 处理文字
+
      *
      * @param coin
      * @return
@@ -239,7 +239,7 @@ public class StringUtils {
     }
 
     /**
-     * 处理文字
+
      *
      * @param coin
      * @return
@@ -281,10 +281,10 @@ public class StringUtils {
     public static String string2Unicode(String string) {
         StringBuffer unicode = new StringBuffer();
         for (int i = 0; i < string.length(); i++) {
-            // 取出每一个字符
+            
             char c = string.charAt(i);
             if (c < 0x20 || c > 0x7E) {
-                // 转换为unicode
+                
                 String tmp = Integer.toHexString(c);
                 if (tmp.length() >= 4) {
                     unicode.append("\\u" + Integer.toHexString(c));

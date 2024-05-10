@@ -14,7 +14,7 @@ public abstract class IGameUserView extends ConstraintLayoutView {
 
 
     /**
-     * 設置用戶信息
+
      *
      * @param info
      */

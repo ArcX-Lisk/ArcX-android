@@ -39,7 +39,7 @@ public class VersionSettingItem extends ISettingItemView {
 
     @Override
     public String getName() {
-        return "当前版本号";
+
     }
 
     @Override

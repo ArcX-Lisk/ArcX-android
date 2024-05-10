@@ -4,10 +4,10 @@ package com.daylong.httplibrary.bean.response.game.charter;
 
 public class UserCharterInfoResponse {
 
-    private Integer halfCharterTime; //348包机剩余次数
-    private Integer oneCharterTime;//618包机剩余次数
-    private Integer halfDayTime;//348当天包机次数
-    private Integer oneDayTime;//618当天包机次数
+    private Integer halfCharterTime; 
+    private Integer oneCharterTime;
+    private Integer halfDayTime;
+    private Integer oneDayTime;
 
     public UserCharterInfoResponse(Integer halfCharterTime, Integer oneCharterTime, Integer halfDayTime, Integer oneDayTime) {
         this.halfCharterTime = halfCharterTime;
@@ -50,7 +50,7 @@ public class UserCharterInfoResponse {
     public void setOneDayTime(Integer oneDayTime) {
         this.oneDayTime = oneDayTime;
     }
-//    是否可以直接开始游戏
+
     public Boolean isStartCharter(Integer id) {
         if (id != 2) {
             return halfCharterTime > 0;
@@ -60,7 +60,7 @@ public class UserCharterInfoResponse {
     }
 //
 //    /**
-//     * 没有购买次数
+
 //     *
 //     * @return
 //     */

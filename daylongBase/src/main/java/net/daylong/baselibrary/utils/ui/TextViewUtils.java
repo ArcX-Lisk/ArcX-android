@@ -13,10 +13,10 @@ public class TextViewUtils {
 
 
     /**
-     * @param viewGroup 要关联的View
+
      * @param params
-     * @param size      大小
-     * @param color     颜色
+
+
      * @return
      */
     public static TextView create(ViewGroup viewGroup, ViewGroup.LayoutParams params, int size, @ColorRes Integer color) {
@@ -31,9 +31,9 @@ public class TextViewUtils {
     }
 
     /**
-     * @param viewGroup 要关联的View
+
      * @param params
-     * @param size      大小
+
      * @return
      */
     public static TextView create(ViewGroup viewGroup, ViewGroup.LayoutParams params, int size) {

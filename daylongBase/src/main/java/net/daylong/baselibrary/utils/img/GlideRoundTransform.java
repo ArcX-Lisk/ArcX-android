@@ -16,7 +16,7 @@ import java.security.MessageDigest;
 
 /**
  * @author
- * @Company 广州大龙网络科技有限公司
+
  * @Description
  * @Date 2019/12/23
  * @Version 1.0

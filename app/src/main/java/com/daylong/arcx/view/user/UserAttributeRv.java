@@ -18,7 +18,7 @@ import net.daylong.baselibrary.view.recycler.GridRecyclerView;
 import java.util.List;
 
 /**
- * 用户属性List
+
  */
 public class UserAttributeRv extends GridRecyclerView {
 

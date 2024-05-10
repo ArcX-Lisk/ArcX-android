@@ -41,7 +41,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 转移
+
  */
 public class NftSalesCoinActivity extends BaseMvpActivity<NftSalesCoinPresenter, NftSalesCoinModel> implements NftSalesCoinContract.NftSalesCoinView, NftSeekBar.OnEdittextNumListener {
 

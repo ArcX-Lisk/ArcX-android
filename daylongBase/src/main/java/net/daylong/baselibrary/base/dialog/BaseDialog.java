@@ -30,20 +30,20 @@ import net.daylong.baselibrary.utils.ui.layout.cl.ConstraintLayoutUtils;
 import net.daylong.daylongbase.R;
 
 /**
- * Dialog通用样式
+
  */
 public abstract class BaseDialog extends DialogFragment {
 
-    protected float mDimAmount = 0.9f;//背景昏暗度
-    protected boolean mShowBottomEnable;//是否底部显示
-    private int mMargin = 0;//左右边距
+    protected float mDimAmount = 0.9f;
+    protected boolean mShowBottomEnable;
+    private int mMargin = 0;
 
     protected int getAnimStyle() {
         return 0;
     }
 
-    ;//进入退出动画
-    private boolean mOutCancel = true;//点击外部取消
+    ;
+    private boolean mOutCancel = true;
     private Context mContext;
     private int mWidth;
     private int mHeight;
@@ -72,7 +72,7 @@ public abstract class BaseDialog extends DialogFragment {
 
 
     /**
-     * 其他地方是否可以点击关闭
+
      *Y
      * @return
      */
@@ -196,7 +196,7 @@ public abstract class BaseDialog extends DialogFragment {
 
 
     /**
-     * 初始化
+
      */
     private void initParams() {
         Window window = getDialog().getWindow();
@@ -206,7 +206,7 @@ public abstract class BaseDialog extends DialogFragment {
             params.dimAmount = mDimAmount;
             params.softInputMode = WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE;
             window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
-            //设置dialog动画
+            
             if (getAnimStyle() != 0) {
                 window.setWindowAnimations(getAnimStyle());
 
@@ -214,9 +214,9 @@ public abstract class BaseDialog extends DialogFragment {
                 window.setWindowAnimations(R.style.FragmentDialogAnimation);
             }
 
-            window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN); // 隐藏状态栏
-            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON); // 保持屏幕常亮
-            window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN); // 布局扩展到屏幕之外
+            window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN); 
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON); 
+            window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN); 
             window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
@@ -241,7 +241,7 @@ public abstract class BaseDialog extends DialogFragment {
     }
 
     /**
-     * 设置背景昏暗度
+
      *
      * @param dimAmount
      * @return
@@ -253,7 +253,7 @@ public abstract class BaseDialog extends DialogFragment {
 
 
     /**
-     * 是否显示底部
+
      *
      * @param showBottom
      * @return
@@ -264,7 +264,7 @@ public abstract class BaseDialog extends DialogFragment {
     }
 
     /**
-     * 设置宽高
+
      *
      * @param width
      * @param height
@@ -277,7 +277,7 @@ public abstract class BaseDialog extends DialogFragment {
     }
 
     /**
-     * 设置左右margin
+
      *
      * @param margin
      * @return
@@ -289,7 +289,7 @@ public abstract class BaseDialog extends DialogFragment {
 
 
     /**
-     * 设置是否点击外部取消
+
      *
      * @param outCancel
      * @return
@@ -306,21 +306,21 @@ public abstract class BaseDialog extends DialogFragment {
 
 
     /**
-     * 操作dialog布局
+
      *
      * @param rootView
      * @param dialog
      */
     public abstract void initView(ConstraintLayout rootView, BaseDialog dialog);
     /**
-     * 操作dialog布局
+
      *
      * @param rootView
      * @param dialog
      */
     public  void initView(ViewGroup rootView, ViewGroup contentView, BaseDialog dialog){}
     /**
-     * 操作dialog布局
+
      *
      * @param dialog
      */
@@ -329,12 +329,12 @@ public abstract class BaseDialog extends DialogFragment {
 
 
     /**
-     * 初始化数据
+
      */
     public abstract void initData();
 
     /**
-     * 获取屏幕宽度
+
      *
      * @param context
      * @return
@@ -350,17 +350,17 @@ public abstract class BaseDialog extends DialogFragment {
     }
 
     /**
-     * 添加Fragment
+
      *
-     * @param fragment  需要添加的Fragment
-     * @param container 布局Id
+
+
      */
     public void addFragment(BaseFragment fragment, int container, String tag) {
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        if (!fragment.isAdded() && null == getChildFragmentManager().findFragmentByTag(tag)) {   // 先判断是否被add过
-            transaction.add(container, fragment, tag).commitAllowingStateLoss(); // 隐藏当前的fragment，add下一个到Activity中
+        if (!fragment.isAdded() && null == getChildFragmentManager().findFragmentByTag(tag)) {   
+            transaction.add(container, fragment, tag).commitAllowingStateLoss(); 
         } else {
-            transaction.show(fragment).commitAllowingStateLoss(); // 隐藏当前的fragment，显示下一个
+            transaction.show(fragment).commitAllowingStateLoss(); 
         }
     }
 

@@ -39,7 +39,7 @@ public class DollCoinGameTitle extends BaseGameTitleView {
         super(context);
 
 
-        // 是否显示龙珠
+        
         if (isShowDragonBall) {
             dragonBallListView = new DragonBallListView(getContext(), userGameBalance, 5);
             addView(dragonBallListView);
@@ -54,7 +54,7 @@ public class DollCoinGameTitle extends BaseGameTitleView {
     public DollCoinGameTitle(@NonNull BaseGameActivity context) {
         this(context, false);
 
-        //新建包机
+        
     }
 
     @Override
@@ -93,14 +93,14 @@ public class DollCoinGameTitle extends BaseGameTitleView {
     public void gameInfo(GameInfoBean gameInfoBean) {
         super.gameInfo(gameInfoBean);
 
-        //包机
+        
         if (gameStatus == GameStatus.GAME) {
             if (activity.getGameInfo().isShowCharter()) {
                 if (ICharterFlightButton == null) {
                     ICharterFlightButton = new PushCoinCharterBtn(activity, ibtBack.getId());
                     addView(ICharterFlightButton);
                 }
-                //新建包机按钮
+                
                 if (ICharterFlightButton.getVisibility() != View.VISIBLE) {
                     ICharterFlightButton.setVisibility(View.VISIBLE);
                     WebSocketMrg.getInstance().sendMsg(new CharterGameInfoRequest());
@@ -125,7 +125,7 @@ public class DollCoinGameTitle extends BaseGameTitleView {
 
     }
 
-    //包机返回信息
+    
     @Override
     public void onChart(long charterBalance, int leftTime, long endTime) {
         super.onChart(charterBalance, leftTime, endTime);
@@ -157,7 +157,7 @@ public class DollCoinGameTitle extends BaseGameTitleView {
     @Override
     protected void back() {
         if (ICharterFlightButton != null && ICharterFlightButton.isChatter()) {
-            //显示结束 包机
+            
             CharterEndToastDialog.showDialog(activity.getSupportFragmentManager());
         } else {
             WebSocketMrg.getInstance().sendMsg(new ExitGameRequest());

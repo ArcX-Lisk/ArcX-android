@@ -50,7 +50,7 @@ public class StoreActivity  extends BaseActivity  {
         MyImageView.create(titleLayout, new ConstraintBuilder(19).leftCenterV().leftMargin(8), R.drawable.img_points);
 
         MyTextView myTextView = MyTextView.create(titleLayout, new ConstraintBuilder().ww().leftCenterV().leftMargin(31));
-        myTextView.initText("我的积分", 9, R.color.color_434343);
+
 
 
         myCoin = MyTextView.create(titleLayout, new ConstraintBuilder().ww().rightCenterV().rightMargin(8));

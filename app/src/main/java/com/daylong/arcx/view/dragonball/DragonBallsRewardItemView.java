@@ -77,7 +77,7 @@ public class DragonBallsRewardItemView extends ConstraintLayout {
 
 
     /**
-     * 选择
+
      */
     public void selected(boolean isAnim) {
 

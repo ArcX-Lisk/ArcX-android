@@ -8,7 +8,7 @@ import net.daylong.baselibrary.http.response.IBaseView;
 
 import io.reactivex.Observable;
 
-//游客
+
 public interface FeedbackContract {
     interface FeedbackModel extends IBaseModel {
         Observable<BaseResponse<Object>> postFeedback(String str);
@@ -27,7 +27,7 @@ public interface FeedbackContract {
 
         public abstract void postFeedback(String str);
 
-        //请求用户信息
+        
 
 
     }

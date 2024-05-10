@@ -41,10 +41,10 @@ public class BaseTitleView extends ConstraintLayoutView {
     }
 
     /**
-     * 初始化头部信息
+
      *
      * @param activity act
-     * @param strId    标题名称
+
      */
     public void init(int backRegId, BaseActivity activity, Integer strId) {
         myImageBtn.setBackgroundResource(backRegId);

@@ -45,7 +45,7 @@ public class PrivacyCheckBox extends LinearLayout {
 
     public SpannableStringBuilder setCheckText() {
 
-        //已阅读并同意和《隐私权政策》
+        
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
         setText(spannableStringBuilder, " I agree to", "#BCACF5", new ClickableSpan() {
             @Override
@@ -63,7 +63,7 @@ public class PrivacyCheckBox extends LinearLayout {
             @Override
             public void onClick(View view) {
 
-                ToastUtil.show("用户注册协议");
+
 
             }
 
@@ -78,7 +78,7 @@ public class PrivacyCheckBox extends LinearLayout {
         setText(spannableStringBuilder, "Privacy Palicy", "#FF9A9A", new ClickableSpan() {
             @Override
             public void onClick(View view) {
-                ToastUtil.show("用户注册协议");
+
 
 
             }
@@ -94,11 +94,11 @@ public class PrivacyCheckBox extends LinearLayout {
     }
 
     /**
-     * 设置文字
+
      *
      * @param spannableStringBuilder
-     * @param msg                    内容
-     * @param color                  颜色
+
+
      */
     public void setText(SpannableStringBuilder spannableStringBuilder, String msg, String color, ClickableSpan clickableSpan) {
 

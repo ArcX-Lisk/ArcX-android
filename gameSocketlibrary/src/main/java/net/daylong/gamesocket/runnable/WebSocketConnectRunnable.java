@@ -7,10 +7,10 @@ public class WebSocketConnectRunnable implements Runnable {
 
 
     /**
-     * 重新连接次数
+
      */
     private int reconnectNum;
-    private static final int NEXT_RECONNECT_TIME = 1000 * 5; //5秒
+    private static final int NEXT_RECONNECT_TIME = 1000 * 5; 
 
     @Override
     public void run() {
@@ -29,7 +29,7 @@ public class WebSocketConnectRunnable implements Runnable {
     }
 
     /**
-     * 刷新重连次数
+
      */
     public void reReconnectNum() {
         if (reconnectNum != 0) {

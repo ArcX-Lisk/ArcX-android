@@ -14,7 +14,7 @@ import net.daylong.baselibrary.utils.ui.layout.cl.ConstraintLayoutView;
 import net.daylong.gamesocket.mrg.WebSocketMrg;
 
 /**
- * 游戏控制View
+
  */
 public abstract class IGameOperateView extends ConstraintLayoutView implements OnClickTouchListener.OnClickListener {
     protected abstract GameOperateType getGameOperateType();

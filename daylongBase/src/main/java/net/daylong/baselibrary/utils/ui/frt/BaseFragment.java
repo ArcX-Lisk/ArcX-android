@@ -38,7 +38,7 @@ import io.reactivex.disposables.Disposable;
 
 public abstract class BaseFragment extends RxFragment implements IBaseView {
     /**
-     * 上下文对象
+
      */
     protected Context mContext;
 
@@ -50,7 +50,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 加载框
+
      */
 
     @Override
@@ -71,7 +71,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
             BaseActivity activityx = (BaseActivity) activity;
             disposable = activityx.lifecycle().subscribe(activityEvent -> {
                 if (activityEvent == ActivityEvent.START) {
-                    // 处理Activity发送的START事件
+                    
                     onEventStart();
                 } else if (activityEvent == ActivityEvent.STOP) {
                     onEventStop();
@@ -135,8 +135,8 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
 
 
     /**
-     * 初始化view
-     * 子类实现 控件绑定、视图初始化等内容
+
+
      *
      * @param savedInstanceState
      */
@@ -144,8 +144,8 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 初始化数据
-     * 子类可以复写此方法初始化子类数据
+
+
      */
     protected void initData() {
     }
@@ -182,7 +182,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
 
     @Override
     public void hideKeyBord() {
-        //点击空白位置 隐藏软键盘
+        
     }
 
     @Override
@@ -241,40 +241,40 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
 
 
     /**
-     * 添加Fragment
+
      *
-     * @param fragment  需要添加的Fragment
-     * @param container 布局Id
+
+
      */
     public void addFragment(BaseFragment fragment, int container) {
         if (fragment == null) {
             return;
         }
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        if (!fragment.isAdded()) {   // 先判断是否被add过
-            transaction.add(container, fragment).commit(); // 隐藏当前的fragment，add下一个到Activity中
+        if (!fragment.isAdded()) {   
+            transaction.add(container, fragment).commit(); 
         } else {
-            transaction.show(fragment).commit(); // 隐藏当前的fragment，显示下一个
+            transaction.show(fragment).commit(); 
         }
     }
 
     /**
-     * 添加Fragment
+
      *
-     * @param fragment  需要添加的Fragment
-     * @param container 布局Id
+
+
      */
     public void addFragment(BaseFragment fragment, int container, String tag) {
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        if (!fragment.isAdded() && null == getChildFragmentManager().findFragmentByTag(tag)) {   // 先判断是否被add过
-            transaction.add(container, fragment, tag).commitAllowingStateLoss(); // 隐藏当前的fragment，add下一个到Activity中
+        if (!fragment.isAdded() && null == getChildFragmentManager().findFragmentByTag(tag)) {   
+            transaction.add(container, fragment, tag).commitAllowingStateLoss(); 
         } else {
-            transaction.show(fragment).commitAllowingStateLoss(); // 隐藏当前的fragment，显示下一个
+            transaction.show(fragment).commitAllowingStateLoss(); 
         }
     }
 
     /**
-     * 删除Fragment
+
      *
      * @param fragment
      */
@@ -288,7 +288,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 隐藏Fragment
+
      *
      * @param fragment
      */
@@ -303,7 +303,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 隐藏Fragment
+
      */
     public void hideFragment(String tag) {
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
@@ -318,7 +318,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 隐藏Fragment
+
      *
      * @param fragment
      */
@@ -333,7 +333,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 隐藏Fragment
+
      */
     public void showFragment(String tag) {
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
@@ -356,10 +356,10 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 判断横竖屏
+
      *
      * @param activity
-     * @return 1：竖 | 0：横
+
      */
     public static int getScreenOrient(Activity activity) {
         int orient = activity.getRequestedOrientation();
@@ -413,7 +413,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 添加view 到主view 中
+
      *
      * @param view
      */
@@ -424,9 +424,9 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 添加View 到主view
+
      *
-     * @param position 位置
+
      * @param view     view
      */
     public void addView(int position, View view) {
@@ -440,7 +440,7 @@ public abstract class BaseFragment extends RxFragment implements IBaseView {
     }
 
     /**
-     * 初始化背景
+
      */
     protected void initBg() {
         if (bgImgRegId() != null) {

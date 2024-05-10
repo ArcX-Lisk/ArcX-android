@@ -23,7 +23,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 娃娃机
+
  */
 public class NftAdapter extends BaseQuickAdapter<GameItemInfoResponse, MyViewHolder> {
 

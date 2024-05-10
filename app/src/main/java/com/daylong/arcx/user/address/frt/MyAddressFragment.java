@@ -77,7 +77,7 @@ public class MyAddressFragment extends BaseListFragment<MyAddressPresenter, MyAd
                         Intent intent = new Intent();
 
                         Intent resultIntent = new Intent();
-                        resultIntent.putExtra("address", baseQuickAdapter.getData().get(position)); // 传递参数
+                        resultIntent.putExtra("address", baseQuickAdapter.getData().get(position)); 
                         getActivity().setResult(Activity.RESULT_OK, resultIntent);
                         finish();
                     }

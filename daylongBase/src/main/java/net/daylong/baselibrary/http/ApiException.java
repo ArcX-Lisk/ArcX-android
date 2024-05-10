@@ -74,7 +74,7 @@ public class ApiException extends RuntimeException {
         this.errorMsg = errorMsg;
     }
 
-    //    token 错误
+    
     public boolean isTokenError() {
         return status == 1006 || status == 1007 || status == 1008 || status == 1009;
     }
@@ -83,12 +83,12 @@ public class ApiException extends RuntimeException {
         return status == 1061;
     }
 
-    //    余额不足
+    
     public boolean isNotMoney() {
         return status == 1019;
     }
 
-    //    签名错误
+    
     public boolean isSignError() {
         return status == 1176;
     }

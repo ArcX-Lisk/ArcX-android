@@ -14,7 +14,7 @@ public class CharterPushBtn extends ICharterPushCoinBtn {
     }
 
     public CharterPushBtn(@NonNull Context context) {
-        this(context, R.drawable.img_mch_alert_btn, "包机余额", R.color.color_white, R.color.color_c2001da7, R.drawable.img_coin, R.color.color_white);
+
     }
 
 }

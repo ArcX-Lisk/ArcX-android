@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 包机提示内容
+
  */
 public class CharterDescResponse implements Serializable {
 
@@ -58,7 +58,7 @@ public class CharterDescResponse implements Serializable {
         }
 
         public  String getBtnStr(){
-            return "支付"+getPrice()+"元";
+
         }
 
     }

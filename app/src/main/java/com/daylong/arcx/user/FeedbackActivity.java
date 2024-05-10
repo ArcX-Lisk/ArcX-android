@@ -62,7 +62,7 @@ public class FeedbackActivity extends BaseMvpActivity<FeedbackPresenter, Feedbac
         editText.getPaint().setTextSize(AppUtil.getSize(7));
         editText.setTextColor(getColor(R.color.color_434343));
         editText.setPadding(AppUtil.getSize(6), AppUtil.getSize(6), AppUtil.getSize(6), AppUtil.getSize(6));
-        editText.setHint("说点啥吧～～");
+
         editText.setHintTextColor(getColor(R.color.color_434343));
         editText.setLayoutParams(new ConstraintBuilder(172, 100).topToBottom(baseTitleView).centerH().buildPayoutParams());
 
@@ -75,7 +75,7 @@ public class FeedbackActivity extends BaseMvpActivity<FeedbackPresenter, Feedbac
 
 
         BaseButton btnNewAddress = BaseButton.create(rootView, new ConstraintBuilder(163, 28).bottomCenterH().bottomMargin(25));
-        btnNewAddress.initBtn("提交", 10, R.color.color_434343, true);
+
         btnNewAddress.setGravity(Gravity.CENTER);
         btnNewAddress.setBackgroundResource(R.drawable.shape_r_30_bg_c48);
         btnNewAddress.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +84,7 @@ public class FeedbackActivity extends BaseMvpActivity<FeedbackPresenter, Feedbac
                 String trim = editText.getText().toString().trim();
 
                 if (TextUtils.isEmpty(trim)) {
-                    ToastUtil.show("请填写反馈内容");
+
                     return;
                 }
 
@@ -104,7 +104,7 @@ public class FeedbackActivity extends BaseMvpActivity<FeedbackPresenter, Feedbac
 
     @Override
     public void onFeedback() {
-        ToastUtil.show("反馈成功");
+
 
         finish();
 

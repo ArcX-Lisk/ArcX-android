@@ -59,7 +59,7 @@ public class NewAddressActivity extends BaseMvpActivity<MyAddressEditPresenter, 
         address = (MyAddressResponse) intent.getSerializableExtra("address");
 
         if (address != null) {
-            baseTitleView.setTitleName("编辑地址");
+
             address.setDealOperateType(2);
         } else {
             address = new MyAddressResponse();
@@ -74,29 +74,29 @@ public class NewAddressActivity extends BaseMvpActivity<MyAddressEditPresenter, 
         MyTextView tvName = MyTextView.create(contentView, new ConstraintBuilder().ww().height(30).leftTop().leftTopMargin(12, 0));
         tvName.setId(View.generateViewId());
         tvName.setGravity(Gravity.CENTER_VERTICAL);
-        tvName.initText("收件人", 8, R.color.color_434343);
 
 
-        etName = create(contentView, tvName, null, "请输入收件人姓名", address.getName());
+
+
 
 
         MyTextView tvPhone = MyTextView.create(contentView, new ConstraintBuilder().ww().height(30).left(tvName).topToBottom(tvName));
         tvPhone.setGravity(Gravity.CENTER_VERTICAL);
         tvPhone.setId(View.generateViewId());
-        tvPhone.initText("手机号", 8, R.color.color_434343);
 
-        etPhone = create(contentView, tvPhone, InputType.TYPE_CLASS_PHONE, "请输入手机号码", address.getPhone());
+
+
 
 
         MyTextView tvAddress = MyTextView.create(contentView, new ConstraintBuilder().ww().height(30).left(tvName).topToBottom(tvPhone));
         tvAddress.setId(View.generateViewId());
         tvAddress.setGravity(Gravity.CENTER_VERTICAL);
 
-        tvAddress.initText("地区", 8, R.color.color_434343, true);
+
 
 
         btnAddress = BaseButton.create(contentView, new ConstraintBuilder().ww().centerV(tvAddress).right().rightMargin(10));
-        btnAddress.initBtn(address.getAddress() == null ? "请选择" : address.getAddress(), 7, R.color.color_434343);
+
         btnAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -130,14 +130,14 @@ public class NewAddressActivity extends BaseMvpActivity<MyAddressEditPresenter, 
         tvAddressInfo.setId(View.generateViewId());
         tvAddressInfo.setGravity(Gravity.CENTER_VERTICAL);
 
-        tvAddressInfo.initText("详细地址", 8, R.color.color_434343);
 
-        etAddressInfo = create(contentView, tvAddressInfo, null, "请输入详细地址", address.getArea());
+
+
 
         MyTextView tvDef = MyTextView.create(contentView, new ConstraintBuilder().ww().height(30).left(tvName).topToBottom(tvAddressInfo));
         tvDef.setId(View.generateViewId());
         tvDef.setGravity(Gravity.CENTER_VERTICAL);
-        tvDef.initText("默认", 8, R.color.color_434343);
+
 
 
         DefaultCheckBox defaultCheckBox = new DefaultCheckBox(this, new ConstraintBuilder().ww().right().centerV(tvDef).rightMargin(10), R.drawable.setting_switch_selector);
@@ -151,14 +151,14 @@ public class NewAddressActivity extends BaseMvpActivity<MyAddressEditPresenter, 
         contentView.addView(defaultCheckBox);
 
         BaseButton btnNewAddress = BaseButton.create(contentView, new ConstraintBuilder(163, 28).bottomCenterH().bottomMargin(27));
-        btnNewAddress.initBtn("确定", 10, R.color.color_434343, true);
+
         btnNewAddress.setGravity(Gravity.CENTER);
         btnNewAddress.setBackgroundResource(R.drawable.shape_r_30_bg_c48);
         btnNewAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //判断内容是否为null
+                
 
                 String name = getText(etName);
                 String phone = getText(etPhone);
@@ -167,11 +167,11 @@ public class NewAddressActivity extends BaseMvpActivity<MyAddressEditPresenter, 
                 String[] split = addressStr.split("-");
 
                 if (split.length != 3) {
-                    ToastUtil.show("请选择地区");
+
                     return;
                 } else {
                     if (isOrNull(name, phone, addressInfo)) {
-                        ToastUtil.show("请填写完收货人信息");
+
                         return;
                     }
                 }
@@ -216,7 +216,7 @@ public class NewAddressActivity extends BaseMvpActivity<MyAddressEditPresenter, 
 
     @Override
     public void onMyAddressEditSuc() {
-        ToastUtil.show("添加成功");
+
         finish();
     }
 }

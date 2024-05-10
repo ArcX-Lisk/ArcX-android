@@ -31,7 +31,7 @@ public class ArcadeAddBtn extends ArcadeBaseView {
 
     @Override
     protected String getBtnName() {
-        return "换炮";
+
     }
 
     @Override

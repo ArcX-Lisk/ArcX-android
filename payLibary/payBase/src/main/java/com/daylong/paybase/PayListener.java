@@ -7,14 +7,14 @@ public interface PayListener {
 
 
     /**
-     * 支付成功
+
      *
      * @param type
      */
     void onPayScu(PayType type,String msg);
 
     /**
-     * 支付失败
+
      *
      * @param code
      * @param msg

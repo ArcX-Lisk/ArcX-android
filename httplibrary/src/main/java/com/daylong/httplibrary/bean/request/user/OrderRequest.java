@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 登录请求信息
+
  */
 public class OrderRequest implements Serializable {
 

@@ -5,12 +5,12 @@ import com.daylong.httplibrary.bean.AwardBean;
 import java.io.Serializable;
 
 /**
- * 请求服务器 获取生成订单 信息
+
  */
 public class PayRequest implements Serializable {
-    private Integer payCommodityType; //支付类型
-    private Integer productId; //设备ID
-    private Integer commodityId; //商品ID
+    private Integer payCommodityType; 
+    private Integer productId; 
+    private Integer commodityId; 
     private long num;
     private String imgUrl;
 

@@ -65,7 +65,7 @@ public class DragonBallImageView extends MyImageView {
     int cury;
 
     /**
-     * 移动到那个View中
+
      *
      * @param toView
      */
@@ -85,21 +85,21 @@ public class DragonBallImageView extends MyImageView {
         cury = location2[1];
 
 
-        //需要缩放的大小
+        
         float toScaleWidth = widthA * 0.5f;
         float toScaleHeight = heightA * 0.5f;
 
-        //计算缩放比例
+        
         float scaleX = toScaleWidth / widthB;
         float scaleY = toScaleHeight / heightB;
 
 
-        // 计算缩小后的大小位置
+        
         float centerX = (widthB - (scaleX * widthB)) / 2;
         float centerY = (heightB - (scaleY * heightB)) / 2;
-        //计算缩放比例
+        
 
-// 获取 View A 的位置
+
         int[] location = new int[2];
         toView.getLocationOnScreen(location);
         int x = location[0];
@@ -109,19 +109,19 @@ public class DragonBallImageView extends MyImageView {
         float toY = y + (toScaleWidth / 2) - centerY;
 
 
-// 创建动画
+
         ObjectAnimator moveX = ObjectAnimator.ofFloat(this, "x", tox);
         ObjectAnimator moveY = ObjectAnimator.ofFloat(this, "y", toY);
         ObjectAnimator scaleDownX = ObjectAnimator.ofFloat(this, "scaleX", scaleX);
         ObjectAnimator scaleDownY = ObjectAnimator.ofFloat(this, "scaleY", scaleY);
         Interpolator interpolator = new AccelerateDecelerateInterpolator();
 
-// 设置差值器
+
         moveX.setInterpolator(interpolator);
         moveY.setInterpolator(interpolator);
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(moveX, moveY, scaleDownX, scaleDownY);
-        animatorSet.setDuration(1000); // 设置动画时长
+        animatorSet.setDuration(1000); 
 
         animatorSet.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -135,7 +135,7 @@ public class DragonBallImageView extends MyImageView {
 
                 AnimatorSet animatorSet = new AnimatorSet();
                 animatorSet.playTogether(moveX, moveY, scaleDownX, scaleDownY);
-                animatorSet.setDuration(0); // 设置动画时长
+                animatorSet.setDuration(0); 
                 animatorSet.start();
 
                 if (onAnimatorListener != null) {

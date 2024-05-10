@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class AwardBean implements Serializable {
 
-    private Integer cmdTp; //奖励类型
-    private String awdPct; //奖励图片
-    private Long awdAmt; //奖励数量
+    private Integer cmdTp; 
+    private String awdPct; 
+    private Long awdAmt; 
 
     public AwardBean(Integer commodityType, String awardImgUrl, Long awardNum) {
         this.cmdTp = commodityType;

@@ -19,9 +19,9 @@ public class AnimUtils {
 
 
     /**
-     * 获取动画
+
      *
-     * @param reg 资源文件
+
      * @return
      */
     private static Animation getAnimation(int reg) {

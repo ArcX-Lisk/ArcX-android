@@ -45,7 +45,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 到外部
+
  */
 public class ToExternalActivity extends BaseMvpActivity<ToExternalPresenter, ToExternalModel> implements ToExternalContract.ToExternalView, SelectWalletType.OnItemClickListener {
 
@@ -95,7 +95,7 @@ public class ToExternalActivity extends BaseMvpActivity<ToExternalPresenter, ToE
         contentBg.setBackgroundResource(R.drawable.shape_wallet_bg);
 
 
-        //添加地址
+        
         createAddAddr();
         createSudt(etAddress);
 
@@ -172,7 +172,7 @@ public class ToExternalActivity extends BaseMvpActivity<ToExternalPresenter, ToE
         myTextView.setText(Html.fromHtml(xx));
 
 
-        //網絡
+        
         DefaultView networkBg = DefaultView.create(rootView, new ConstraintBuilder(172, 50).topMargin(8).topToBottom(myTextView).centerH());
         networkBg.setBackgroundResource(R.drawable.shape_r8_fff);
 

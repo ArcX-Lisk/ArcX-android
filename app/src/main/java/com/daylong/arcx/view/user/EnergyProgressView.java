@@ -20,7 +20,7 @@ import net.daylong.baselibrary.view.textview.MyTextView;
 import org.greenrobot.eventbus.util.ErrorDialogConfig;
 
 /**
- * 能量View
+
  */
 public class EnergyProgressView extends ConstraintLayoutView implements View.OnClickListener {
 
@@ -61,10 +61,10 @@ public class EnergyProgressView extends ConstraintLayoutView implements View.OnC
     private int lfTm;
 
     /**
-     * @param cnAmt 当前进度数量
-     * @param ttAmt 总进度数量
-     * @param cgAmt 变更数量
-     * @param lfTm  下次刷新时间
+
+
+
+
      */
     public void setEnergy(int cnAmt, int ttAmt, int cgAmt, int lfTm) {
         this.cnAmt = cnAmt;

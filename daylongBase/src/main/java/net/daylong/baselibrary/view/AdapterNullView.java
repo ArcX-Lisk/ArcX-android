@@ -24,7 +24,7 @@ public class AdapterNullView extends ConstraintLayoutView {
 
 
         MyTextView myTextView = MyTextView.create(this, new ConstraintBuilder().ww().topToBottom(myImageView).centerH());
-        myTextView.initText("没有数据~",8, R.color.color_434343);
+
 
     }
 }

@@ -28,7 +28,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 升级Dialog
+
  */
 public class UpdateLevelDialog extends BaseFragmentDialog {
 

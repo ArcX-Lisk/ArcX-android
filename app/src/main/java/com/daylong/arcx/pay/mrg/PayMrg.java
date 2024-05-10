@@ -10,7 +10,7 @@ public class PayMrg {
     private static AliPay aliPay;
 
     /**
-     * 单例
+
      *
      * @return
      */

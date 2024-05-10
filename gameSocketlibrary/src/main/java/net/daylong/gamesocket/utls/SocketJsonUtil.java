@@ -10,7 +10,7 @@ public class SocketJsonUtil {
     private static Gson sGson = new Gson();
 
     /**
-     * 对象转json字符串
+
      * @param Object
      * @return
      */
@@ -18,7 +18,7 @@ public class SocketJsonUtil {
         return sGson.toJson(Object);
     }
     /**
-     * 对象转json字符串
+
      * @param Object
      * @return
      */
@@ -29,7 +29,7 @@ public class SocketJsonUtil {
     }
 
     /**
-     * json字符串转实体对象
+
      * @param json
      * @param cls
      * @param <T>
@@ -40,7 +40,7 @@ public class SocketJsonUtil {
     }
 
     /**
-     * json字符串转实体对象
+
      * @param json
      * @param type
      * @param <T>

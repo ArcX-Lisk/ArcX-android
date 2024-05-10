@@ -1,17 +1,17 @@
 package com.daylong.httplibrary.bean.menus;
 /**
- * 游戏之类
+
  */
 public enum GameChillType {
-    KINGKONG(1, "kingKong")// 金刚
-    , EGYPT(2, "egypt")//埃及
-    , EAST(3, "east")//东方魔力
-    , POWER_THUNDER(4, "thunder")//雷电之力
-    , CLOWN_CIRCUS(5, "clown")//小丑马戏团
-    , PIRATE(6, "pirate")//海盗
-    , PILE_TOWER(7, "pile_tower")//炼金塔
-    , DOLL(8, "doll")//娃娃机
-    , ARCADE_MACHINE(9, "PRESENT")//娃娃机
+    KINGKONG(1, "kingKong")
+    , EGYPT(2, "egypt")
+    , EAST(3, "east")
+    , POWER_THUNDER(4, "thunder")
+    , CLOWN_CIRCUS(5, "clown")
+    , PIRATE(6, "pirate")
+    , PILE_TOWER(7, "pile_tower")
+    , DOLL(8, "doll")
+    , ARCADE_MACHINE(9, "PRESENT")
 
 
     ;

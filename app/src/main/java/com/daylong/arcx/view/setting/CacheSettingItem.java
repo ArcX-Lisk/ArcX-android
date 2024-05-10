@@ -37,7 +37,7 @@ public class CacheSettingItem extends ISettingItemView {
         checkBox.setLayoutParams(winLayoutParams);
 
 
-        //        获取缓存
+        
         new Thread() {
             @Override
             public void run() {
@@ -55,7 +55,7 @@ public class CacheSettingItem extends ISettingItemView {
 
     @Override
     public String getName() {
-        return "清理缓存";
+
     }
 
     @Override
@@ -67,7 +67,7 @@ public class CacheSettingItem extends ISettingItemView {
     @Override
     public void onClick(View v) {
         super.onClick(v);
-        new XPopup.Builder(getContext()).asConfirm("清理缓存", "是否清理缓存。",
+
                 new OnConfirmListener() {
                     @Override
                     public void onConfirm() {

@@ -64,7 +64,7 @@ public class CheckInDialog extends BaseCheckInDialog {
     public void onCheckInInfo(CheckInInfoResponse data) {
 
         List<CheckInInfoResponse.SignListDTO> signList = data.getSignList();
-        // 今天是否签到
+        
         boolean dayCheck = data.isCheck();
 
         boolean isCheck = false;
@@ -88,7 +88,7 @@ public class CheckInDialog extends BaseCheckInDialog {
             btnCheck = BaseButton.create(contentView, new ConstraintBuilder(109, 31).bottomCenterH().bottomMargin(14));
             btnCheck.setGravity(Gravity.CENTER_HORIZONTAL);
             btnCheck.setPadding(0, getSize(7), 0, 0);
-            btnCheck.initBtn("签到", 10, R.color.color_434343, true);
+
         }
 
         btnCheck.setOnClickListener(dayCheck ? null : checkListener);
@@ -104,7 +104,7 @@ public class CheckInDialog extends BaseCheckInDialog {
             return;
         }
 
-        //弹出奖励
+        
         DefaultDialog.showDialog(getChildFragmentManager(), data.get(0), -1);
 
     }

@@ -21,7 +21,7 @@ import net.daylong.baselibrary.utils.ui.layout.ConstraintBuilder;
 import java.util.List;
 
 /**
- * 街机的游戏按钮
+
  */
 public class ArcadePositionLayout extends IStartBtn {
     private LinearLayout layout;
@@ -57,7 +57,7 @@ public class ArcadePositionLayout extends IStartBtn {
             int childCount2 = postions.size();
             MyLogUtil.e("rag==>" + "childCount:" + childCount + "<childCount2>" + childCount2);
             if (layout.getChildCount() != postions.size()) {
-                //移除多余view
+                
                 removeAllViews();
                 addView(postions);
             }
@@ -107,7 +107,7 @@ public class ArcadePositionLayout extends IStartBtn {
 
     @Override
     public void setData(GameInfoBean gameInfoBean) {
-        // 设置内容
+        
         addArcadePosition(gameInfoBean.getGameStatus(UserCache.getUserId()), gameInfoBean.getStreeList());
 
     }

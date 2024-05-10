@@ -49,7 +49,7 @@ public class SelectGameCoinDialog extends BaseFragmentDialog {
                 WebSocketMrg.getInstance().sendMsg(new StartGameRequest());
                 dismiss();
             }
-            //点击选择倍数
+            
         }
     };
 

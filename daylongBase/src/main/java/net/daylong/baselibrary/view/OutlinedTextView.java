@@ -49,7 +49,7 @@ public class OutlinedTextView extends View {
         strokePaint.setColor(Color.parseColor("#B84B00"));
         strokePaint.setTextSize(size);
         strokePaint.setStyle(Paint.Style.STROKE);
-        strokePaint.setStrokeWidth(AppUtil.getSize(1)); // 设置外边框宽度
+        strokePaint.setStrokeWidth(AppUtil.getSize(1)); 
         strokePaint.setAntiAlias(true);
     }
 
@@ -57,9 +57,9 @@ public class OutlinedTextView extends View {
     protected void onDraw(Canvas canvas) {
 
         float textHeight = strokePaint.descent() - strokePaint.ascent();
-        float x = 0; // 居中文本的 x 坐标
-        float y = (getHeight() - textHeight) / 2 - strokePaint.ascent(); // 居中文本的 y 坐标
-        // 先绘制外边框
+        float x = 0; 
+        float y = (getHeight() - textHeight) / 2 - strokePaint.ascent(); 
+        
         drawTextWithLetterSpacing(canvas, text, x, y, strokePaint, AppUtil.getSize(1));
         drawTextWithLetterSpacing(canvas, text, x, y, textPaint, AppUtil.getSize(1));
 

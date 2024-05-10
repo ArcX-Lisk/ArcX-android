@@ -67,7 +67,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 上下文对象
+
      */
     protected Context mContext;
     protected ViewGroup rootView = null;
@@ -85,18 +85,18 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 获取方向 默认竖屏
+
      *
-     * @return SCREEN_ORIENTATION_PORTRAIT 竖屏 SCREEN_ORIENTATION_LANDSCAPE 横屏
+
      */
     public int getMyRequestedOrientation() {
         return ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
     }
 
     /**
-     * 是否设置方向
+
      *
-     * @return 默认是
+
      */
     protected boolean isRequestedOrientation() {
         return true;
@@ -139,7 +139,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 设置 标题
+
      *
      * @return
      */
@@ -164,7 +164,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 默认加入Title
+
      *
      * @return
      */
@@ -185,9 +185,9 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
         mContext = BaseApplication.getInstance().getContext();
         initSys();
-        //设置View
+        
 
-        //加载布局
+        
         if (getLayoutId() != null) {
             setContentView(getLayoutId());
             mUnbinder = ButterKnife.bind(this);
@@ -216,7 +216,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 获取背景图片名称
+
      *
      * @return
      */
@@ -225,7 +225,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 初始化背景
+
      */
     protected void initBg() {
         if (getBgImgRegId() != null) {
@@ -238,7 +238,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 获取背景图片名称
+
      *
      * @return
      */
@@ -246,9 +246,9 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
         return null;
     }
 
-    //初始化配置
+    
     protected void initSys() {
-        //设置方向
+        
         if (isRequestedOrientation()) {
             setRequestedOrientation(getMyRequestedOrientation());
         }
@@ -259,8 +259,8 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 获取当前Loayout的布局ID,用于设置当前布局
-     * 交由子类实现
+
+
      *
      * @return
      */
@@ -270,8 +270,8 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 初始化数据
-     * 子类可以复写此方法初始化子类数据
+
+
      */
     protected void initData() {
     }
@@ -310,7 +310,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时则不能隐藏
+
      *
      * @param v
      * @param event
@@ -326,13 +326,13 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
                     right = left + v.getWidth();
             if (event.getX() > left && event.getX() < right
                     && event.getY() > top && event.getY() < bottom) {
-                // 点击EditText的事件，忽略它。
+                
                 return false;
             } else {
                 return true;
             }
         }
-        // 如果焦点不是EditText则忽略，这个发生在视图刚绘制完，第一个焦点不在EditText上，和用户用轨迹球选择其他的焦点
+        
         return false;
     }
 
@@ -381,29 +381,29 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 添加Fragment
+
      *
-     * @param fragment  需要添加的Fragment
-     * @param container 布局Id
+
+
      */
     public void addFragment(BaseFragment fragment, int container) {
         if (fragment == null) {
             return;
         }
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        if (!fragment.isAdded()) {   // 先判断是否被add过
-            transaction.add(container, fragment).commitAllowingStateLoss(); // 隐藏当前的fragment，add下一个到Activity中
+        if (!fragment.isAdded()) {   
+            transaction.add(container, fragment).commitAllowingStateLoss(); 
         } else {
-            transaction.show(fragment).commitAllowingStateLoss(); // 隐藏当前的fragment，显示下一个
+            transaction.show(fragment).commitAllowingStateLoss(); 
         }
     }
 
 
     /**
-     * 添加Fragment
+
      *
-     * @param fragment  需要添加的Fragment
-     * @param container 布局Id
+
+
      */
     public void addFragment(BaseFragment fragment, int container, String tag) {
         FragmentManager fm = getSupportFragmentManager();
@@ -422,7 +422,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
 
 
     /**
-     * 隐藏Fragment
+
      *
      * @param fragment
      */
@@ -436,7 +436,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 隐藏Fragment
+
      */
     public void hideFragment(String tag) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -451,7 +451,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 删除Fragment
+
      *
      * @param fragment
      */
@@ -465,7 +465,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 显示Fragment
+
      *
      * @param fragment
      */
@@ -480,7 +480,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 隐藏Fragment
+
      */
     public void showFragment(String tag) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -500,7 +500,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 添加view 到主view 中
+
      *
      * @param view
      */
@@ -512,9 +512,9 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     }
 
     /**
-     * 添加View 到主view
+
      *
-     * @param position 位置
+
      * @param view     view
      */
     public void addView(int position, View view) {
@@ -630,7 +630,7 @@ public abstract class BaseActivity extends RxAppCompatActivity implements IBaseV
     @Override
     public void arcadeCoinReturn(Long coin) {
 
-        //直接内容返回
+        
 
 
         ArcadeReturnDialog.showDialog(getSupportFragmentManager(), coin);

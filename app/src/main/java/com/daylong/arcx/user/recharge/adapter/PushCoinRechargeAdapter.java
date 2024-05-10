@@ -96,8 +96,8 @@ public class PushCoinRechargeAdapter extends BaseQuickAdapter<RechargeResponse.G
     public GradientDrawable getGradientDrawable(int color) {
         GradientDrawable shape = new GradientDrawable();
         shape.setShape(GradientDrawable.RECTANGLE);
-        shape.setStroke(AppUtil.getSize(2), ContextCompat.getColor(getContext(), color)); // 设置边框宽度和颜色
-        shape.setCornerRadius(AppUtil.getSize(7)); // 设置圆角半径
+        shape.setStroke(AppUtil.getSize(2), ContextCompat.getColor(getContext(), color)); 
+        shape.setCornerRadius(AppUtil.getSize(7)); 
         return shape;
 
     }

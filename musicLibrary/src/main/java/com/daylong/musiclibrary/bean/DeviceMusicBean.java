@@ -1,10 +1,10 @@
 package com.daylong.musiclibrary.bean;
 public class DeviceMusicBean {
-    private Integer productId; //设备ID
-    private Integer isStart; //传入0 代表结束 1代表开始
-    private Integer isEndSwitch; //传入 0 代表 只有 开始没有结束， 1:代表 有开始和结束
+    private Integer productId; 
+    private Integer isStart; 
+    private Integer isEndSwitch; 
     private Integer productType;
-    private Integer voiceType; //播放类型
+    private Integer voiceType; 
 
     public Integer getProductId() {
         return productId;
@@ -48,7 +48,7 @@ public class DeviceMusicBean {
 
 
     /**
-     * 是否播放
+
      *
      * @return
      */

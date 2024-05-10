@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class WebSocketMsgResponse implements Serializable {
 
     private String ip; //ip
-    private String port; //端口
+    private String port; 
     public String getIp() {
         return ip;
     }

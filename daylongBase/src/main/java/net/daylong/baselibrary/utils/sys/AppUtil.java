@@ -33,7 +33,7 @@ import java.util.UUID;
 public class AppUtil {
 
     /**
-     * 获取全局handler
+
      *
      * @return
      */
@@ -42,7 +42,7 @@ public class AppUtil {
     }
 
     /**
-     * 获取UI主线程id
+
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class AppUtil {
     }
 
     /**
-     * 是否运行在UI主线程
+
      *
      * @return
      */
@@ -72,22 +72,22 @@ public class AppUtil {
     }
 
     /**
-     * 运行在UI主线程
+
      *
      * @param runnable
      */
     public static void runOnUIThread(Runnable runnable) {
         if (isRunOnUIThread()) {
-            // 已经是主线程, 直接运行
+            
             runnable.run();
         } else {
-            // 如果是子线程, 借助handler让其运行在主线程
+            
             getMainHandler().post(runnable);
         }
     }
 
     /**
-     * 获取上下文对象
+
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class AppUtil {
     }
 
     /**
-     * 判断App是否在前台运行
+
      *
      * @param context
      * @return
@@ -126,7 +126,7 @@ public class AppUtil {
     }
 
     /**
-     * 获取版本名称
+
      *
      * @return
      */
@@ -145,7 +145,7 @@ public class AppUtil {
         }
         return versionName;
     }  /**
-     * 获取版本名称
+
      *
      * @return
      */
@@ -155,7 +155,7 @@ public class AppUtil {
     }
 
     /**
-     * 获取版本号
+
      *
      * @param context
      * @return
@@ -175,7 +175,7 @@ public class AppUtil {
 
 
     /**
-     * 判断手机是否安装SDCard
+
      *
      * @return
      */
@@ -184,7 +184,7 @@ public class AppUtil {
     }
 
     /**
-     * 获取手机SDCard路径
+
      *
      * @return
      */
@@ -200,7 +200,7 @@ public class AppUtil {
     }
 
     /**
-     * 显示软键盘
+
      *
      * @param editText
      */
@@ -211,7 +211,7 @@ public class AppUtil {
     }
 
     /**
-     * 隐藏软键盘
+
      *
      * @param editText
      */
@@ -227,7 +227,7 @@ public class AppUtil {
     /**
      * @param context
      * @param phone
-     * @param immediate true:直接拨打  false:拨号界面
+
      */
     public static void callPhone(Context context, String phone, boolean immediate) {
         Intent intent;
@@ -271,10 +271,10 @@ public class AppUtil {
 
 
     /**
-     * 获得设备硬件uuid
-     * 使用硬件信息，计算出一个随机数
+
+
      *
-     * @return 设备硬件uuid
+
      */
     private static String getDeviceUUID() {
         try {
@@ -297,7 +297,7 @@ public class AppUtil {
 
 
     /**
-     * 获取尺寸
+
      *
      * @param size
      * @return
@@ -307,10 +307,10 @@ public class AppUtil {
     }
 
     /**
-     * 判断横竖屏
+
      *
      * @param activity
-     * @return 1：竖 | 0：横
+
      */
     public static int getScreenOrient(Activity activity) {
         int orient = activity.getRequestedOrientation();
@@ -326,7 +326,7 @@ public class AppUtil {
 
 
     /**
-     * 是否横屏
+
      *
      * @return
      */
@@ -336,7 +336,7 @@ public class AppUtil {
 
 
     /**
-     * 隐藏软键盘
+
      */
     public static void hintInput(Activity activity) {
         try {
@@ -368,22 +368,22 @@ public class AppUtil {
 
     public static String getSignatureMD5(Context context) {
         try {
-            // 获取包管理器
+            
             PackageManager packageManager = context.getPackageManager();
 
-            // 获取包信息
+            
             String packageName = context.getPackageName();
             PackageInfo packageInfo = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
 
-            // 获取签名信息
+            
             Signature[] signatures = packageInfo.signatures;
 
-            // 计算MD5值
+            
             MessageDigest md = MessageDigest.getInstance("MD5");
             md.update(signatures[0].toByteArray());
             byte[] md5Bytes = md.digest();
 
-            // 转换为十六进制字符串
+            
             StringBuilder sb = new StringBuilder();
             for (byte md5Byte : md5Bytes) {
                 sb.append(Integer.toString((md5Byte & 0xff) + 0x100, 16).substring(1));

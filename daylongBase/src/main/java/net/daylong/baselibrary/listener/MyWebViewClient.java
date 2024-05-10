@@ -37,14 +37,14 @@ public class MyWebViewClient extends WebViewClient {
     }
 
     private void injectJavaScript(WebView webView) {
-        // 这段JavaScript代码会在页面加载完成后注入
+        
         String js = "javascript: (function() {" +
                 "   document.querySelector('#yes_btn').addEventListener('click', function() {" +
                 "       window.onButtonClicked('Button was clicked');" +
                 "   });" +
                 "})();";
 
-        // 使用evaluateJavascript进行注入
+        
         webView.evaluateJavascript(js, null);
     }
 

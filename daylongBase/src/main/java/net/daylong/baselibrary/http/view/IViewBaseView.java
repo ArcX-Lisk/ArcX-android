@@ -9,7 +9,7 @@ public interface IViewBaseView {
 
 
     /**
-     * 绑定生命周期
+
      *
      * @param <T>
      * @return

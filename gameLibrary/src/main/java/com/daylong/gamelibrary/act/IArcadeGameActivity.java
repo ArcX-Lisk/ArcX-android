@@ -24,10 +24,10 @@ public abstract class IArcadeGameActivity extends BaseGameActivity {
         return GameType.DOLL_MACHINE;
     }
 
-    //开始按钮
+    
     protected IStartBtn startBtn;
     /**
-     * 投币按钮
+
      */
     protected IGameOperateView pushCoinBtn;
 
@@ -59,9 +59,9 @@ public abstract class IArcadeGameActivity extends BaseGameActivity {
 
         startBtn.setData(gameInfoBean);
 
-        //空闲
+        
         if (gameStatus == GameStatus.FREE) {
-            //移除当前玩家
+            
             if (curGamingUserMsg != null) {
                 curGamingUserMsg = null;
             }
@@ -72,7 +72,7 @@ public abstract class IArcadeGameActivity extends BaseGameActivity {
 
         } else {
             if (gameStatus == GameStatus.GAME) {
-                // 同一个用户
+                
                 if (curGamingUserMsg != null && curGamingUserMsg.getUserId() == curGamingUserMsg.getUserId()) {
                     return;
                 }

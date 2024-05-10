@@ -26,7 +26,7 @@ public class ArcadePushCoinBtn extends ArcadeBaseView {
 
     @Override
     protected String getBtnName() {
-        return "投币";
+
     }
 
     @Override

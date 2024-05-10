@@ -57,7 +57,7 @@ public class GameCoinItemView extends ConstraintLayout {
 
         if (vipLimitMsg.isFlg()) {
 
-            //限制
+            
 
         }
 
@@ -65,7 +65,7 @@ public class GameCoinItemView extends ConstraintLayout {
     }
 
 //    /**
-//     * 锁住提示
+
 //     *
 //     * @param view
 //     * @param level
@@ -91,10 +91,10 @@ public class GameCoinItemView extends ConstraintLayout {
 //        popupWindow.setTouchable(true);
 //        popupWindow.setOutsideTouchable(false);
 //        popupWindow.setFocusable(true);
-//        //设置PopupWindow的背景：
+
 //        popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 //
-//        //设置PopupWindow的位置：
+
 //        int[] location = new int[2];
 //        view.getLocationOnScreen(location);
 //

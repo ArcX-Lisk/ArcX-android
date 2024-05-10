@@ -81,7 +81,7 @@ public enum WalletType implements Serializable {
     }
 
     /**
-     * 兑换显示
+
      *
      * @return
      */

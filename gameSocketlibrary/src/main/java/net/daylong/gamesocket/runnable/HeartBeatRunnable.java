@@ -8,7 +8,7 @@ public class HeartBeatRunnable implements Runnable {
 
 
     /**
-     * 心跳发送时间
+
      */
     private static final int HEART_BEAT_RATE = 10000;
 

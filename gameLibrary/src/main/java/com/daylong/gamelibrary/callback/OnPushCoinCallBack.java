@@ -7,13 +7,13 @@ import com.daylong.musiclibrary.bean.DeviceWinningBean;
 import java.util.ArrayList;
 
 /**
- * 推币机回调
+
  */
 public interface OnPushCoinCallBack {
 
 
     /**
-     * 龙珠
+
      * @param dragonBallNum
      */
     void onDragonBall(int dragonBallNum, ArrayList<AwardBean> awardBeans);

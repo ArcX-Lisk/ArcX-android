@@ -48,7 +48,7 @@ public class PayDialog extends BottomPopupView implements View.OnClickListener, 
 
 
         MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(10));
-        myTextView.initText("充值方式", 9, R.color.color_434343);
+
         myTextView.setId(View.generateViewId());
 
         ConstraintLayout play = new ConstraintBuilder(108, 28).topToBottom(myTextView).centerH().topMargin(7).build(getContext());
@@ -60,7 +60,7 @@ public class PayDialog extends BottomPopupView implements View.OnClickListener, 
 
 
         MyTextView myTextView2 = MyTextView.create(play, new ConstraintBuilder().ww().rightCenterV().leftMargin(7).leftToRightById(net.daylong.daylongbase.R.id.base_view_2));
-        myTextView2.initText("支付宝支付", 10, R.color.color_white, true);
+
         myTextView2.setId(net.daylong.daylongbase.R.id.base_view_1);
 
         play.setBackgroundResource(R.drawable.shape_30_bg_6ff);

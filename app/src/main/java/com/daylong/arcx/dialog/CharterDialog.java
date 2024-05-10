@@ -15,7 +15,7 @@
 //import net.daylong.baselibrary.view.textview.MyTextView;
 //
 ///**
-// * 机器故障
+
 // */
 //public abstract class CharterDialog extends BaseFragmentDialog {
 //
@@ -44,10 +44,10 @@
 //
 //        MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(17));
 //        myTextView.setId(View.generateViewId());
-//        myTextView.initText("包机说明", 11, R.color.color_434343);
+
 //        MyTextView tvDesc = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(17));
 //        tvDesc.setId(View.generateViewId());
-//        tvDesc.initText("包机说明", 9, R.color.color_434343);
+
 //
 //
 //    }

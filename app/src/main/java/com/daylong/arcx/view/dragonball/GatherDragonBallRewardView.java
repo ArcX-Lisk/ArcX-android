@@ -18,7 +18,7 @@ import net.daylong.baselibrary.view.img.BaseSvgaImageView;
 import net.daylong.baselibrary.view.img.MyImageView;
 
 /**
- * 超级玛丽.. 神龙
+
  */
 public class GatherDragonBallRewardView extends ConstraintLayoutView {
 
@@ -48,7 +48,7 @@ public class GatherDragonBallRewardView extends ConstraintLayoutView {
     private BaseSvgaImageView svgaImageView;
 
     /**
-     * 背景
+
      */
     private void createBg() {
         MyImageView myImageView = MyImageView.create(this, new ConstraintBuilder(170, 171).topToBottom(ivTitle), R.drawable.img_dragon_light);
@@ -120,7 +120,7 @@ public class GatherDragonBallRewardView extends ConstraintLayoutView {
     }
 
 
-    //初始化背景框
+    
 
     private DragonBallRewardBean reward;
 

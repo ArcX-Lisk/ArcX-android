@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 抓娃娃
+
  */
 public class PushCoinGameStrategy extends ISocketResponseStrategy {
 
@@ -64,7 +64,7 @@ public class PushCoinGameStrategy extends ISocketResponseStrategy {
 
 
     public void removerOnPushCoinCallBack() {
-        // 移除数据
+        
         onGameWebSocketCallBacks.clear();
 
     }
@@ -75,7 +75,7 @@ public class PushCoinGameStrategy extends ISocketResponseStrategy {
 
     }
 
-    // 注册回调事件
+    
     public void register(OnPushCoinCallBack callBack) {
         onGameWebSocketCallBacks.add(callBack);
     }
@@ -100,7 +100,7 @@ public class PushCoinGameStrategy extends ISocketResponseStrategy {
 
     @Override
     public void issue(Integer cmd, JSONObject msg) {
-        MyLogUtil.e("rag==推币机回调>" + cmd + "<>" + GameCmdType.getGameReturnCmdType(cmd).getDesc() + ":" + msg);
+
 
         if (activity != null) {
             activity.runOnUiThread(new Runnable() {
@@ -115,18 +115,18 @@ public class PushCoinGameStrategy extends ISocketResponseStrategy {
                     for (OnPushCoinCallBack onGameWebSocketCallBack : onGameWebSocketCallBacks) {
 
 
-                        //当前龙珠数量
+                        
                         if (cmd.equals(GameCmdType.C2S_INNO_DRAGON_MSG.getReturnCdm())) {
                             onGameWebSocketCallBack.onDragonBall(serverMsg.optInt("dgbAmt"), null);
 
-                            // 龙珠掉落
+                            
                         } else if (cmd.equals(GameCmdType.S2C_INNO_DRAGON_AWARD_MSG.getReturnCdm())) {
                             JSONObject dgTnTbln = serverMsg.optJSONObject("dgTnTbln");
                             if (dgTnTbln != null) {
                                 onGameWebSocketCallBack.onDragonBallMary(JsonUtil.fromJsonToObject(serverMsg.toString(), DragonBallRewardBean.class));
                             } else {
                                 JSONArray awdTbln = serverMsg.optJSONArray("awdTbln");
-//                             cnbAmt -> {Integer@16875} 5   单独
+
                                 ArrayList<AwardBean> list = new ArrayList<>();
 
                                 if (awdTbln != null && awdTbln.length() > 0) {

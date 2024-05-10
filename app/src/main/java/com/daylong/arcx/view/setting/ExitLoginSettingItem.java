@@ -39,7 +39,7 @@ public class ExitLoginSettingItem extends ISettingItemView {
 
     @Override
     public String getName() {
-        return "退出登录";
+
     }
 
     @Override

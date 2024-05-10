@@ -49,10 +49,10 @@ public class ConstraintLayoutUtils {
 
 
     /**
-     * 宽度自适应
+
      *
-     * @param height    高度
-     * @param leftId    左边ID
+
+
      * @param topMargin mar
      * @return
      */
@@ -61,10 +61,10 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * 宽度自适应 控件在view 的右边
+
      *
-     * @param height    高度
-     * @param toRightId 关联右边ID
+
+
      * @param topMargin mar
      * @return
      */
@@ -74,9 +74,9 @@ public class ConstraintLayoutUtils {
 
 
     /**
-     * 宽度自适应 控件在view 的右边
+
      *
-     * @param toRightId 关联右边ID
+
      * @param topMargin mar
      * @return
      */
@@ -168,7 +168,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * 底部剧中
+
      *
      * @param wight
      * @param height
@@ -183,7 +183,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * 底部剧中
+
      *
      * @param wight
      * @param height
@@ -197,7 +197,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * top左右中
+
      *
      * @param wight
      * @param height
@@ -248,7 +248,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * 左右居中
+
      *
      * @param wight
      * @param height
@@ -262,7 +262,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * top左右中
+
      *
      * @param wight
      * @param height
@@ -276,9 +276,9 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * 宽度自适应 左边和top 对齐
+
      *
-     * @param height 高度
+
      * @return
      */
     public static ConstraintLayout.LayoutParams createWLT(float height) {
@@ -291,9 +291,9 @@ public class ConstraintLayoutUtils {
 
 
     /**
-     * 宽度自适应 左边和top 对齐
+
      *
-     * @param height 高度
+
      * @return
      */
     public static ConstraintLayout.LayoutParams createWL(float height) {
@@ -304,9 +304,9 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * 宽度自适应 左边和top 对齐
+
      *
-     * @param height 高度
+
      * @return
      */
     public static ConstraintLayout.LayoutParams createW(float height) {
@@ -345,7 +345,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * top左右中
+
      *
      * @param wight
      * @param height
@@ -358,7 +358,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * top左右中
+
      *
      * @param wight
      * @param height
@@ -372,7 +372,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * top左右中
+
      *
      * @param wight
      * @param height
@@ -386,7 +386,7 @@ public class ConstraintLayoutUtils {
 
 
     /**
-     * 头部对齐
+
      *
      * @param wight
      * @param height
@@ -521,7 +521,7 @@ public class ConstraintLayoutUtils {
 
 
     /**
-     * 左边再右边 中间居中
+
      *
      * @return
      */
@@ -535,7 +535,7 @@ public class ConstraintLayoutUtils {
     }
 
     /**
-     * 在控件右边 竖居中
+
      *
      * @return
      */
@@ -550,11 +550,11 @@ public class ConstraintLayoutUtils {
 
 
     /**
-     * 在右边 上下居中
+
      *
      * @param wight
      * @param height
-     * @param rightMargin 右边边距
+
      * @return
      */
     public static ConstraintLayout.LayoutParams createRightCenterRightMargin(float wight, float height, float rightMargin) {

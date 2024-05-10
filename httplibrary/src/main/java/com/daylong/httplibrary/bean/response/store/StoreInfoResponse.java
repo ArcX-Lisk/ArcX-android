@@ -11,10 +11,10 @@ import java.util.List;
 public class StoreInfoResponse {
 
 
-    private SpPlyIfoDTO spPlyIfo; //超级玩家
-    private String selCnMch; //售币机
-    private List<CnTblnDTO> cnTbln; //游戏币列表
-    private PpyIfoDTO ppyIfo; //道具信息
+    private SpPlyIfoDTO spPlyIfo; 
+    private String selCnMch; 
+    private List<CnTblnDTO> cnTbln; 
+    private PpyIfoDTO ppyIfo; 
 
 
     public boolean isShowSpPay() {
@@ -82,9 +82,9 @@ public class StoreInfoResponse {
     }
 
     public static class PpyIfoDTO implements Serializable {
-        private Integer rfTm; //下次刷新时间
-        private Integer rfAxcAmt; //刷新AXC价格
-        private List<PpyTblnDTO> ppyTbln; //道具列表
+        private Integer rfTm; 
+        private Integer rfAxcAmt; 
+        private List<PpyTblnDTO> ppyTbln; 
 
         public Integer getRfTm() {
             return rfTm;
@@ -111,13 +111,13 @@ public class StoreInfoResponse {
         }
 
         public static class PpyTblnDTO implements Serializable {
-            private Integer cmdId; //商品ID
-            private Long ppyAmt; //道具数量
-            private String nm; //道具名称
-            private String pct; //图片
-            private String dsc; //描述
-            private Integer soFlg; //描述
-            private Long axcAmt; //AXC价格
+            private Integer cmdId; 
+            private Long ppyAmt; 
+            private String nm; 
+            private String pct; 
+            private String dsc; 
+            private Integer soFlg; 
+            private Long axcAmt; 
 
             public boolean isSoFlg() {
                 return soFlg == 1;
@@ -195,10 +195,10 @@ public class StoreInfoResponse {
     }
 
     public static class CnTblnDTO implements Serializable {
-        private Integer cmdId; //商品ID
-        private Long cnAmt; //游戏币数量
-        private Integer usdtAmt; //USDT价格
-        private String pct; //图片
+        private Integer cmdId; 
+        private Long cnAmt; 
+        private Integer usdtAmt; 
+        private String pct; 
 
 
         public String getUsdtAmtStr() {

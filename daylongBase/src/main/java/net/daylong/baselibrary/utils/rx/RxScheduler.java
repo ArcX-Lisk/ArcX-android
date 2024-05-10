@@ -9,9 +9,9 @@ import io.reactivex.schedulers.Schedulers;
 public class RxScheduler {
 
     /**
-     * 统一线程处理
-     * 发布事件io线程，解绑io线程，接收事件主线程
-     * compose处理线程
+
+
+
      * @param <T>
      * @return
      */

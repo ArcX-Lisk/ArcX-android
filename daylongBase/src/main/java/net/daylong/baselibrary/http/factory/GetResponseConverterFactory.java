@@ -32,13 +32,13 @@ public class GetResponseConverterFactory extends Converter.Factory {
 
     @Override
     public Converter<ResponseBody, ?> responseBodyConverter(Type type, Annotation[] annotations, Retrofit retrofit) {
-        //返回我们自定义的Gson响应体变换器
+        
         return new GsonResponseBodyConverter<>(gson, type);
     }
 
     @Override
     public Converter<?, RequestBody> requestBodyConverter(Type type, Annotation[] parameterAnnotations, Annotation[] methodAnnotations, Retrofit retrofit) {
-        //返回我们自定义的Gson响应体变换器
+        
 
         TypeAdapter<?> adapter = gson.getAdapter(TypeToken.get(type));
 

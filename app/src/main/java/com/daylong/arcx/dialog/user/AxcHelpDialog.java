@@ -18,7 +18,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 能量
+
  */
 public class AxcHelpDialog extends BaseFragmentDialog {
 

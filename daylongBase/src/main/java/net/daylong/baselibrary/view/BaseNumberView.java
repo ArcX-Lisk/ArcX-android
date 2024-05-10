@@ -61,7 +61,7 @@ public abstract class BaseNumberView extends View {
     }
 
     /**
-     * 前缀
+
      *
      * @return
      */
@@ -71,7 +71,7 @@ public abstract class BaseNumberView extends View {
     protected String keyPrefix;
     protected long num;
 
-    protected int left = 0; //开始位置
+    protected int left = 0; 
 
 
     public void setKeyPrefix(String keyPrefix) {
@@ -79,7 +79,7 @@ public abstract class BaseNumberView extends View {
     }
 
     /**
-     * 宽度
+
      *
      * @return
      */
@@ -89,7 +89,7 @@ public abstract class BaseNumberView extends View {
     protected abstract CanvasImageBean getImageDot();
 
     /**
-     * 开始位置
+
      *
      * @return
      */
@@ -98,7 +98,7 @@ public abstract class BaseNumberView extends View {
     }
 
     /**
-     * 结束结束
+
      *
      * @return
      */
@@ -111,7 +111,7 @@ public abstract class BaseNumberView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        // 空直接返回
+        
         requestLayout();
         if (TextUtils.isEmpty(numStr)) {
             return;
@@ -151,7 +151,7 @@ public abstract class BaseNumberView extends View {
 
 
     /**
-     * 绘制数字
+
      */
     private void canvasNum(Canvas canvas, char ch, CanvasImageBean canvasImage) {
         String keyNum = Character.toString(ch);
@@ -163,16 +163,16 @@ public abstract class BaseNumberView extends View {
     }
 
     private Bitmap getImageBitMap(String key, int regId) {
-        // 如果存在
+        
         Bitmap bitmap;
 
         if (digitImages.containsKey(key)) {
             bitmap = digitImages.get(key);
-            // 去出来
+            
         } else {
             bitmap = BitmapFactory.decodeResource(getResources(), regId);
             if (bitmap == null) {
-                Log.e("ERROR", "找不到对应的图片ID:" + regId);
+
                 return null;
             }
             digitImages.put(key, bitmap);
@@ -184,13 +184,13 @@ public abstract class BaseNumberView extends View {
     /**
      * @param canvas
      * @param blt
-     * @param y      屏幕上的y坐标
+
      */
     private void drawImage(Canvas canvas, Bitmap blt, int y,
                            CanvasImageBean canvasImageBean) {
 
-        Rect src = new Rect();// 图片 >>原矩形
-        Rect dst = new Rect();// 屏幕 >>目标矩形
+        Rect src = new Rect();
+        Rect dst = new Rect();
         src.left = 0;
 
         src.top = 0;
@@ -206,8 +206,8 @@ public abstract class BaseNumberView extends View {
 
         dst.right = left + canvasImageBean.getWidth();
         dst.bottom = y + canvasImageBean.getHeight();
-// 画出指定的位图，位图将自动--》缩放/自动转换，以填补目标矩形
-// 这个方法的意思就像 将一个位图按照需求重画一遍，画后的位图就是我们需要的了
+
+
         canvas.drawBitmap(blt, null, dst, paint);
 
         src = null;
@@ -238,7 +238,7 @@ public abstract class BaseNumberView extends View {
 
 
     /**
-     * 获取到View 的宽度
+
      *
      * @return
      */
@@ -272,8 +272,8 @@ public abstract class BaseNumberView extends View {
     }
 
     protected void clearViewContent() {
-        requestLayout(); // 重新请求布局
-        invalidate(); // 重新绘制视图
+        requestLayout(); 
+        invalidate(); 
         numStr = "";
     }
 

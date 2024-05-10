@@ -6,7 +6,7 @@ import androidx.constraintlayout.widget.Constraints;
 import net.daylong.baselibrary.utils.sys.AppUtil;
 
 /**
- * 左边对齐
+
  */
 public class CLayoutRight {
 
@@ -23,10 +23,10 @@ public class CLayoutRight {
     }
 
     /**
-     * 右边对齐
+
      *
      * @param params
-     * @param rightMargin 边距
+
      * @return
      */
     public static ConstraintLayout.LayoutParams rightCenterRightMarginV(ConstraintLayout.LayoutParams params, float rightMargin) {
@@ -40,11 +40,11 @@ public class CLayoutRight {
     }
 
     /**
-     * 右边对齐
+
      *
      * @param params
-     * @param toLId       对齐右边ID
-     * @param rightMargin 边距
+
+
      * @return
      */
     public static ConstraintLayout.LayoutParams rightToRightCenterRightMarginV(ConstraintLayout.LayoutParams params, int toLId, float rightMargin) {

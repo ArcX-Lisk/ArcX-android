@@ -3,11 +3,11 @@ package com.daylong.musiclibrary;
 public class GameMediaBean {
 
 
-    private Integer id; //id 对应unity ID
-    private Integer type; //类型1 ass 路径 2R.raw 路径
+    private Integer id; 
+    private Integer type; 
     private String musicName;
     private Integer rawMusic;
-    private Integer outTime; //超时播放. 定时超时没收到就停止
+    private Integer outTime; 
     private String desc;
 
     public Integer getOutTime() {

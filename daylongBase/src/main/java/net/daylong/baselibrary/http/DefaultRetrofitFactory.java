@@ -22,7 +22,7 @@ public class DefaultRetrofitFactory {
     private static Retrofit sRetrofit;
 
     /**
-     * 构造方法私有化
+
      */
     private DefaultRetrofitFactory() {
         sOkHttpClient = new OkHttpClient.Builder()
@@ -50,7 +50,7 @@ public class DefaultRetrofitFactory {
     }
 
     /**
-     * 单例获取
+
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class DefaultRetrofitFactory {
     }
 
     /**
-     * 创建API
+
      *
      * @param tClass
      * @param <T>
@@ -77,9 +77,9 @@ public class DefaultRetrofitFactory {
     }
 
     /**
-     * 创建API
+
      *
-     * @param baseUrl 多个BaseURL切换
+
      * @param tClass
      * @param <T>
      * @return

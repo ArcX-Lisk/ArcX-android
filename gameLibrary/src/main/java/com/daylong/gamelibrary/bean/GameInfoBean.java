@@ -9,9 +9,9 @@ import java.util.List;
 
 public class GameInfoBean extends BaseGameReturnBean {
 
-    private UserInfoResponse gmPly; //游戏中玩家信息
-    private List<UserInfoResponse> vsUsrTbln; //旁观玩家
-    private List<ArcadePositionBean> streeList;//街机群组	街机有返回
+    private UserInfoResponse gmPly; 
+    private List<UserInfoResponse> vsUsrTbln; 
+    private List<ArcadePositionBean> streeList;
 
     public UserInfoResponse getGamingUserMsg() {
         return gmPly;
@@ -55,7 +55,7 @@ public class GameInfoBean extends BaseGameReturnBean {
             return GameStatus.FREE;
         } else {
             Long gameUserId = gmPly.getUserId();
-            // 自己游戏中
+            
             if (gameUserId == userId) {
                 return GameStatus.GAME;
             }

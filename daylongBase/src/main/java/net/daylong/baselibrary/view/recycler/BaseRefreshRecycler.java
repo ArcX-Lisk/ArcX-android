@@ -29,7 +29,7 @@ public abstract class BaseRefreshRecycler<T> extends SmartRefreshLayout implemen
     }
 
     /**
-     * 是否启动拉下刷新
+
      *
      * @return
      */
@@ -38,7 +38,7 @@ public abstract class BaseRefreshRecycler<T> extends SmartRefreshLayout implemen
     }
 
     /**
-     * 是否启动加载更多
+
      *
      * @return
      */
@@ -62,7 +62,7 @@ public abstract class BaseRefreshRecycler<T> extends SmartRefreshLayout implemen
         }
         addView(recyclerView);
         ClassicsFooter classicsFooter = new ClassicsFooter(getContext());
-        //取消加载提示
+        
         classicsFooter.setAccentColor(Color.TRANSPARENT);
         classicsFooter.setPrimaryColor(Color.TRANSPARENT);
         setRefreshFooter(classicsFooter);
@@ -96,19 +96,19 @@ public abstract class BaseRefreshRecycler<T> extends SmartRefreshLayout implemen
     @Override
     public void onRefresh(@NonNull RefreshLayout refreshLayout) {
 
-        MyLogUtil.e("刷新");
+
 
     }
 
     @Override
     public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-        MyLogUtil.e("加载更多");
+
 
     }
 
 
     /**
-     * 没有更多数据
+
      */
     public void finishNoMoreData() {
         finishLoadMore();

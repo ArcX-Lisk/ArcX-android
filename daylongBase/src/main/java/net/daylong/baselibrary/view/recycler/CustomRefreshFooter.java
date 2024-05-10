@@ -35,7 +35,7 @@ package net.daylong.baselibrary.view.recycler;//package net.daylong.metapusherba
 //        progressBar.setIndeterminateDrawable(getContext().getDrawable(res));
 //    }
 //    /**
-//     * 状态改变时调用。在这里切换第三阶段的动画卖萌小人
+
 //     *
 //     * @param refreshLayout
 //     * @param oldState
@@ -45,14 +45,14 @@ package net.daylong.baselibrary.view.recycler;//package net.daylong.metapusherba
 //    public void onStateChanged(RefreshLayout refreshLayout, RefreshState oldState, RefreshState newState) {
 //
 //        switch (newState) {
-//            case PullDownToRefresh: //下拉过程
+
 //
 //                break;
-//            case ReleaseToRefresh: //松开刷新
+
 //
 //
 //                break;
-//            case Refreshing: //loading中
+
 //
 //                break;
 //        }

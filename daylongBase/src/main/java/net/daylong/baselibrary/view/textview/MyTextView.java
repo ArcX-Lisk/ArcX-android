@@ -66,7 +66,7 @@ public class MyTextView extends BaseTextView {
     }
 
     /**
-     * 加粗
+
      */
     public void setFakeBold() {
         getPaint().setFakeBoldText(true);

@@ -29,6 +29,6 @@ public class DefaultConfirmDialogBtn extends BaseButton {
         initBtn(10, R.color.color_white, true);
         setLayoutParams(constraintBuilder.buildPayoutParams());
         setShadowLayer(3, 0, 0, getContext().getColor(R.color.color_c2001da7));
-        setText("确认");
+
     }
 }

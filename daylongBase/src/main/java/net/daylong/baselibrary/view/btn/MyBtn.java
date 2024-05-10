@@ -68,21 +68,21 @@ public class MyBtn extends BaseButton implements View.OnTouchListener {
         if (onImageClickListener == null) {
             return false;
         }
-        Drawable buttonBackground = getBackground(); // 获取按钮的背景Drawable
+        Drawable buttonBackground = getBackground(); 
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                buttonBackground.setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); // 灰色效果
+                buttonBackground.setColorFilter(Color.parseColor("#80000000"), PorterDuff.Mode.SRC_ATOP); 
                 setBackgroundDrawable(buttonBackground);
                 break;
 
-            //松开
+            
             case MotionEvent.ACTION_UP:
-                //移出
+                
             case MotionEvent.ACTION_CANCEL:
 
                 long curTime = System.currentTimeMillis();
-                buttonBackground.clearColorFilter(); // 清除灰色效果
+                buttonBackground.clearColorFilter(); 
                 setBackgroundDrawable(buttonBackground);
                 if (curTime - clickTime < 1000) {
                     return false;
@@ -116,7 +116,7 @@ public class MyBtn extends BaseButton implements View.OnTouchListener {
     }
 
     /**
-     * 加粗
+
      */
     public void setFakeBold() {
         getPaint().setFakeBoldText(true);

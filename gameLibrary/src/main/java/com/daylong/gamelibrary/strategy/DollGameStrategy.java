@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 抓娃娃
+
  */
 public class DollGameStrategy extends ISocketResponseStrategy {
 
@@ -63,12 +63,12 @@ public class DollGameStrategy extends ISocketResponseStrategy {
 
 
     public void removerOnGameDollCallBack() {
-        // 移除数据
+        
         if (dollOperateTypes != null) {
             dollOperateTypes.clear();
         }
 
-        //移除
+        
         dollOperateTypes = null;
 
     }
@@ -79,7 +79,7 @@ public class DollGameStrategy extends ISocketResponseStrategy {
 
     }
 
-    // 注册回调事件
+    
     public void register(OnGameDollCallBack callBack) {
         onGameWebSocketCallBacks.add(callBack);
     }
@@ -103,7 +103,7 @@ public class DollGameStrategy extends ISocketResponseStrategy {
 
     @Override
     public void issue(Integer cmd, JSONObject msg) {
-        MyLogUtil.e("rag==娃娃机回调收到>" + cmd + "<>" + msg);
+
 
         if (activity != null) {
             activity.runOnUiThread(new Runnable() {
@@ -114,20 +114,20 @@ public class DollGameStrategy extends ISocketResponseStrategy {
 
                     int productId = serverMsg.optInt("devId");
                     int operateType = serverMsg.optInt("hdlTp", -1);
-                    //余额
-                    //积分
+                    
+                    
                     GameOperateType operateState = GameOperateType.getOperateState(operateType);
 
 
                     if (operateState != null) {
                         for (OnGameDollCallBack onGameWebSocketCallBack : onGameWebSocketCallBacks) {
-                            //下抓
+                            
                             if (operateState == GameOperateType.CATCH) {
 
                                 onGameWebSocketCallBack.catchDown();
 
 
-                                //结果
+                                
                             } else if (operateState == GameOperateType.CATCH_RESULT || operateState == GameOperateType.ROCK) {
 
 

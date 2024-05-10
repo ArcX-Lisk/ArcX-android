@@ -26,7 +26,7 @@ public interface SocketContract {
     abstract class SocketPresenter extends BasePresenter<SocketModel, SocketView> {
 
         public abstract void getWebSocketInfo();
-        //请求用户信息
+        
 
     }
 }

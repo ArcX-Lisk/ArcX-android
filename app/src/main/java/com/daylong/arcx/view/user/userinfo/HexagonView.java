@@ -19,8 +19,8 @@ public class HexagonView extends View {
     private Paint fillPaint;
     private Path path;
 
-    private Bitmap originalBitmap; // 原始图片
-    private Bitmap scaledBitmap;   // 缩放后的图片
+    private Bitmap originalBitmap; 
+    private Bitmap scaledBitmap;   
     private Paint imgPaint;
 
     private long[] attributes;
@@ -37,7 +37,7 @@ public class HexagonView extends View {
         fillPaint.setStyle(Paint.Style.FILL);
         path = new Path();
         imgPaint = new Paint();
-        imgPaint.setAntiAlias(true); // 抗锯齿
+        imgPaint.setAntiAlias(true); 
         originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.img_user_attribute_bg);
         scaledBitmap = Bitmap.createScaledBitmap(originalBitmap, AppUtil.getSize(68), AppUtil.getSize(74), false);
 
@@ -50,18 +50,18 @@ public class HexagonView extends View {
 
         int startX = getWidth() / 2;
         int startY = getHeight() / 2;
-        int radius = AppUtil.getSize(25); // 初始半径
+        int radius = AppUtil.getSize(25); 
 
         canvas.drawBitmap(scaledBitmap, 0, 0, imgPaint);
 
         if (attributes != null) {
-            //最大的值
+            
             long maxNum = attributes[0];
 
-            //一个的大小
+            
             float oneSize = radius * 1.0f / maxNum;
             path.reset();
-            float angleDeg = 270; //开始位置
+            float angleDeg = 270; 
             double angleRad = Math.toRadians(angleDeg);
             for (int j = 0; j < attributes.length; j++) {
                 float size = oneSize * attributes[j];

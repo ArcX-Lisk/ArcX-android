@@ -51,7 +51,7 @@ public abstract class IGameVisitView extends LinearLayoutView {
         if (list != null && list.size() > 0) {
             setVisibility(View.VISIBLE);
 //            myTextView.setVisibility(list.size() > 0 ? View.VISIBLE : View.GONE);
-//            myTextView.setText(list.size() + "人");
+
         } else {
             setVisibility(View.GONE);
 
@@ -60,7 +60,7 @@ public abstract class IGameVisitView extends LinearLayoutView {
 
 //
         ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) getLayoutParams();
-        //游戲中
+        
         if (gameStatus == GameStatus.OTHER) {
             layoutParams.leftToRight = net.daylong.daylongbase.R.id.base_view_4;
 

@@ -6,16 +6,16 @@ import java.io.Serializable;
 
 public class MyAddressResponse implements Serializable {
 
-    private int dealOperateType; //见数据操作方式数据字典
-    private Integer addressId; //地址ID 编辑、删除必传
+    private int dealOperateType; 
+    private Integer addressId; 
 
-    private String name;//收货人姓名
-    private String phone; //收货电话
-    private String area;//收货区域
-    private String province; //省份
-    private String city; //城市
-    private String county; //县区
-    private Integer defaultFlag; //是否默认
+    private String name;
+    private String phone; 
+    private String area;
+    private String province; 
+    private String city; 
+    private String county; 
+    private Integer defaultFlag; 
 
     public boolean isDefault() {
         return defaultFlag != null && defaultFlag == 1;
@@ -123,7 +123,7 @@ public class MyAddressResponse implements Serializable {
 
 
     public enum DataOperateType {
-        ADD(1, "添加"), EDIT(2, "编辑"), DELETE(3, "删除");
+
         private int id;
         private String desc;
 
@@ -153,11 +153,11 @@ public class MyAddressResponse implements Serializable {
 
     public String getInfo() {
 
-        String stringBuilder = "联系人:" + getName() +
+
                 "\n" +
-                "联系电话:" + getPhone() +
+
                 "\n" +
-                "地址:" + getAddress2() + getArea()
+
                ;
 
 

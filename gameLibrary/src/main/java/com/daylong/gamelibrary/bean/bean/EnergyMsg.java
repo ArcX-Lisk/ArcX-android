@@ -3,9 +3,9 @@ package com.daylong.gamelibrary.bean.bean;
 public class EnergyMsg {
 
 
-    private Integer cnAmt; //当前进度数量
-    private Integer ttAmt; //总进度数量
-    private Integer lfTm;//下次刷新时间
+    private Integer cnAmt; 
+    private Integer ttAmt; 
+    private Integer lfTm;
 
     public Integer getCnAmt() {
         return cnAmt;

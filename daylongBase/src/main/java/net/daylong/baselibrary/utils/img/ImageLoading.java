@@ -41,11 +41,11 @@ import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 /**
  * 2018/8/3
- * 描述 : 图片加载
+
  */
 public class ImageLoading {
     /**
-     * 加载圆形图片
+
      *
      * @param context
      * @param url
@@ -69,7 +69,7 @@ public class ImageLoading {
     }
 
     /**
-     * 描边
+
      *
      * @param url
      * @param imageView
@@ -93,7 +93,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载圆形图片
+
      *
      * @param context
      * @param url
@@ -113,7 +113,7 @@ public class ImageLoading {
     }
 
     /**
-     * 圆角
+
      *
      * @param url
      * @param imageView
@@ -133,9 +133,9 @@ public class ImageLoading {
     }
 
     /**
-     * 加载圆形图片
+
      *
-     * @param reg       图片资源
+
      * @param imageView
      */
     public static void displayRoundImage(int reg, ImageView imageView) {
@@ -148,9 +148,9 @@ public class ImageLoading {
     }
 
     /**
-     * 加载圆形图片
+
      *
-     * @param reg       图片资源
+
      * @param imageView
      */
     public static void displayRoundImage(String reg, ImageView imageView, int rounded) {
@@ -166,7 +166,7 @@ public class ImageLoading {
 
     /**
      * 0
-     * 加载圆形图片
+
      *
      * @param url
      * @param imageView
@@ -177,7 +177,7 @@ public class ImageLoading {
 
     /**
      * 0
-     * 加载圆形图片
+
      *
      * @param url
      * @param imageView
@@ -188,7 +188,7 @@ public class ImageLoading {
 
 
     /**
-     * 加载圆形手机图片
+
      *
      * @param context
      * @param url
@@ -204,7 +204,7 @@ public class ImageLoading {
                     .load(url)
 
                     .apply(mRequestOptions)
-                    .transition(withCrossFade())//需要导包
+                    .transition(withCrossFade())
 
                     .into(imageView);
         }
@@ -212,7 +212,7 @@ public class ImageLoading {
     }
 
     /**
-     * 圆角
+
      *
      * @param imagePath
      * @param imageView
@@ -226,7 +226,7 @@ public class ImageLoading {
 
             Glide.with(BaseApplication.getInstance().getContext()).load(url)
                     .apply(RequestOptions.bitmapTransform(new RoundedCornersTransformation(rounded, 0, RoundedCornersTransformation.CornerType.BOTTOM_RIGHT)))
-                    .transition(withCrossFade())//需要导包
+                    .transition(withCrossFade())
 
                     .into(imageView);
 
@@ -234,7 +234,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载圆形手机图片
+
      *
      * @param url
      * @param imageView
@@ -247,7 +247,7 @@ public class ImageLoading {
 
             Glide.with(getContextx())
                     .load(url)
-                    .transition(withCrossFade())//需要导包
+                    .transition(withCrossFade())
 
                     .apply(options)
                     .into(imageView);
@@ -256,7 +256,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载圆形图片
+
      *
      * @param context
      * @param url
@@ -269,13 +269,13 @@ public class ImageLoading {
         Glide.with(getContextx())
                 .load(url)
                 .apply(mRequestOptions)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
 
                 .into(imageView);
     }
 
     /**
-     * 加载圆形图片
+
      *
      * @param context
      * @param url
@@ -288,7 +288,7 @@ public class ImageLoading {
         Glide.with(getContextx())
                 .load(url)
                 .apply(mRequestOptions)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
 
                 .into(imageView);
     }
@@ -310,7 +310,7 @@ public class ImageLoading {
             options.transform(new BlurTransformation(23, 4));
             Glide.with(getContextx())
                     .load(imagePath)
-                    .transition(withCrossFade())//需要导包
+                    .transition(withCrossFade())
 
                     .apply(options)
                     .into(imageView);
@@ -319,7 +319,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载图片
+
      *
      * @param context
      * @param imagePath
@@ -527,7 +527,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载图片
+
      *
      * @param imagePath
      * @param imageView
@@ -554,7 +554,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载图片
+
      *
      * @param imagePath
      * @param imageView
@@ -577,7 +577,7 @@ public class ImageLoading {
 
 
     /**
-     * 加载图片
+
      *
      * @param imagePath
      * @param imageView
@@ -597,7 +597,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载图片
+
      *
      * @param
      * @param imageView
@@ -612,7 +612,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载图片
+
      *
      * @param imagePath
      * @param imageView
@@ -640,14 +640,14 @@ public class ImageLoading {
         RequestOptions options = new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL);
         Glide.with(getContextx())
                 .load(imagePath)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
 
                 .apply(options)
                 .into(imageView);
     }
 
     /**
-     * 加载图片
+
      *
      * @param context
      * @param resId
@@ -660,14 +660,14 @@ public class ImageLoading {
         Glide.with(getContextx())
 
                 .load(resId)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
                 .apply(options)
                 .into(imageView);
 
     }
 
     /**
-     * 加载图片
+
      *
      * @param resId
      * @param imageView
@@ -685,7 +685,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载图片
+
      *
      * @param imageView
      */
@@ -738,7 +738,7 @@ public class ImageLoading {
                     }
                 });
         request.load(imagePath)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
 
                 .into(imageView);
 
@@ -778,7 +778,7 @@ public class ImageLoading {
                     }
                 });
         request.load(imagePath)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
                 .into(imageView);
 
     }
@@ -799,14 +799,14 @@ public class ImageLoading {
                         try {
                             int duration = 0;
                             if (resource != null) {
-                                // 计算动画时长
+                                
                                 Drawable.ConstantState state = resource.getConstantState();
                                 resource.startFromFirstFrame();
                                 resource.setLoopCount(1);
                                 resource.stop();
 
                                 if (state != null) {
-                                    //不能混淆GifFrameLoader和GifState类
+                                    
                                     Object gifFrameLoader = null;
 
                                     gifFrameLoader = GlideGifUtil.getValue(state, "frameLoader");
@@ -829,7 +829,7 @@ public class ImageLoading {
                     }
                 });
         request.load(imagePath)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
                 .into(imageView);
 
     }
@@ -849,14 +849,14 @@ public class ImageLoading {
                         try {
                             int duration = 0;
                             if (resource != null) {
-                                // 计算动画时长
+                                
                                 Drawable.ConstantState state = resource.getConstantState();
                                 resource.startFromFirstFrame();
                                 resource.setLoopCount(1);
                                 resource.stop();
 
                                 if (state != null) {
-                                    //不能混淆GifFrameLoader和GifState类
+                                    
                                     Object gifFrameLoader = null;
 
                                     gifFrameLoader = GlideGifUtil.getValue(state, "frameLoader");
@@ -880,7 +880,7 @@ public class ImageLoading {
                     }
                 });
         request.load(imagePath)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
                 .into(imageView);
 
     }
@@ -911,14 +911,14 @@ public class ImageLoading {
 
         request.load(imagePath)
                 .apply(options)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
                 .into(imageView);
 
     }
 
 
     /**
-     * 圆角
+
      *
      * @param imagePath
      * @param imageView
@@ -930,14 +930,14 @@ public class ImageLoading {
         } else {
             String url = getImagePath(imagePath);
             Glide.with(BaseApplication.getInstance().getContext()).load(url)
-                    .transition(withCrossFade())//需要导包
+                    .transition(withCrossFade())
                     .apply(RequestOptions.bitmapTransform(new GlideRoundTransform(BaseApplication.getInstance().getContext(), rounded)))
                     .into(imageView);
         }
     }
 
     /**
-     * 毛玻璃效果
+
      *
      * @param url
      * @param imageView
@@ -952,7 +952,7 @@ public class ImageLoading {
             Glide.with(BaseApplication.getInstance().getContext())
 
                     .load(imagePath)
-                    .transition(withCrossFade())//需要导包
+                    .transition(withCrossFade())
 
                     .apply(options)
                     .into(imageView);
@@ -961,7 +961,7 @@ public class ImageLoading {
     }
 
     /**
-     * 毛玻璃效果
+
      *
      * @param url
      * @param imageView
@@ -976,7 +976,7 @@ public class ImageLoading {
             Glide.with(BaseApplication.getInstance().getContext())
 
                     .load(imagePath)
-                    .transition(withCrossFade())//需要导包
+                    .transition(withCrossFade())
 
                     .apply(options)
                     .into(imageView);
@@ -985,7 +985,7 @@ public class ImageLoading {
     }
 
     /**
-     * 毛玻璃效果
+
      *
      * @param imageView
      */
@@ -997,7 +997,7 @@ public class ImageLoading {
         Glide.with(BaseApplication.getInstance().getContext())
                 .load(img)
                 .apply(options)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
                 .into(imageView);
     }
 
@@ -1037,7 +1037,7 @@ public class ImageLoading {
     }
 
     /**
-     * 加载手机图片
+
      *
      * @param url
      * @param imageView
@@ -1048,7 +1048,7 @@ public class ImageLoading {
 
         Glide.with(getContextx())
                 .load(url)
-                .transition(withCrossFade())//需要导包
+                .transition(withCrossFade())
                 .apply(options)
                 .into(imageView);
 
@@ -1076,10 +1076,10 @@ public class ImageLoading {
     }
 
     /**
-     * 动态缩列图
+
      *
      * @param url
-     * @param imgCount 图片数量
+
      * @return
      */
     public static String getBehaviorThumbnail(String url, int imgCount) {
@@ -1098,7 +1098,7 @@ public class ImageLoading {
     }
 
     /**
-     * 清除图片内存缓存
+
      */
     public static void clearImageMemoryCache(final Context context) {
         try {

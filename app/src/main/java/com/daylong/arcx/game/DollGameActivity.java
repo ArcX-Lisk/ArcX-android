@@ -43,7 +43,7 @@ public class DollGameActivity extends IPushCoinGameActivity implements OnGameDol
         super.initData();
 
         super.initData();
-        // 加入
+        
 
         dollGameStrategy = DollGameStrategy.getInstance();
         dollGameStrategy.setActivity(this);

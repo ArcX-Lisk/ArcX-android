@@ -21,7 +21,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //import net.daylong.metapusherbaselibrary.dialog.BaseFragmentDialog;
 //
 ///**
-// * 包机结束
+
 // */
 //public class CharterEndRewardDialog extends BaseFragmentDialog {
 //
@@ -77,7 +77,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //        TopLayoutC.margin(layoutParams, 3);
 //        LeftLayoutC.centerH(layoutParams);
 //        BaseButton button = BaseButton.create(constraintLayout, layoutParams);
-//        button.setText("确认");
+
 //        button.setTextColor(Color.BLACK);
 //        button.setGravity(Gravity.CENTER);
 //        button.setBackgroundResource(R.drawable.ic_dialog_default_btn_bg);
@@ -103,7 +103,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //        LeftLayoutC.margin(keyParams, 36);
 //        MyTextView tvKeyBalance = MyTextView.create(constraintLayout, keyParams);
 //        tvKeyBalance.setId(R.id.charter_end_dialog_balance_key);
-//        tvKeyBalance.setText("包机余额：");
+
 //        tvKeyBalance.setTextSize(8);
 //        tvKeyBalance.getPaint().setFakeBoldText(true);
 //
@@ -122,7 +122,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //    }
 //
 //
-//    //返回
+
 //    private void initCharterReturn(ConstraintLayout constraintLayout, CharterMsg charterMsg) {
 //
 //
@@ -133,7 +133,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //
 //        MyTextView tvKeyBalance = MyTextView.create(constraintLayout, keyParams);
 //        tvKeyBalance.setId(R.id.charter_end_dialog_return_key);
-//        tvKeyBalance.setText("包机返回：");
+
 //        tvKeyBalance.setTextSize(8);
 //        tvKeyBalance.getPaint().setFakeBoldText(true);
 //
@@ -159,7 +159,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //
 //        MyTextView tvKeyBalance = MyTextView.create(constraintLayout, keyParams);
 //        tvKeyBalance.setId(R.id.charter_end_dialog_count_key);
-//        tvKeyBalance.setText("合计获得：");
+
 //        tvKeyBalance.setTextSize(10);
 //        tvKeyBalance.getPaint().setFakeBoldText(true);
 //        tvKeyBalance.setTextColor(getContext().getColor(R.color.color_ffdb00));
@@ -190,7 +190,7 @@ package com.daylong.arcx.dialog.charter;//package com.daylong.gamelibrary.dialog
 //        LeftLayoutC.centerH(layoutParamsWW);
 //
 //        MyTextView textView = MyTextView.create(constraintLayout, layoutParamsWW);
-//        textView.setText("包机结算");
+
 //        textView.setTextSize(11);
 //        textView.getPaint().setFakeBoldText(true);
 //

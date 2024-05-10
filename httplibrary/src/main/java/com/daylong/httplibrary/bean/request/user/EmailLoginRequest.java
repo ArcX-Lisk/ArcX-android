@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class EmailLoginRequest implements Serializable {
 
-    private Integer lgWt =3;//登录方式
-    private String email; //邮箱
-    private String vfyCd; //验证码
-    private String pwd; //密码
+    private Integer lgWt =3;
+    private String email; 
+    private String vfyCd; 
+    private String pwd; 
 
     public EmailLoginRequest(String email, String vfyCd, String pwd) {
         this.email = email;

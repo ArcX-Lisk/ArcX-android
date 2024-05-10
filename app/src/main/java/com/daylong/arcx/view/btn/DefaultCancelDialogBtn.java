@@ -29,7 +29,7 @@ public class DefaultCancelDialogBtn extends BaseButton {
         initBtn(10, R.color.color_white, true);
         setLayoutParams(constraintBuilder.buildPayoutParams());
         setShadowLayer(3, 0, 0, getContext().getColor(R.color.color_c2001da7));
-        setText("取消");
+
     }
 
     public DefaultCancelDialogBtn(@NonNull Context context, ConstraintBuilder builder) {
@@ -41,6 +41,6 @@ public class DefaultCancelDialogBtn extends BaseButton {
         initBtn(10, R.color.color_white, true);
         setLayoutParams(builder.buildPayoutParams());
         setShadowLayer(3, 0, 0, getContext().getColor(R.color.color_c2001da7));
-        setText("取消");
+
     }
 }

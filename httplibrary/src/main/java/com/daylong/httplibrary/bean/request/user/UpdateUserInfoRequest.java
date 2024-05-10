@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class UpdateUserInfoRequest implements Serializable {
 
-    private String plyNm; //昵称
-    private Integer sex;// 性别
+    private String plyNm; 
+    private Integer sex;
 
     public UpdateUserInfoRequest(String plyNm, Integer sex) {
         this.plyNm = plyNm;

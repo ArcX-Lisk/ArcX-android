@@ -28,7 +28,7 @@ import net.daylong.baselibrary.view.textview.MyTextView;
 import net.daylong.gamesocket.mrg.WebSocketMrg;
 
 /**
- * 包机结束提示
+
  */
 public class CharterEndToastDialog extends BaseMvpFragmentDialog<CharterPresenter, CharterModel> implements CharterContract.CharterView {
 
@@ -64,12 +64,12 @@ public class CharterEndToastDialog extends BaseMvpFragmentDialog<CharterPresente
 
         MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(17));
         myTextView.setId(View.generateViewId());
-        myTextView.initText("是否结束？", 11, R.color.color_434343, true);
+
 
         MyTextView tvDesc = MyTextView.create(contentView, new ConstraintBuilder().ww().height(30).topToBottom(myTextView));
         tvDesc.setPadding(AppUtil.getSize(10), 0, AppUtil.getSize(10), 0);
         tvDesc.setId(View.generateViewId());
-        tvDesc.initText("包机时间将会清零", 9, R.color.color_434343, true);
+
         tvDesc.setGravity(Gravity.CENTER_HORIZONTAL);
         tvDesc.setId(View.generateViewId());
         tvDesc.setVisibility(View.INVISIBLE);
@@ -91,7 +91,7 @@ public class CharterEndToastDialog extends BaseMvpFragmentDialog<CharterPresente
         });
 
         DefaultConfirmDialogBtn defaultConfirmDialogBtn = new DefaultConfirmDialogBtn(getContext(), tvDesc.getId());
-        defaultConfirmDialogBtn.setText("取消");
+
         defaultConfirmDialogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,7 +99,7 @@ public class CharterEndToastDialog extends BaseMvpFragmentDialog<CharterPresente
             }
         });
         DefaultCancelDialogBtn defaultCancelDialogBtn = new DefaultCancelDialogBtn(getContext(), tvDesc.getId());
-        defaultCancelDialogBtn.setText("确认");
+
 
         defaultCancelDialogBtn.setOnClickListener(new View.OnClickListener() {
             @Override

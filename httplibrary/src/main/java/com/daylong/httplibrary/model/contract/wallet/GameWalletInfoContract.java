@@ -11,7 +11,7 @@ import net.daylong.baselibrary.http.view.IViewBaseView;
 
 import io.reactivex.Observable;
 
-//包机
+
 public interface GameWalletInfoContract {
     interface GameWalletInfoModel extends IViewBaseModel {
 

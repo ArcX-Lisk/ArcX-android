@@ -3,9 +3,9 @@ package net.daylong.baselibrary.app;
 
 public class Constant {
     public static final String WX_APP_ID = "wx6e35864ce9929790";
-    public static final int CAMERA_REQUEST_CODE = 100; //拍摄图片或视频
-    public static final int ALBUM_REQUEST_CODE = 200; //相册选择图片或视频
-    public static final String BASE_URL = "http://b-ssl.duitang.com/uploads/item/201306/27/20130627163146_eMjUf.thumb.700_0.jpeg"; //相册选择图片或视频
+    public static final int CAMERA_REQUEST_CODE = 100; 
+    public static final int ALBUM_REQUEST_CODE = 200; 
+    public static final String BASE_URL = "http:
 
     public static final String BASE_PAGE = BaseApplication.getAppContext().getExternalCacheDir() + "";
     public static final String iMAGE_CACHE_PATH = BASE_PAGE + "/cache/img";
@@ -23,12 +23,12 @@ public class Constant {
     public static final String ASS_FUN_CARD_HELP = ASS_FUN_CARD_PATH + "ic_help_fun_card";
 
 
-    //   图片缩略图~
-//    用户头像大小
+    
+
     public static final String IMG_THUMBNAIL_USER_ICON = "?imageMogr2/thumbnail/100x";
     public static final String IMG_THUMBNAIL_POST = "?imageMogr2/thumbnail/200x";
     public static final String IMG_THUMBNAIL_FLAG_ICON = "?imageMogr2/thumbnail/48x";
-    //    按照高度比例
+    
     public static final String IMG_THUMBNAIL_HEIGHT = "?imageMogr2/thumbnail/x";
     public static final String IMG_THUMBNAIL_WIDTH = "?imageMogr2/thumbnail/";
 

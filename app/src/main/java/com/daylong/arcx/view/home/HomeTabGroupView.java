@@ -17,12 +17,12 @@ public class HomeTabGroupView extends LinearLayoutView implements View.OnClickLi
         setOrientation(HORIZONTAL);
 
         setLayoutParams(new ConstraintBuilder().mm().height(58).leftBottom().buildPayoutParams());
-        HomeTabView pusherView = new HomeTabView(getContext(), "推币机", R.drawable.img_main_pusher);
+
         pusherView.setId(net.daylong.daylongbase.R.id.base_view_1);
-        dollView = new HomeTabView(getContext(), "娃娃机", R.drawable.img_main_doll);
+
         dollView.setId(net.daylong.daylongbase.R.id.base_view_2);
 
-        HomeTabView arcadeView = new HomeTabView(getContext(), "街机", R.drawable.img_main_arcade);
+
         arcadeView.setId(net.daylong.daylongbase.R.id.base_view_3);
 
         pusherView.setOnClickListener(this);

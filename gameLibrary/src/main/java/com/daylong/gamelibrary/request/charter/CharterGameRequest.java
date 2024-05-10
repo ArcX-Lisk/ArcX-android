@@ -5,7 +5,7 @@ import com.daylong.gamelibrary.meuns.GameCmdType;
 
 import net.daylong.gamesocket.request.base.BaseMsg;
 /**
- * 包机
+
  */
 public class CharterGameRequest extends BaseMsg<CharterRequestParam> {
     public CharterGameRequest(int commodityId ) {

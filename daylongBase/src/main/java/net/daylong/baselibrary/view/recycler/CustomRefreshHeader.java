@@ -20,7 +20,7 @@ import net.daylong.daylongbase.R;
 
 /**
  * @author
- * @Company 广州大龙网络科技有限公司
+
  * @Description
  * @Date 2019/12/21
  * @Version 1.0
@@ -73,7 +73,7 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
     private boolean isPlay;
 
     /**
-     * 状态改变时调用。在这里切换第三阶段的动画卖萌小人
+
      *
      * @param refreshLayout
      * @param oldState
@@ -82,7 +82,7 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
     @Override
     public void onStateChanged(RefreshLayout refreshLayout, RefreshState oldState, RefreshState newState) {
         switch (newState) {
-            case PullDownToRefresh: //下拉刷新开始。正在下拉还没松手时调用
+            case PullDownToRefresh: 
 
 
                 if (!isPlay) {
@@ -94,7 +94,7 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
 
 
                 break;
-            case Refreshing: //正在刷新。只调用一次
+            case Refreshing: 
 //                if (isShowImg) {
 //                    mImage.setImageResource(R.drawable.anim_pull_refreshing);
 //                }
@@ -106,12 +106,12 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
     }
 
     /**
-     * 动画结束后调用
+
      */
     @Override
     public int onFinish(RefreshLayout layout, boolean success) {
 
-        // 结束动画
+        
 //        if (pullDownAnim != null && pullDownAnim.isRunning()) {
 //            pullDownAnim.stop();
 //        }
@@ -121,7 +121,7 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
             refreshingAnim.stop();
 
         }
-//        //重置状态
+
         return 0;
     }
 
@@ -141,12 +141,12 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
     public void onMoving(boolean isDragging, float percent, int offset, int height, int maxDragHeight) {
 
 
-        // 下拉的百分比小于100%时，不断调用 setScale 方法改变图片大小
+        
         if (percent < 1) {
             mImage.setScaleX(1.0F);
             mImage.setScaleY(1.0F);
 
-            //是否执行过翻跟头动画的标记
+            
 //            if (hasSetPullDownAnim) {
 //                hasSetPullDownAnim = false;
 //            }
@@ -154,9 +154,9 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
 
         }
 
-        //当下拉的高度达到Header高度100%时，开始加载正在下拉的初始动画，即翻跟头
+        
         if (percent >= 1.0) {
-//            //因为这个方法是不停调用的，防止重复
+
 //            if (!hasSetPullDownAnim) {
 ////                mImage.setImageResource(R.drawable.anim_pull_end);
 ////                pullDownAnim = (AnimationDrawable) mImage.getDrawable();
@@ -164,7 +164,7 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
 ////
 ////                hasSetPullDownAnim = true;
 //            }
-//            Logger.d("percent:  完成下拉");
+
 //
         }
 

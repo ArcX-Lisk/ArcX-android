@@ -21,7 +21,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 能量
+
  */
 public class EnergyHelpDialog extends BaseFragmentDialog {
 
@@ -94,7 +94,7 @@ public class EnergyHelpDialog extends BaseFragmentDialog {
             AppUtil.getMainHandler().postDelayed(runnable, 1000);
         }
 
-        // 百分比
+        
         int dp = (int) (cnAmt * 1.0f / ttAmt * 100);
         myProgressBar.setProgress(dp, String.valueOf(cnAmt));
 

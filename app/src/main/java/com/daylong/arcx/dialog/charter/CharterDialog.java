@@ -77,7 +77,7 @@ public class CharterDialog extends BaseMvpFragmentDialog<CharterPresenter, Chart
 
         MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(17));
         myTextView.setId(View.generateViewId());
-        myTextView.initText("包机说明", 11, R.color.color_434343, true);
+
 
         MyTextView tvDesc = MyTextView.create(contentView, new ConstraintBuilder().ww().topToBottom(myTextView).topMargin(6));
         tvDesc.setPadding(AppUtil.getSize(10), 0, AppUtil.getSize(10), 0);

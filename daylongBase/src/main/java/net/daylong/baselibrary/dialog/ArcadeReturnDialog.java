@@ -61,7 +61,7 @@ public class ArcadeReturnDialog extends BaseFragmentDialog {
 
 
         MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().top(myImageView).leftToRightById(myImageView).leftTopMargin(31, 6));
-        myTextView.initText("已到账", 9, net.daylong.daylongbase.R.color.color_434343);
+
         myTextView.setId(View.generateViewId());
         OutlinedTextView.create(contentView, new ConstraintBuilder().ww().height(17).topToBottom(myTextView).topMargin(2).leftToRightById(myImageView).leftTopMargin(12, 6), AppUtil.getSize(12), StringUtils.numFormatDot(coin));
 

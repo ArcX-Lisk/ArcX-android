@@ -3,7 +3,7 @@ package com.daylong.httplibrary.bean.request.game;
 import com.daylong.httplibrary.bean.request.BasePageRequest;
 
 public class GameProductRequest extends BasePageRequest {
-    private int  productType; //分類Di
+    private int  productType; 
 
     public GameProductRequest(int productType,Integer pageNum, Integer pageSize) {
         super(pageNum, pageSize);

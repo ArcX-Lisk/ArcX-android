@@ -57,7 +57,7 @@ public class MyGoodsAdapter extends BaseQuickAdapter<MyGoodsResponse, MyViewHold
                 .topToBottom(myTextView)
                 .topMargin(3));
         tvNunName.setId(net.daylong.daylongbase.R.id.base_view_4);
-        tvNunName.initText("数量", 7, R.color.color_979797, false);
+
 
 
         MyTextView coinNum = MyTextView.create(rootView, new ConstraintBuilder().ww()

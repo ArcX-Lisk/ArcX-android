@@ -72,18 +72,18 @@ public class WalletActivity extends BaseActivity {
     private int tabCurrent;
 
     public void getFragment(int checkedId) {
-        //如果是周任务
+        
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         fragment = (BaseFragment) fragmentManager.findFragmentByTag(checkedId + "");
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if (fragment == null) {
-            //首页
+            
             if (checkedId == btnSpending.getId()) {
                 fragment = new WalletSpendingFragment();
             } else {
                 fragment = new WalletWalletFragment();
-//我的.
+
             }
 
             fragmentTransaction.add(contentFrame.getId(), fragment, checkedId + "");
@@ -91,7 +91,7 @@ public class WalletActivity extends BaseActivity {
             fragmentTransaction.show(fragment);
             fragment.onFragmentEnter();
         }
-        //获取当前显示的Fragment
+        
         BaseFragment CurrentFragment = (BaseFragment) fragmentManager.findFragmentByTag(tabCurrent + "");
         if (tabCurrent != 0 && CurrentFragment != null && tabCurrent != checkedId) {
             fragmentTransaction.hide(CurrentFragment);

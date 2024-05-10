@@ -56,7 +56,7 @@ public class InvitationBindActivity extends BaseMvpActivity<InvitationPresenter,
         contentView.setBackgroundResource(R.drawable.shape_invitation_bg);
         addView(contentView);
         MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().topCenterH().topMargin(21));
-        myTextView.initText("填写好友邀请码", 9, R.color.color_434343, false);
+
         ConstraintBuilder constraintBuilder = new ConstraintBuilder(148, 35).topCenterH().topMargin(51);
         tvCode = new EditText(this);
         tvCode.setLayoutParams(constraintBuilder.getParams());
@@ -67,7 +67,7 @@ public class InvitationBindActivity extends BaseMvpActivity<InvitationPresenter,
         tvCode.getPaint().setTextSize(AppUtil.getSize(9));
         tvCode.setTextColor(getColor(R.color.color_434343));
         tvCode.setHintTextColor(getColor(R.color.color_434343));
-        tvCode.setHint("输入邀请码");
+
         tvCode.setMaxLines(1);
 
 
@@ -91,7 +91,7 @@ public class InvitationBindActivity extends BaseMvpActivity<InvitationPresenter,
             }
         });
         btnBind = BaseButton.create(contentView, new ConstraintBuilder(108, 28).bottomCenterH().bottomMargin(31));
-        btnBind.initBtn("确认", 10, R.color.color_434343);
+
         btnBind.setGravity(Gravity.CENTER);
         btnBind.setBackgroundResource(R.drawable.shape_invitation_btn_none_bg);
         btnBind.setOnClickListener(new View.OnClickListener() {

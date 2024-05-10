@@ -4,16 +4,16 @@ import com.daylong.httplibrary.bean.menus.GameChillType;
 import com.daylong.httplibrary.bean.response.user.UserInfoResponse;
 
 /**
- * 游戏信息
+
  */
 public class GameInfoResponse extends GameItemInfoResponse {
 
-    private Integer devTp; //设备类型
-    private Integer sndTp; //设备二级分类
-    private Integer devIdx; //设备位置
-    private String lvAds; //播流地址
-    private int cmdTp; //消耗商品类型
-    private int devSts; //设备占用状态
+    private Integer devTp; 
+    private Integer sndTp; 
+    private Integer devIdx; 
+    private String lvAds; 
+    private int cmdTp; 
+    private int devSts; 
     private String devDtPct;
 
     private UserInfoResponse gmPly;

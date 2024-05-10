@@ -37,7 +37,7 @@ public class BannerAdapter extends com.youth.banner.adapter.BannerAdapter<HomeBa
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtil.show("还没处理");
+
             }
         });
     }

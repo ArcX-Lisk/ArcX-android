@@ -37,10 +37,10 @@ public class FileUtil {
 
     public static final String DOCUMENTS_DIR = "documents";
 
-    public static final int SIZETYPE_B = 1;//获取文件大小单位为B的double值
-    public static final int SIZETYPE_KB = 2;//获取文件大小单位为KB的double值
-    public static final int SIZETYPE_MB = 3;//获取文件大小单位为MB的double值
-    public static final int SIZETYPE_GB = 4;//获取文件大小单位为GB的double值
+    public static final int SIZETYPE_B = 1;
+    public static final int SIZETYPE_KB = 2;
+    public static final int SIZETYPE_MB = 3;
+    public static final int SIZETYPE_GB = 4;
 
     public static void downloadFile(String url, final String downloadName, DownloadFileListener downloadFileListener) {
         final long startTime = System.currentTimeMillis();
@@ -50,7 +50,7 @@ public class FileUtil {
         okHttpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                // 下载失败
+                
                 e.printStackTrace();
 
                 downloadFileListener.onFail(0, e.getMessage());
@@ -63,7 +63,7 @@ public class FileUtil {
                 byte[] buf = new byte[65536];
                 int len = 0;
                 FileOutputStream fos = null;
-                // 储存下载文件的目录
+                
                 String savePath = Constant.UPDATE_PATH;
                 ;
                 try {
@@ -167,7 +167,7 @@ public class FileUtil {
 
 
     /**
-     * 专为Android4.4以上设计的从Uri获取文件路径
+
      */
     public static String getPath(final Context context, final Uri uri) {
 
@@ -213,7 +213,7 @@ public class FileUtil {
                     }
                 }
 
-                // 在某些android8+的手机上，无法获取路径，所以用拷贝的方式，获取新文件名，然后把文件发出去
+                
                 String fileName = getFileName(context, uri);
                 File cacheDir = getDocumentCacheDir(context);
                 File file = generateFileName(fileName, cacheDir);
@@ -415,11 +415,11 @@ public class FileUtil {
     }
 
     /**
-     * 获取文件指定文件的指定单位的大小
+
      *
-     * @param filePath 文件路径
-     * @param sizeType 获取大小的类型1为B、2为KB、3为MB、4为GB
-     * @return double值的大小
+
+
+
      */
     public static double getFileOrFilesSize(String filePath, int sizeType) {
         File file = new File(filePath);
@@ -437,10 +437,10 @@ public class FileUtil {
     }
 
     /**
-     * 调用此方法自动计算指定文件或指定文件夹的大小
+
      *
-     * @param filePath 文件路径
-     * @return 计算好的带B、KB、MB、GB的字符串
+
+
      */
     public static String getAutoFileOrFilesSize(String filePath) {
         File file = new File(filePath);
@@ -458,7 +458,7 @@ public class FileUtil {
     }
 
     /**
-     * 获取指定文件大小
+
      *
      * @param file
      * @return
@@ -482,7 +482,7 @@ public class FileUtil {
     }
 
     /**
-     * 获取指定文件夹
+
      *
      * @param f
      * @return
@@ -501,7 +501,7 @@ public class FileUtil {
     }
 
     /**
-     * 转换文件大小
+
      *
      * @param fileS
      * @return
@@ -526,7 +526,7 @@ public class FileUtil {
     }
 
     /**
-     * 转换文件大小,指定转换的类型
+
      *
      * @param fileS
      * @param sizeType
@@ -558,11 +558,11 @@ public class FileUtil {
 
 
         File file = new File(Constant.LOG_PATH);
-        if (!file.exists()) {  //没有创建文件夹则创建
+        if (!file.exists()) {  
             file.mkdirs();
         }
         File file2 = new File(Constant.UPDATE_PATH);
-        if (!file2.exists()) {  //没有创建文件夹则创建
+        if (!file2.exists()) {  
             file2.mkdirs();
         }
 

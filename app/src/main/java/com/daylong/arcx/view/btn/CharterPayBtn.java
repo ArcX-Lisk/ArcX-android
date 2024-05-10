@@ -69,7 +69,7 @@ public class CharterPayBtn extends BaseButton implements View.OnClickListener {
             Boolean startCharter = charterInfoResponse.isStartCharter(charterType.getId());
 
 
-            //包机
+            
             if (startCharter) {
                 WebSocketMrg.getInstance().sendMsg(new CharterGameRequest(commodityListDTO.getCommodityId()));
                 if (onCharterPayListener != null) {

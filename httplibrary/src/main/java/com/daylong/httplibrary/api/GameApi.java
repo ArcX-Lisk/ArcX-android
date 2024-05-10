@@ -31,7 +31,7 @@ public interface GameApi {
     Observable<BaseResponse<GameInfoResponse>> getGameInfo(@Query("devId") int productId);
 
     /**
-     * 包机信息
+
      * @param productId
      * @return
      */
@@ -39,7 +39,7 @@ public interface GameApi {
     Observable<BaseResponse<CharterDescResponse>> getGameCharterDesc(@Query("productId") int productId);
 
     /**
-     * 我的包机信息
+
      * @return
      */
     @GET("user_charter_msg")

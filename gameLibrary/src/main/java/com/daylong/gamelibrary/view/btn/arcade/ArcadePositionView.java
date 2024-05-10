@@ -49,9 +49,9 @@ public class ArcadePositionView extends ConstraintLayout {
         UserInfoResponse gamingUserMsg = gamePosition.getUserInfoResponse();
 
 
-        //玩家未空
+        
         if (gamingUserMsg == null) {
-            //创建开始按钮
+            
             createStartBtn();
             if (ivUserIcon != null && ivUserIcon.getVisibility() != View.GONE) {
                 ivUserIcon.setVisibility(View.GONE);

@@ -34,7 +34,7 @@ public class LinearLayoutBuilder {
     }
 
 
-    // 增加错误检查和异常处理
+    
     public LinearLayoutBuilder margin(float left, float top, float right, float bottom) {
         try {
             if (left < 0 || top < 0 || right < 0 || bottom < 0) {
@@ -50,7 +50,7 @@ public class LinearLayoutBuilder {
         return this;
     }
 
-    // 增加错误检查和异常处理
+    
     public LinearLayoutBuilder margin(float margin) {
 
         return margin(margin, margin, margin, margin);
@@ -78,7 +78,7 @@ public class LinearLayoutBuilder {
     }
 
     /**
-     * 设置高度 高度沾满
+
      *
      * @param wight
      * @return
@@ -90,7 +90,7 @@ public class LinearLayoutBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public LinearLayoutBuilder mm() {
         payoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
@@ -100,9 +100,9 @@ public class LinearLayoutBuilder {
 
 
     /**
-     * 横屏沾满 设置高度
+
      *
-     * @param height 高度
+
      * @return
      */
     public LinearLayoutBuilder m(float height) {
@@ -150,7 +150,7 @@ public class LinearLayoutBuilder {
 
 
     /**
-     * 水平居中
+
      */
     public LinearLayoutBuilder centerH() {
         payoutParams.gravity = Gravity.CENTER_HORIZONTAL;
@@ -158,7 +158,7 @@ public class LinearLayoutBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public LinearLayoutBuilder height(float height) {
         payoutParams.height = AppUtil.getSize(height);
@@ -166,7 +166,7 @@ public class LinearLayoutBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public LinearLayoutBuilder NotSizeHeight(int height) {
         payoutParams.height = height;
@@ -174,7 +174,7 @@ public class LinearLayoutBuilder {
     }
 
     /**
-     * 水平居中
+
      */
     public LinearLayoutBuilder width(float width) {
         payoutParams.width = AppUtil.getSize(width);

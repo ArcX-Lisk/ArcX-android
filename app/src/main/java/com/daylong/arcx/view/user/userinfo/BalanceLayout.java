@@ -31,7 +31,7 @@ public class BalanceLayout extends CardView {
         myImageView.setId(View.generateViewId());
 
         MyTextView myTextView = MyTextView.create(balanceLayout, new ConstraintBuilder().ww().leftToRightById(myImageView).centerV(myImageView));
-        myTextView.initText("我的金币", 9, R.color.color_434343, true);
+
 
 
         tvMyBalance = MyTextView.create(balanceLayout, new ConstraintBuilder().ww().left(myImageView).topToBottom(myImageView).topMargin(10));
@@ -40,7 +40,7 @@ public class BalanceLayout extends CardView {
 
         BaseButton baseButton = BaseButton.create(balanceLayout, new ConstraintBuilder(52, 22).centerV().right().rightMargin(8));
         baseButton.setBackgroundResource(R.drawable.shape_r_22_bg_b30);
-        baseButton.initBtn("充值", 10, R.color.color_434343);
+
         baseButton.setGravity(Gravity.CENTER);
         baseButton.setOnClickListener(new OnClickListener() {
             @Override

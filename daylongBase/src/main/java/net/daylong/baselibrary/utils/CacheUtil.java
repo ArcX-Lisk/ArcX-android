@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 /**
  * @author
- * @Company 广州大龙网络科技有限公司
+
  * @Description
  * @Date 2020/1/3
  * @Version 1.0
@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 public class CacheUtil {
 
     /**
-     * 获取缓存大小
+
      *
      * @param context
      * @return
@@ -33,7 +33,7 @@ public class CacheUtil {
     }
 
     /***
-     * 清理所有缓存
+
      * @param context
      */
     public static void clearAllCache(Context context) {
@@ -56,15 +56,15 @@ public class CacheUtil {
         return dir.delete();
     }
 
-    // 获取文件
-    //Context.getExternalFilesDir() --> SDCard/Android/data/你的应用的包名/files/ 目录，一般放一些长时间保存的数据
-    //Context.getExternalCacheDir() --> SDCard/Android/data/你的应用包名/cache/目录，一般存放临时缓存数据
+    
+    
+    
     public static long getFolderSize(File file) throws Exception {
         long size = 0;
         try {
             File[] fileList = file.listFiles();
             for (int i = 0; i < fileList.length; i++) {
-                // 如果下面还有文件
+                
                 if (fileList[i].isDirectory()) {
                     size = size + getFolderSize(fileList[i]);
                 } else {
@@ -78,7 +78,7 @@ public class CacheUtil {
     }
 
     /**
-     * 格式化单位
+
      *
      * @param size
      * @return

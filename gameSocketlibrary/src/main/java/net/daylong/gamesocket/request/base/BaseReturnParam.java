@@ -2,11 +2,11 @@ package net.daylong.gamesocket.request.base;
 
 public class BaseReturnParam<T> {
 
-    private int errorCode; //错误码
-    private String errorDesc; //错误描述
-    private String serverTime; //服务器时间
-    private long serverDate; //服务器时间戳
-    private T serverMsg; //返回内容
+    private int errorCode; 
+    private String errorDesc; 
+    private String serverTime; 
+    private long serverDate; 
+    private T serverMsg; 
 
     public int getErrorCode() {
         return errorCode;

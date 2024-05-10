@@ -38,7 +38,7 @@ public interface CheckInContract {
         public abstract void checkIn();
         public abstract void getCheckInfo();
 
-        //请求用户信息
+        
 
     }
 }

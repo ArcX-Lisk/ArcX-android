@@ -44,7 +44,7 @@ public interface LoginContract {
         public abstract void getLoginUserInfo( long id);
 
         public abstract void getAppInfoResponse();
-        //请求用户信息
+        
 
     }
 }

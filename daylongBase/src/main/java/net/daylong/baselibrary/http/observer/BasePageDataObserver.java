@@ -84,12 +84,12 @@ public abstract class BasePageDataObserver<T, B> implements Observer<BasePageDat
     }
 
     /**
-     * 请求开始返回
+
      */
     protected abstract void onStart();
 
     /**
-     * 请求数据成功返回
+
      *
      * @param data
      * @throws Exception
@@ -97,13 +97,13 @@ public abstract class BasePageDataObserver<T, B> implements Observer<BasePageDat
     protected abstract void onSuccess(List<T> data, BasePageDataResponse<T,B> basePageResponse) throws Exception;
 
     /**
-     * 请求token过期返回
+
      *
      * @throws Exception
      */
     protected void onCodeOverdue(String message) throws Exception {
         ToastUtil.show(message);
-        //RxBus发送通知
+        
     }
 
     protected void onCodeMesseng(String message) throws Exception {
@@ -111,7 +111,7 @@ public abstract class BasePageDataObserver<T, B> implements Observer<BasePageDat
     }
 
     /**
-     * 请求数据失败返回
+
      *
      * @param message
      */
@@ -122,14 +122,14 @@ public abstract class BasePageDataObserver<T, B> implements Observer<BasePageDat
     }
 
     /**
-     * 请求数据失败返回
+
      */
     protected void onError(ApiException apiException) throws Exception {
 
     }
 
     /**
-     * 请求完成返回
+
      */
     protected abstract void onFinish();
 

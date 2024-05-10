@@ -78,13 +78,13 @@ public class WinDragonBallDialog implements DragonBallImageView.OnAnimatorListen
     private CoinRewardNumberView coinRewardNumberView;
     private MyImageView myImageView;
 
-    private View dragonBallView;//龙珠的View
-    private View axcView;//龙珠的View
+    private View dragonBallView;
+    private View axcView;
     private DragonBallListView dragonBallListView;
     private int num;
 
     public void show(int num, List<AwardBean> awardBeans, DragonBallListView dragonBallListView, MyImageView axcView) {
-        //设置背景
+        
         rootView.setBackgroundColor(rootView.getContext().getColor(R.color.main_color_80000));
         this.axcView = axcView;
 
@@ -122,7 +122,7 @@ public class WinDragonBallDialog implements DragonBallImageView.OnAnimatorListen
         } else {
             int size = awardBeans.size();
 
-            //多个的时候
+            
             for (int i = 0; i < size; i++) {
                 DragonBallAwardItemView dragonBallAwardItemView;
                 if (i == 0) {
@@ -144,7 +144,7 @@ public class WinDragonBallDialog implements DragonBallImageView.OnAnimatorListen
                 } else {
 
                     ConstraintBuilder constraintBuilder = new ConstraintBuilder().ww().top(IDS[0]);
-                    //如果两个
+                    
                     if (size == 2) {
                         constraintBuilder.leftToRightById(IDS[0]);
                         constraintBuilder.right();
@@ -192,7 +192,7 @@ public class WinDragonBallDialog implements DragonBallImageView.OnAnimatorListen
     }
 
     /**
-     * 隐藏一个龙珠
+
      *
      * @param viewA
      */

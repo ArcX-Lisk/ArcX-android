@@ -156,7 +156,7 @@ public class PushCoinGameActivity extends IPushCoinGameActivity implements PayLi
     public void onGameWinning(DeviceWinningBean data) {
 
 
-        MyLogUtil.e("中奖消息->" + JsonUtil.toJson(data));
+
         if (data.isOrdinary()) {
 
             SoundPoolType.AWARD_NORMAL.play();
@@ -168,7 +168,7 @@ public class PushCoinGameActivity extends IPushCoinGameActivity implements PayLi
             SoundPoolType.getSoundPoolTypeByName(data.getAwardMulti() + "").play();
             return;
         }
-        //如果是中奖开始
+        
         if (data.isStart()) {
             if (data.isPay()) {
                 SoundPoolType.ALARM_BELL.play();
@@ -186,7 +186,7 @@ public class PushCoinGameActivity extends IPushCoinGameActivity implements PayLi
                     }, 2000);
                 } else {
 
-                    //免费游戏
+                    
                     if (productAwardType == 1) {
                         productAwardType = Integer.parseInt((gameInfo.getSecondType() + "0000" + productAwardType));
                     }

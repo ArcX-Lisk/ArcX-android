@@ -23,7 +23,7 @@ public class WXMrg {
     private WxLoginListener listeners;
 
     /**
-     * 单例
+
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class WXMrg {
         IWXAPI wxapi = WXAPIFactory.createWXAPI(context, Constant.WX_APP_ID, true);
         wxapi.registerApp(Constant.WX_APP_ID);
         SendAuth.Req req = new SendAuth.Req();
-        req.scope = "snsapi_userinfo"; // 只能填 snsapi_userinfo
+        req.scope = "snsapi_userinfo"; 
         wxapi.sendReq(req);
     }
 
@@ -64,19 +64,19 @@ public class WXMrg {
         WXWebpageObject webpage = new WXWebpageObject();
         webpage.webpageUrl = url;
 
-//用 WXWebpageObject 对象初始化一个 WXMediaMessage 对象
+
         WXMediaMessage msg = new WXMediaMessage(webpage);
         msg.title = name;
         msg.description = desc;
         Bitmap thumbBmp = BitmapFactory.decodeResource(context.getResources(), DrawableUtils.getDrawableByName("icon"));
         msg.thumbData = bmpToByteArray(thumbBmp, true);
 
-//构造一个Req
+
         SendMessageToWX.Req req = new SendMessageToWX.Req();
         req.transaction = buildTransaction("webpage");
         req.message = msg;
         req.scene = SendMessageToWX.Req.WXSceneSession;
-//调用api接口，发送数据到微信
+
         api.sendReq(req);
     }
 

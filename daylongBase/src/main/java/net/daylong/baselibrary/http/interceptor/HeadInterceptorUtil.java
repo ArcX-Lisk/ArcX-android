@@ -14,7 +14,7 @@ import okio.Buffer;
 
 public class HeadInterceptorUtil {
     /**
-     * 头部拦截器
+
      *
      * @return
      */
@@ -34,7 +34,7 @@ public class HeadInterceptorUtil {
 
 
     /**
-     * post 请求参数获取
+
      */
     private static String bodyToString(final Request request) {
         final Request copy = request.newBuilder().build();
@@ -48,7 +48,7 @@ public class HeadInterceptorUtil {
     }
 
     /**
-     * 字符串转unicode
+
      *
      * @param str
      * @return
@@ -63,7 +63,7 @@ public class HeadInterceptorUtil {
     }
 
     /**
-     * 日志拦截器
+
      *
      * @return
      */
@@ -86,12 +86,12 @@ public class HeadInterceptorUtil {
                 }
 
 
-                MyLogUtil.e("请求信息->"+requestMessage);
+
                 if (!response.isSuccessful()) {
-                    // 在这里进行请求错误的处理逻辑
-                    // 例如，记录错误日志、重试请求等
-                    // 这里只是简单地抛出一个异常作为示例
-                    throw new IOException("请求错误：" + request.url().toString());
+                    
+                    
+                    
+
                 }
 
                 return response.newBuilder().body(ResponseBody.create(responseBody.contentType(),
@@ -102,7 +102,7 @@ public class HeadInterceptorUtil {
 
 
     /**
-     * 基础公共参数拦截器
+
      *
      * @return
      */

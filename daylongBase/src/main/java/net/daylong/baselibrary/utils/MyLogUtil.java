@@ -19,7 +19,7 @@ public class MyLogUtil {
     private static boolean sDebug = true;
 
     /**
-     * 初始化
+
      *
      * @param debug
      */
@@ -31,9 +31,9 @@ public class MyLogUtil {
     }
 
     /**
-     * 打印日志(Verbose)
+
      *
-     * @param msg 内容
+
      */
     public static void v(String msg) {
         if (sDebug) {
@@ -42,9 +42,9 @@ public class MyLogUtil {
     }
 
     /**
-     * 打印日志(Debug)
+
      *
-     * @param msg 内容
+
      */
     public static void d(String msg) {
         if (sDebug) {
@@ -54,9 +54,9 @@ public class MyLogUtil {
 
 
     /**
-     * 打印日志(Info)
+
      *
-     * @param msg 内容
+
      */
     public static void i(String msg) {
         if (sDebug) {
@@ -65,9 +65,9 @@ public class MyLogUtil {
     }
 
     /**
-     * 打印日志(Warm)
+
      *
-     * @param msg 内容
+
      */
     public static void w(String msg) {
         if (sDebug) {
@@ -76,9 +76,9 @@ public class MyLogUtil {
     }
 
     /**
-     * 打印日志(wtf)
+
      *
-     * @param msg 内容
+
      */
     public static void wtf(String msg) {
         if (sDebug) {
@@ -88,9 +88,9 @@ public class MyLogUtil {
 
 
     /**
-     * 打印日志(Error)
+
      *
-     * @param msg 内容
+
      */
     public static void e(String msg) {
         if (sDebug) {
@@ -99,9 +99,9 @@ public class MyLogUtil {
     }
 
     /**
-     * 打印日志(Error)
+
      *
-     * @param msg 内容
+
      */
     public static void e(String msg, String text) {
         if (sDebug) {
@@ -110,9 +110,9 @@ public class MyLogUtil {
     }
 
     /**
-     * 打印日志(Error)
+
      *
-     * @param msg 内容
+
      */
     public static void i(String msg, String text) {
         if (sDebug) {
@@ -121,7 +121,7 @@ public class MyLogUtil {
     }
 
     /**
-     * 打印日志(Error)
+
      *
      * @param throwable
      */
@@ -133,9 +133,9 @@ public class MyLogUtil {
 
 
     /**
-     * 打印日志(Erro)
+
      *
-     * @param msg       内容
+
      * @param throwable
      */
     public static void e(String msg, Throwable throwable) {
@@ -145,9 +145,9 @@ public class MyLogUtil {
     }
 
     /**
-     * 打印日志(json)
+
      *
-     * @param msg 内容
+
      */
     public static void json(String msg) {
         if (sDebug) {
@@ -157,7 +157,7 @@ public class MyLogUtil {
 
 
     /**
-     * 追加文件：使用FileWriter
+
      *
      * @param content
      */
@@ -169,14 +169,14 @@ public class MyLogUtil {
             FileWriter writer = null;
             try {
                 File file = new File(path);
-                if (!file.exists()) {  //没有创建文件夹则创建
+                if (!file.exists()) {  
                     file.mkdirs();
                 }
-                // 打开一个写文件器，构造函数中的第二个参数true表示以追加形式写文件
+                
                 writer = new FileWriter(path + DateUtil.currentDatetimeDay() + ".log", true);
                 writer.write(content + "\r\n");
                 writer.flush();
-                //关闭流
+                
                 writer.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -195,14 +195,14 @@ public class MyLogUtil {
             FileWriter writer = null;
             try {
                 File file = new File(path);
-                if (!file.exists()) {  //没有创建文件夹则创建
+                if (!file.exists()) {  
                     file.mkdirs();
                 }
-                // 打开一个写文件器，构造函数中的第二个参数true表示以追加形式写文件
+                
                 writer = new FileWriter(path + DateUtil.currentDatetimeDay() + fileName + ".log", true);
                 writer.write(content + "\r\n");
                 writer.flush();
-                //关闭流
+                
                 writer.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -218,14 +218,14 @@ public class MyLogUtil {
             FileWriter writer = null;
             try {
                 File file = new File(path);
-                if (!file.exists()) {  //没有创建文件夹则创建
+                if (!file.exists()) {  
                     file.mkdirs();
                 }
-                // 打开一个写文件器，构造函数中的第二个参数true表示以追加形式写文件
+                
                 writer = new FileWriter(path + DateUtil.currentDatetimeDay() + name + ".log", true);
                 writer.write(content + "\r\n");
                 writer.flush();
-                //关闭流
+                
                 writer.close();
             } catch (IOException e) {
                 e.printStackTrace();

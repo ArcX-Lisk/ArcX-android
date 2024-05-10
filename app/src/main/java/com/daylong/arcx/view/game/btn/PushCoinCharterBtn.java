@@ -37,7 +37,7 @@ public class PushCoinCharterBtn extends ICharterFlightButton {
 
     @Override
     public void onCharterStart(int flightTime) {
-        // 新增文字
+        
         if (tvTime == null) {
             tvTime = MyTextView.create(this, new ConstraintBuilder().ww().topCenterH().topMargin(5));
             tvTime.initText(6, R.color.color_white, true);

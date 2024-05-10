@@ -102,7 +102,7 @@ public class ComboNumberView extends BaseNumberView {
     }
 
     /**
-     * 超时隐藏 毫秒
+
      *
      * @return
      */

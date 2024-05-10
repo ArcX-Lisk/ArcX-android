@@ -85,7 +85,7 @@ public class GameProductPresenter extends GameProductContract.GameProductPresent
                                 Integer productId1 = data.getProductId();
                                 if (productId1 != null && productId1 <= 0) {
                                     productId1 = productId;
-                                    //清楚倒计时
+                                    
                                     GameCache.setGameLastTime(0);
                                 }
                                 getGameInfo(productId1);

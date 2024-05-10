@@ -14,13 +14,13 @@ import net.daylong.baselibrary.utils.ui.layout.cl.ConstraintLayoutView;
 import net.daylong.gamesocket.mrg.WebSocketMrg;
 
 /**
- * 包机按钮
+
  */
 public abstract class ICharterFlightButton extends ConstraintLayoutView implements View.OnClickListener {
 
 
     /**
-     * 北京
+
      *
      * @return
      */
@@ -39,7 +39,7 @@ public abstract class ICharterFlightButton extends ConstraintLayoutView implemen
     public void onClick(View v) {
 
 
-        //获取信息
+        
         if (getCharterDescResponse() != null) {
             showCharterDialog();
         }
@@ -51,7 +51,7 @@ public abstract class ICharterFlightButton extends ConstraintLayoutView implemen
 
 
     /**
-     * 设置包机时间
+
      *
      * @param time
      */
@@ -64,7 +64,7 @@ public abstract class ICharterFlightButton extends ConstraintLayoutView implemen
         public void run() {
             flightTime--;
             if (flightTime <= 0) {
-                //    包机结束
+                
                 onCharterEnd();
                 WebSocketMrg.getInstance().sendMsg(new GameOperateDefaultRequest(GameOperateType.CHARTER_SETTLEMENT));
 
@@ -81,7 +81,7 @@ public abstract class ICharterFlightButton extends ConstraintLayoutView implemen
     private boolean isChatter;
 
     /**
-     * 显示显示隐藏
+
      *
      * @param isShow
      */
@@ -91,10 +91,10 @@ public abstract class ICharterFlightButton extends ConstraintLayoutView implemen
     }
 
 
-    //接受到包机信息
+    
 
     /**
-     * 更新状态
+
      *
      * @param isChatter
      */
@@ -104,7 +104,7 @@ public abstract class ICharterFlightButton extends ConstraintLayoutView implemen
         }
         this.isChatter = isChatter;
         if (isChatter) {
-            //包机开始
+            
             flightTime = endTime;
             onCharterStart(endTime);
             postDelayed(runnable, Constant.COUNTDOWN_1_S);

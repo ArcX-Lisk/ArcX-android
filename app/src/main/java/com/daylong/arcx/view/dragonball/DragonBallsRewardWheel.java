@@ -34,7 +34,7 @@ public class DragonBallsRewardWheel extends ConstraintLayout {
     }
 
 
-    //中奖信息
+    
     private List<DragonBallRewardBean.DragonTrainAwardMsgDTO.IconAwardListDTO> iconAwardList;
 
     private Runnable runnable = new Runnable() {
@@ -183,10 +183,10 @@ public class DragonBallsRewardWheel extends ConstraintLayout {
 
 
         awardMsg = dragonTrainAwardMsg.getEarnArr();
-        //中奖图标
+        
         List<String> iconList = dragonTrainAwardMsg.getIconList();
 
-        //中奖信息
+        
         iconAwardList = dragonTrainAwardMsg.getIconAwardList();
 
         if (iconList != null && iconList.size() > 0) {
@@ -209,9 +209,9 @@ public class DragonBallsRewardWheel extends ConstraintLayout {
             MediaPlayerType.SHOW_BALL_MALI_RUN.play();
 
         }
-        //结束位置
+        
         if (endPosition == null) {
-            //获取开始位置
+            
             DragonBallRewardBean.DragonTrainAwardMsgDTO.IconAwardListDTO iconAwardListDTO = iconAwardList.get(runNum);
             Integer awardIndex = iconAwardListDTO.getAwardIndex();
 

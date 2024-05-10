@@ -48,7 +48,7 @@ public class MyAddressActivity extends BaseActivity {
         addFragment(myAddressFragment, net.daylong.daylongbase.R.id.base_frt);
 
         BaseButton btnNewAddress = BaseButton.create(rootView, new ConstraintBuilder(163, 28).bottomCenterH().bottomMargin(27));
-        btnNewAddress.initBtn("新建地址", 10, R.color.color_434343, true);
+
         btnNewAddress.setGravity(Gravity.CENTER);
         btnNewAddress.setBackgroundResource(R.drawable.shape_r_30_bg_c48);
         btnNewAddress.setOnClickListener(new View.OnClickListener() {

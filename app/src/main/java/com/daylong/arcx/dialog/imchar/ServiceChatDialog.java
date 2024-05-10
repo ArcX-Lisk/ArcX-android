@@ -63,7 +63,7 @@
 //        createBack();
 //
 //        MyTextView myTextView = MyTextView.create(contentView, new ConstraintBuilder().ww().height(9).topMargin(9).topCenterH());
-//        myTextView.initTextFakeBold("客服消息", 8, R.color.color_333);
+
 //
 //    }
 //

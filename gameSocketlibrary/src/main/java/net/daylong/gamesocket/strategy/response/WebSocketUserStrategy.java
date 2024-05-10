@@ -44,7 +44,7 @@ public class WebSocketUserStrategy extends ISocketResponseStrategy {
 
     }
 
-    // 注册回调事件
+    
     public void register(UserBalanceCallBack callBack) {
         webSocketUserBalanceCallBackList.add(callBack);
     }
@@ -55,8 +55,8 @@ public class WebSocketUserStrategy extends ISocketResponseStrategy {
 
     @Override
     public void addCmd() {
-        addCmd(1004); //用户余额信息
-        addCmd(1102); //用户余额信息
+        addCmd(1004); 
+        addCmd(1102); 
     }
 
     @Override
@@ -68,9 +68,9 @@ public class WebSocketUserStrategy extends ISocketResponseStrategy {
                     JSONObject serverMsg = msg.optJSONObject("serverMsg");
                     for (UserBalanceCallBack userBalanceCallBack : webSocketUserBalanceCallBackList) {
                         if (cmd.equals(1004)) {
-                            //余额
+                            
                             int goldNum = serverMsg.optInt("gdAmt", 0);
-                            //积分
+                            
                             int integralNum = serverMsg.optInt("axcAmt", 0);
                             userBalanceCallBack.userBalance(goldNum, integralNum);
 
@@ -90,8 +90,8 @@ public class WebSocketUserStrategy extends ISocketResponseStrategy {
 
     }
 
-    private Long goldNum; //金币数量
-    private Long integralNum; //积分数量
+    private Long goldNum; 
+    private Long integralNum; 
 
     public void forCallBack(long goldNum, long integralNum) {
 

@@ -36,7 +36,7 @@ public interface TaskContract {
         public abstract void getTaskList();
         public abstract void receive( Integer integer);
 
-        //请求用户信息
+        
 
     }
 }

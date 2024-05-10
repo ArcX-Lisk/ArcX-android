@@ -39,14 +39,14 @@ public abstract class BaseGameTitleView extends ConstraintLayoutView implements 
     protected abstract MyImageBtn getSettingBtn();
 
     /**
-     * 用户余额
+
      *
      * @return
      */
     protected abstract IUserGameBalance getUserBalance();
 
     /**
-     * 用户游戏信息
+
      *
      * @return
      */
@@ -126,7 +126,7 @@ public abstract class BaseGameTitleView extends ConstraintLayoutView implements 
     private Runnable getStartGameInfoRunnable = new Runnable() {
         @Override
         public void run() {
-            //请求龙珠信息
+            
             if (activity.getGameType() == GameType.PUSH_COIN_MACHINE) {
                 WebSocketMrg.getInstance().sendMsg(new DefaultWebSocketRequest(GameCmdType.C2S_INNO_DRAGON_MSG.getCdm()));
             }
@@ -145,11 +145,11 @@ public abstract class BaseGameTitleView extends ConstraintLayoutView implements 
 
     @Override
     public void gameInfo(GameInfoBean gameInfoBean) {
-        //房间信息
+        
 
-        //游戏状态
+        
         GameStatus gameStatus = gameInfoBean.getGameStatus(UserCache.getUserId());
-        //状态不一样
+        
         if (gameStatus != this.gameStatus) {
 
 
@@ -158,7 +158,7 @@ public abstract class BaseGameTitleView extends ConstraintLayoutView implements 
                 if (gameStatus == GameStatus.GAME) {
 
 
-                    MyLogUtil.e("开始游戏=>gameInfo-gameStatus == GameStatus.GAME");
+
 
 
                     postDelayed(getStartGameInfoRunnable, 1000);
@@ -186,7 +186,7 @@ public abstract class BaseGameTitleView extends ConstraintLayoutView implements 
                 }
 
             }
-            // 更细信息
+            
         }
 
         if (gameVisitView != null) {
@@ -223,7 +223,7 @@ public abstract class BaseGameTitleView extends ConstraintLayoutView implements 
 
     @Override
     public void onEnergy(int cnAmt, int ttAmt, long cgAmt, int lfTm) {
-        MyLogUtil.e("收到消息=onEnergy=>" + "cnAmt:" + cnAmt + "<ttAmt:" + ttAmt + "<lfTm:" + lfTm);
+
     }
 
     @Override

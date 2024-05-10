@@ -24,7 +24,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 
 
 /**
- * 游戏设置
+
  */
 public class GameSettingDialog extends AttachPopupView {
     private BaseGameActivity activity;

@@ -6,12 +6,12 @@ import androidx.constraintlayout.widget.Constraints;
 import net.daylong.baselibrary.utils.sys.AppUtil;
 
 /**
- * 左边对齐
+
  */
 public class CLayoutLeft {
 
     /**
-     * 左边对齐
+
      *
      * @param params
      * @return
@@ -21,7 +21,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 左边对齐
+
      *
      * @param params
      * @return
@@ -37,7 +37,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 左边对齐
+
      *
      * @param params
      * @return
@@ -50,7 +50,7 @@ public class CLayoutLeft {
 
 
     /**
-     * 左边对齐
+
      *
      * @param params
      * @return
@@ -62,7 +62,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 左边对齐
+
      *
      * @param params
      * @return
@@ -75,7 +75,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 左边对齐
+
      *
      * @param params
      * @return
@@ -88,7 +88,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 左边对齐
+
      *
      * @param params
      * @return
@@ -99,11 +99,11 @@ public class CLayoutLeft {
     }
 
     /**
-     * 左边对ID 头部默认 头部边距
+
      *
      * @param params
-     * @param leftId    左边ID
-     * @param topMargin 头 边距
+
+
      * @return
      */
     public static ConstraintLayout.LayoutParams leftTopAndTopMargin(ConstraintLayout.LayoutParams params, int leftId, float topMargin) {
@@ -131,11 +131,11 @@ public class CLayoutLeft {
 
 
     /**
-     * 左边对右边ID 头部默认 头部边距
+
      *
      * @param params
-     * @param toRightId 左边ID
-     * @param topMargin 头 边距
+
+
      * @return
      */
     public static ConstraintLayout.LayoutParams leftToRightTopAndTopMargin(ConstraintLayout.LayoutParams params, int toRightId, float topMargin) {
@@ -146,11 +146,11 @@ public class CLayoutLeft {
     }
 
     /**
-     * 左边对右边ID 头部在view 底下 头部边距
+
      *
      * @param params
-     * @param toRightId 左边ID
-     * @param topMargin 头 边距
+
+
      * @return
      */
     public static ConstraintLayout.LayoutParams leftToRightTopToBottomAndTopMargin(ConstraintLayout.LayoutParams params, int toRightId, int toBottomId, float topMargin) {
@@ -162,7 +162,7 @@ public class CLayoutLeft {
 
 
     /**
-     * 左边对齐右边Id
+
      *
      * @param params
      * @param toRId
@@ -175,11 +175,11 @@ public class CLayoutLeft {
 
 
     /**
-     * 左边在view 的右边
-     * 头部默认
+
+
      *
      * @param params
-     * @param toRightId 右边ViewId
+
      * @return
      */
     public static ConstraintLayout.LayoutParams leftToRightIdTopParent(ConstraintLayout.LayoutParams params, int toRightId) {
@@ -189,11 +189,11 @@ public class CLayoutLeft {
     }
 
     /**
-     * 左边在view 的右边
-     * 头部默认
+
+
      *
      * @param params
-     * @param toRightId 右边ViewId
+
      * @return
      */
     public static ConstraintLayout.LayoutParams leftToRightIdTopToTop(ConstraintLayout.LayoutParams params, int toRightId, int toTopId) {
@@ -257,7 +257,7 @@ public class CLayoutLeft {
 
 
     /**
-     * 头部居中
+
      *
      * @return
      */
@@ -266,7 +266,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 头部居中
+
      *
      * @return
      */
@@ -275,7 +275,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 头部居中
+
      *
      * @return
      */
@@ -284,7 +284,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 竖屏居中
+
      *
      * @return
      */
@@ -295,7 +295,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 竖屏居中
+
      *
      * @return
      */
@@ -306,7 +306,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 竖屏居中
+
      *
      * @return
      */
@@ -317,7 +317,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 竖屏居中
+
      *
      * @return
      */
@@ -327,7 +327,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 竖屏居中
+
      *
      * @return
      */
@@ -340,7 +340,7 @@ public class CLayoutLeft {
     }
 
     /**
-     * 竖屏居中
+
      *
      * @return
      */
@@ -353,7 +353,7 @@ public class CLayoutLeft {
 
 
     /**
-     * 横向居中
+
      *
      * @param w
      * @param h

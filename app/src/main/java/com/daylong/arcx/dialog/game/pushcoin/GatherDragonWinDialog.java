@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 玛丽机赢的
+
  */
 public class GatherDragonWinDialog extends BaseFragmentDialog {
 

@@ -37,7 +37,7 @@ public class RetrofitRtcFactory {
 
 
     /**
-     * 构造方法私有化
+
      */
     private RetrofitRtcFactory() {
         sOkHttpClient = new OkHttpClient.Builder()
@@ -78,7 +78,7 @@ public class RetrofitRtcFactory {
     }
 
     /**
-     * 创建API
+
      *
      * @param tClass
      * @param <T>
@@ -89,9 +89,9 @@ public class RetrofitRtcFactory {
     }
 
     /**
-     * 创建API
+
      *
-     * @param baseUrl 多个BaseURL切换
+
      * @param tClass
      * @param <T>
      * @return

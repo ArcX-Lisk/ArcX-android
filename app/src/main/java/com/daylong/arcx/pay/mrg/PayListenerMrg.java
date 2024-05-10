@@ -13,7 +13,7 @@ public class PayListenerMrg {
     private static List<PayListener> listenersList;
 
     /**
-     * 单例
+
      *
      * @return
      */

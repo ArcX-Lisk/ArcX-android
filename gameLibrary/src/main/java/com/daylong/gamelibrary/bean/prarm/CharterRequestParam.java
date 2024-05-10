@@ -5,7 +5,7 @@ import com.daylong.basecache.GameCache;
 import net.daylong.gamesocket.request.base.BaseParam;
 
 /**
- * 包机
+
  */
 public class CharterRequestParam extends BaseParam {
 

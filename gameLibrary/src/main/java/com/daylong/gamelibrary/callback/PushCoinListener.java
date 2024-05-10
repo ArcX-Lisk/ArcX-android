@@ -12,8 +12,8 @@ import net.daylong.baselibrary.utils.sys.AppUtil;
 
 public class PushCoinListener implements View.OnTouchListener {
 
-    private static final long AUTO_TIME = 3000; //长按执行开始自动
-    private static final String TAG = "投币触摸->";
+    private static final long AUTO_TIME = 3000; 
+
 
     private Action action = Action.NONE; //
 
@@ -26,8 +26,8 @@ public class PushCoinListener implements View.OnTouchListener {
     private BaseGameActivity activity;
 
     /**
-     * @param autoPushCoinTime // 自动投币时间
-     * @param downPushCoinTime // 点击投币时间
+     * @param autoPushCoinTime 
+     * @param downPushCoinTime 
      */
     public PushCoinListener(DnPlayView dnPlayView, BaseGameActivity activity, OnTouchPushCoinListener onTouchPushCoinListener, int autoPushCoinTime, int downPushCoinTime) {
         this.activity = activity;
@@ -44,17 +44,17 @@ public class PushCoinListener implements View.OnTouchListener {
             long currentTimeMillis = System.currentTimeMillis();
             long c = currentTimeMillis - pushCoinTime;
 
-            MyLogUtil.e(TAG, "投币->时间差" + c);
+
 
             if (c >= autoPushCoinTime) {
-                MyLogUtil.e(TAG, "投币->");
+
                 if (action == Action.NONE) {
                     SoundPoolType.PUSH_COIN.play();
                 }
                 onTouchPushCoinListener.onPushCoin();
                 pushCoinTime = currentTimeMillis;
             } else {
-                MyLogUtil.e(TAG, "投币->不能投幣->");
+
 
             }
 
@@ -64,7 +64,7 @@ public class PushCoinListener implements View.OnTouchListener {
     };
 
     /**
-     * 获取投币时间
+
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class PushCoinListener implements View.OnTouchListener {
     public boolean onTouch(View v, MotionEvent event) {
 
         if (AppUtil.isHorizontal() || !activity.isMyStart() || activity.getGameType() != GameType.PUSH_COIN_MACHINE) {
-            MyLogUtil.e(TAG, "不触发投币状态");
+
             return false;
         }
         int action = event.getAction();
@@ -89,10 +89,10 @@ public class PushCoinListener implements View.OnTouchListener {
         switch (action) {
             case MotionEvent.ACTION_DOWN:
                 downTime = System.currentTimeMillis();
-                //按下,启动
+                
                 AppUtil.getMainHandler().removeCallbacks(runnable, null);
                 AppUtil.getMainHandler().postDelayed(runnable, 0);
-                MyLogUtil.e(TAG, "按下时间->" + downTime);
+
 
                 float x = event.getX();
                 float y = event.getY();
@@ -100,26 +100,26 @@ public class PushCoinListener implements View.OnTouchListener {
                     onTouchPushCoinListener.onDown(x, y, this.action);
                 }
                 if (this.action == Action.NONE) {
-                    // 播放自动的动画
+                    
 //                    dnPlayView.getAutoView().showAutoAnim(x, y);
                 }
                 break;
-            //松开
+            
             case MotionEvent.ACTION_UP:
-                //移出
+                
             case MotionEvent.ACTION_CANCEL:
-                //松手时间差
+                
 //                dnPlayView.getAutoView().hintAuto();
-                MyLogUtil.e(TAG, "松手->当前状态" + this.action);
+
 
                 if (this.action == Action.NONE) {
                     long difference = System.currentTimeMillis() - downTime;
-                    //如果时间差大于等于自动时间
-                    MyLogUtil.e(TAG, "松手->时间差" + difference);
+                    
+
 
                     if (difference >= AUTO_TIME) {
-                        //启动自动
-                        // 变更状态为自动.
+                        
+                        
                         this.action = Action.AUTO;
                         if (onTouchPushCoinListener != null) {
                             onTouchPushCoinListener.onStartAuto();
@@ -140,7 +140,7 @@ public class PushCoinListener implements View.OnTouchListener {
 
                 this.action = Action.NONE;
                 AppUtil.getMainHandler().removeCallbacks(runnable, null);
-                MyLogUtil.e(TAG, "松手->取消自动");
+
 
                 break;
         }
@@ -150,7 +150,7 @@ public class PushCoinListener implements View.OnTouchListener {
     }
 
 
-    //關閉
+    
     public void close() {
         activity = null;
         AppUtil.getMainHandler().removeCallbacks(runnable, null);
@@ -158,8 +158,8 @@ public class PushCoinListener implements View.OnTouchListener {
 
     //
     public enum Action {
-        NONE, // 默认
-        AUTO; // 自动
+        NONE, 
+        AUTO; 
     }
 
     private OnTouchPushCoinListener onTouchPushCoinListener;
@@ -169,7 +169,7 @@ public class PushCoinListener implements View.OnTouchListener {
     }
 
     /**
-     * 投币回调
+
      */
     public interface OnTouchPushCoinListener {
 

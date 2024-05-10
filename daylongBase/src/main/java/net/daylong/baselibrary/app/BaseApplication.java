@@ -23,7 +23,7 @@ public abstract class BaseApplication extends Application {
     protected static Context sContext;
     protected static  Handler sHandler;
     protected static int sMainThreadId;
-    public static final boolean DEBUG = true;  //是否debug模式
+    public static final boolean DEBUG = true;  
     private IAppInfo appInfo;
     public static final int SERVER_SIDE_TYPE = 7;
 
@@ -47,7 +47,7 @@ public abstract class BaseApplication extends Application {
 
         MyLogUtil.init(DEBUG);
 
-//        初始化 友盟
+
         appInfo = initAppInfo();
         KeyboardVisibilityObserver.getInstance().init(this);
         FileUtil.createCacheFile();
@@ -77,7 +77,7 @@ public abstract class BaseApplication extends Application {
 
 
     /**
-     * 获取当前对象
+
      *
      * @return
      */
@@ -97,7 +97,7 @@ public abstract class BaseApplication extends Application {
     }
 
     /**
-     * 获取全局handler
+
      *
      * @return
      */
@@ -106,7 +106,7 @@ public abstract class BaseApplication extends Application {
     }
 
     /**
-     * 获取主线程id
+
      *
      * @return
      */
@@ -115,7 +115,7 @@ public abstract class BaseApplication extends Application {
     }
 
     /**
-     * Base请求的连接
+
      *
      * @return
      */

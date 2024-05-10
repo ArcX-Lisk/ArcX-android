@@ -22,11 +22,11 @@ public class BuglMrg {
         }
 
 
-// 获取当前包名
+
         String packageName = context.getPackageName();
-// 获取当前进程名
+
         String processName = getProcessName(android.os.Process.myPid());
-// 设置是否为上报进程
+
         strategy.setUploadProcess(processName == null || processName.equals(packageName));
         CrashReport.initCrashReport(context, buglyId, false, strategy);
     }
@@ -44,10 +44,10 @@ public class BuglMrg {
     }
 
     /**
-     * 获取进程号对应的进程名
+
      *
-     * @param pid 进程号
-     * @return 进程名
+
+
      */
     private static String getProcessName(int pid) {
         BufferedReader reader = null;

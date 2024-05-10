@@ -22,7 +22,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 娃娃机
+
  */
 public class GameClawProductAdapter extends BaseQuickAdapter<GameItemInfoResponse, MyViewHolder> {
 

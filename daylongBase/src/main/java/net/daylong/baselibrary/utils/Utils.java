@@ -19,10 +19,10 @@ import java.text.DecimalFormat;
 public class Utils {
 
     /**
-     * dp转px
+
      *
-     * @param value dp值
-     * @return 转换后的px
+
+
      */
     public static int dp2px(float value) {
 
@@ -31,11 +31,11 @@ public class Utils {
     }
 
     /**
-     * px转dp
+
      *
-     * @param context 上下文环境
-     * @param value   px值
-     * @return 转换后的dp
+
+
+
      */
     public static int px2dp(Context context, int value) {
         final float scale = context.getResources().getDisplayMetrics().density;
@@ -43,11 +43,11 @@ public class Utils {
     }
 
     /**
-     * 通过 fraction 计算值
+
      *
      * @param fraction
-     * @param startValue 开始坐标
-     * @param endValue   结束坐标
+
+
      * @return
      */
     public static Integer evaluate(float fraction, Integer startValue, Integer endValue) {
@@ -56,7 +56,7 @@ public class Utils {
     }
 
     /**
-     * float 转成String 保留2位小数
+
      *
      * @param f
      */
@@ -69,7 +69,7 @@ public class Utils {
 
 
     /**
-     * float 转成String 保留1位小数
+
      *
      * @param f
      */
@@ -81,14 +81,14 @@ public class Utils {
 
     public static boolean isMobileNO(String mobileNums) {
         /**
-         * 判断字符串是否符合手机号码格式
-         * 移动号段: 134,135,136,137,138,139,147,150,151,152,157,158,159,170,178,182,183,184,187,188
-         * 联通号段: 130,131,132,145,155,156,170,171,175,176,185,186
-         * 电信号段: 133,149,153,170,173,177,180,181,189
+
+
+
+
          * @param str
-         * @return true 验证通过 false 验证失败
+
          */
-        String telRegex = "^((13[0-9])|(14[5,7,9])|(15[^4])|(18[0-9])|(17[0,1,3,5,6,7,8]))\\d{8}$";// "[1]"代表下一位为数字可以是几，"[0-9]"代表可以为0-9中的一个，"[5,7,9]"表示可以是5,7,9中的任意一位,[^4]表示除4以外的任何一个,\\d{9}"代表后面是可以是0～9的数字，有9位。
+        String telRegex = "^((13[0-9])|(14[5,7,9])|(15[^4])|(18[0-9])|(17[0,1,3,5,6,7,8]))\\d{8}$";
         if (TextUtils.isEmpty(mobileNums))
             return false;
         else
@@ -97,7 +97,7 @@ public class Utils {
 
 
     /**
-     * 处于1千保留2位小数
+
      *
      * @param price
      * @return
@@ -112,7 +112,7 @@ public class Utils {
 
 
     /**
-     * 区分数字
+
      *
      * @param number
      * @return
@@ -122,7 +122,7 @@ public class Utils {
         return df.format(number);
     }
     /**
-     * 区分数字
+
      *
      * @param number
      * @return
@@ -133,7 +133,7 @@ public class Utils {
     }
 
     /**
-     * 区分数字
+
      *
      * @param number
      * @return
@@ -144,7 +144,7 @@ public class Utils {
     }
 
     /**
-     * 区分数字
+
      *
      * @param number
      * @return
@@ -155,7 +155,7 @@ public class Utils {
     }
 
     /**
-     * 区分数字
+
      *
      * @param number
      * @return
@@ -167,7 +167,7 @@ public class Utils {
 
 
     /**
-     * 返回当前的进程名
+
      */
 
     public static String getCurrentProcessName() {
@@ -219,7 +219,7 @@ public class Utils {
 
 
     /**
-     * 获取位置
+
      *
      * @param view
      * @return
@@ -237,7 +237,7 @@ public class Utils {
 
     }
 
-    //读取方法
+    
     public static String getJson(Context context, String fileName) {
         StringBuilder stringBuilder = new StringBuilder();
         try {

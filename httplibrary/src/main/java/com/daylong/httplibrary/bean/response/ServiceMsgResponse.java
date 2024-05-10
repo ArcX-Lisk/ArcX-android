@@ -2,10 +2,10 @@ package com.daylong.httplibrary.bean.response;
 
 public class ServiceMsgResponse {
 
-    private long ctId; //聊天ID
-    private Integer usrId; //玩家ID
-    private String usrPic;// 玩家头像
-    private String ctMsg; //聊天内容
+    private long ctId; 
+    private Integer usrId; 
+    private String usrPic;
+    private String ctMsg; 
     private Long sdDt;//sdDt
     public long getCtId() {
         return ctId;

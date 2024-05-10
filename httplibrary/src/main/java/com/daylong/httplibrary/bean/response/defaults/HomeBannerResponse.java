@@ -3,19 +3,19 @@ package com.daylong.httplibrary.bean.response.defaults;
 import java.io.Serializable;
 
 /**
- * 首页轮播图
+
  */
 public class HomeBannerResponse implements Serializable {
 
 
-    private String title; //标题
-    private Integer redirectType;//跳转类型
-    private String imgUrl; //展示图片
-    private String dynamicImgUrl; //动态图片
-    private String description; //描述
+    private String title; 
+    private Integer redirectType;
+    private String imgUrl; 
+    private String dynamicImgUrl; 
+    private String description; 
     /**
-     * 关联信息
-     * 根据跳转类型做处理，1-无返回，仅展示，2-支付，跳支付页面，3-跳转的H5页面，4-邀请，跳转邀请页面
+
+
      */
     private String contactMsg;
 

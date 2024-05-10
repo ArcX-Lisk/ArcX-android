@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import com.tencent.mmkv.MMKV;
 
 public class MMKVManager {
-    private static final String MMKV_NAME = "cache"; // MMKV 文件名
+    private static final String MMKV_NAME = "cache"; 
     private static MMKV kv;
 
     private static MMKVManager instance = null;

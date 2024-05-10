@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 集齐七龙珠 转圈圈dialog 玛丽
+
  */
 public class GatherDragonBallRewardDialog extends BaseFragmentDialog {
 

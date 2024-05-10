@@ -21,7 +21,7 @@ import net.daylong.baselibrary.view.img.MyImageView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 娃娃机
+
  */
 public class DollStartGame extends IStartBtn {
     public DollStartGame(@NonNull Context context, int gameCoin) {

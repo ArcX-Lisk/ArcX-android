@@ -12,7 +12,7 @@ import java.util.List;
 import io.reactivex.Observable;
 
 /**
- * 等待领取
+
  */
 public interface SendGoodsContract {
     interface SendGoodsModel extends IViewBaseModel {

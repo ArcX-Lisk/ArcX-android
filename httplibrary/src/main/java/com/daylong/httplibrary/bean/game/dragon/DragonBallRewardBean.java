@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 啊\龙珠返回
+
  */
 public class DragonBallRewardBean implements Serializable {
 

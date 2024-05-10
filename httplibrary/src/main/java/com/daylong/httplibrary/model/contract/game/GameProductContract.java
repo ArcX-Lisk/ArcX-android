@@ -45,7 +45,7 @@ public interface GameProductContract {
 
         public abstract void getGameInfo(int productId);
         public abstract void getQuickGame(int devTp);
-        //请求用户信息
+        
 
     }
 }

@@ -55,14 +55,14 @@ public class CheckInItemView extends ConstraintLayoutView {
         ivAward = MyImageView.create(this, new ConstraintBuilder(20, 20).topCenterH().topMargin(21), R.drawable.img_coin);
         tvCoinNum = MyTextView.create(this, new ConstraintBuilder().ww().bottomCenterH().bottomMargin(4));
         tvCoinNum.initText(7, R.color.color_434343, true);
-        tvDay.setText("第" + (day + 1) + "天");
+
 
         setBackgroundResource(day == 6 ? R.drawable.img_checkin_cell_7 : R.drawable.img_checkin_cell);
     }
 
 
     public void initData(CheckInInfoResponse.SignListDTO signItem) {
-        //如果签到
+        
 
         if (signItem.isCheck()) {
             ivAward.setImageReg(R.drawable.img_checkin_done);

@@ -118,19 +118,19 @@ public abstract class BaseGameActivity extends BaseMvpActivity<CharterPresenter,
 
     @Override
     protected void initView(ViewGroup rootView) {
-        //缓存
+        
         GameCache.setGameCmd(getGameCmdType().getCdm());
         super.initView(rootView);
         addView(getBaseGameTitleView());
 
         rootView.setBackgroundResource(DrawableUtils.getDrawableByName("shape_game_bg"));
-        //故障提示
+        
         errorSet.add(1030);
         errorSet.add(1020);
         errorSet.add(1010);
-        //余额不足
+        
         errorSet.add(1012);
-        //新增倒计时
+        
         if (isShowLstTime()) {
             tvLastTime = MyTextView.create(rootView, new ConstraintBuilder().ww().center());
             tvLastTime.initText(75, getTimeColor(), true);
@@ -145,7 +145,7 @@ public abstract class BaseGameActivity extends BaseMvpActivity<CharterPresenter,
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
 
-            MyLogUtil.e("tag-->返回键l");
+
             if (gameStatus == GameStatus.GAME) {
                 return true;
             }
@@ -166,7 +166,7 @@ public abstract class BaseGameActivity extends BaseMvpActivity<CharterPresenter,
         webSocketGameStrategy.register(this);
         webSocketGameStrategy.setActivity(this);
         super.initData();
-        // 加入
+        
         SocketResponseStrategy.getInstance().registerSocketResponse(webSocketGameStrategy);
         gameInfo = (GameInfoResponse) getIntent().getSerializableExtra("gameInfo");
 
@@ -257,20 +257,20 @@ public abstract class BaseGameActivity extends BaseMvpActivity<CharterPresenter,
 
     }
 
-    //开始自动
+    
     @Override
     public void onStartAuto() {
 
     }
 
-    //关闭自动
+    
     @Override
     public void onCloseAuto() {
 
 
     }
 
-    //投币
+    
     @Override
     public void onPushCoin() {
 
@@ -283,7 +283,7 @@ public abstract class BaseGameActivity extends BaseMvpActivity<CharterPresenter,
     @Override
     public void startGameSuc() {
         dismissLoadingDialog();
-        MyLogUtil.e("开始游戏=>gameInfo-startGameSuc == GameStatus.GAME");
+
 
         gameCountdownRunnable.start();
         MediaPlayerMrg.getInstance().play("start");
@@ -327,10 +327,10 @@ public abstract class BaseGameActivity extends BaseMvpActivity<CharterPresenter,
 
 
         if (gameStatus == GameStatus.FREE) {
-            //停止音效
+            
             MediaPlayerMrg.getInstance().stop();
         } else {
-            //播放音效
+            
             MediaPlayerMrg.getInstance().play();
 
         }
@@ -391,13 +391,13 @@ public abstract class BaseGameActivity extends BaseMvpActivity<CharterPresenter,
 
     @Override
     public void onTime(int time) {
-        MyLogUtil.e("倒计时:" + time);
+
         GameCache.setGameLastTime(time);
     }
 
     @Override
     public void onRefreshTime(int time) {
-//刷新的时间
+
     }
 
 

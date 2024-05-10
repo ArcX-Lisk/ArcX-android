@@ -80,7 +80,7 @@ public class MyAddressAdapter extends BaseQuickAdapter<MyAddressResponse, MyView
         );
         defAddress.setId(net.daylong.daylongbase.R.id.base_view_4);
         defAddress.initText(7, R.color.color_434343, false);
-        defAddress.setText("默认地址");
+
 
         MyTextView tvDelete = MyTextView.create(rootView, new ConstraintBuilder().ww()
                 .right()
@@ -89,7 +89,7 @@ public class MyAddressAdapter extends BaseQuickAdapter<MyAddressResponse, MyView
         );
 
         tvDelete.setId(net.daylong.daylongbase.R.id.base_view_6);
-        tvDelete.initText("删除",7, R.color.color_444444, false);
+
         DrawableUtils.seLeftDrawable(tvDelete, R.drawable.img_address_delete, AppUtil.getSize(9), AppUtil.getSize(9));
 
 
@@ -100,7 +100,7 @@ public class MyAddressAdapter extends BaseQuickAdapter<MyAddressResponse, MyView
                 .rightMargin(8)
         );
         tvEt.setId(net.daylong.daylongbase.R.id.base_view_5);
-        tvEt.initText("编辑",7, R.color.color_444444, false);
+
         DrawableUtils.seLeftDrawable(tvEt, R.drawable.img_address_edit, AppUtil.getSize(9), AppUtil.getSize(9));
 
         addChildClickViewIds(net.daylong.daylongbase.R.id.base_view_5);

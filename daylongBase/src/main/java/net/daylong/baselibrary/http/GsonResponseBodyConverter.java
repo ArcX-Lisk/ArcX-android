@@ -14,7 +14,7 @@ import java.lang.reflect.Type;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 /**
- * 请求返回
+
  *
  * @param <T>
  */
@@ -30,10 +30,10 @@ public class GsonResponseBodyConverter<T> implements Converter<ResponseBody, T> 
     public T convert(ResponseBody value) throws IOException {
 
         String response = value.string();
-        //BaseHttpStatus 只解析 code和message
+        
         MyLogUtil.e(response);
         BaseHttpStatus httpStatus = gson.fromJson(response, BaseHttpStatus.class);
-        if (!httpStatus.isOk()) { //失败
+        if (!httpStatus.isOk()) { 
 
             value.close();
             try {
@@ -45,7 +45,7 @@ public class GsonResponseBodyConverter<T> implements Converter<ResponseBody, T> 
             }
 
             throw new ApiException(Integer.parseInt(httpStatus.getCode()), httpStatus.getMsg(), null);
-        } else {//成功
+        } else {
             return gson.fromJson(response, type);
         }
 

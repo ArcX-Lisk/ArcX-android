@@ -20,7 +20,7 @@ import net.daylong.baselibrary.view.layout.LinearLayoutView;
 import net.daylong.baselibrary.view.textview.MyTextView;
 
 /**
- * 能量View
+
  */
 public class GameEnergyProgressView extends ConstraintLayoutView {
 

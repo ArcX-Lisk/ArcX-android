@@ -7,8 +7,8 @@ import java.io.Serializable;
 public class UsdTPayRequest implements Serializable {
 
 
-    private Integer rcgCmdTp; //充值商品类型	1 超级2,金币3 倒计
-    private Integer cmdId; //商品Id
+    private Integer rcgCmdTp; 
+    private Integer cmdId; 
     private Integer devId;
     private Long price;
     private Long num;

@@ -29,8 +29,8 @@ public class TaskRadioBtn extends androidx.appcompat.widget.AppCompatRadioButton
         super(context);
 
         StateListDrawable stateListDrawable = new StateListDrawable();
-        stateListDrawable.addState(new int[]{android.R.attr.state_checked}, new ColorDrawable(Color.TRANSPARENT)); // 选中状态下设为透明
-        stateListDrawable.addState(new int[]{}, new ColorDrawable(Color.TRANSPARENT)); // 非选中状态下设为透明
+        stateListDrawable.addState(new int[]{android.R.attr.state_checked}, new ColorDrawable(Color.TRANSPARENT)); 
+        stateListDrawable.addState(new int[]{}, new ColorDrawable(Color.TRANSPARENT)); 
 
 
         setButtonDrawable(stateListDrawable);

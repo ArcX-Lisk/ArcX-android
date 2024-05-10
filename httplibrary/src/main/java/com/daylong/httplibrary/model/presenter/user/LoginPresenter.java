@@ -116,7 +116,7 @@ public class LoginPresenter extends LoginContract.LoginPresenter {
         IWXAPI wxapi = WXAPIFactory.createWXAPI(mIView.getViewActivity(), Constant.WX_APP_ID, true);
         wxapi.registerApp(Constant.WX_APP_ID);
         SendAuth.Req req = new SendAuth.Req();
-        req.scope = "snsapi_userinfo"; // 只能填 snsapi_userinfo
+        req.scope = "snsapi_userinfo"; 
         wxapi.sendReq(req);
     }
 
@@ -137,7 +137,7 @@ public class LoginPresenter extends LoginContract.LoginPresenter {
                     @Override
                     protected void onSuccess(LoginResponse data) throws Exception {
 
-                        //保存用户请求的Token
+                        
                         if (mIView != null) {
                             mIView.onLoginSuc(data);
                         }

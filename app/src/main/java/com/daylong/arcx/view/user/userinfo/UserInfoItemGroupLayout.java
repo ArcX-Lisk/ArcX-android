@@ -27,10 +27,10 @@ public class UserInfoItemGroupLayout extends CardView {
         linearLayoutView.setOrientation(LinearLayoutView.VERTICAL);
         linearLayoutView.setLayoutParams(new ConstraintBuilder().mw().buildPayoutParams());
 
-        UserInfoItemView myOrder = new UserInfoItemView(getContext(), "我的订单", R.drawable.img_mine_order, UserOrderActivity.class);
-        UserInfoItemView myAddress = new UserInfoItemView(getContext(), "收货地址", R.drawable.img_mine_address, MyAddressActivity.class);
-        UserInfoItemView myFeedback = new UserInfoItemView(getContext(), "反馈", R.drawable.img_mine_feedback, FeedbackActivity.class);
-        UserInfoItemView mySetting = new UserInfoItemView(getContext(), "设置", R.drawable.img_mine_settings, SettingDialog.class);
+
+
+
+
         linearLayoutView.addView(myOrder);
         linearLayoutView.addView(myAddress);
         linearLayoutView.addView(myFeedback);

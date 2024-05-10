@@ -5,7 +5,7 @@ import net.daylong.gamesocket.request.base.BaseMsg;
 import net.daylong.gamesocket.request.base.BaseParam;
 
 /**
- * 心跳
+
  */
 public class BalanceRequest extends BaseMsg<BaseParam> {
     public BalanceRequest() {

@@ -25,7 +25,7 @@ public class GameMedia implements IGamePlay {
     private static Handler handler = new Handler();
 
     public GameMedia(Context context, String fileName) {
-        //    加载游戏音效文件
+        
         mediaBeanMap = new HashMap<>();
         String s = LoadMusicJson.LoadingAssJson(context, fileName);
 
@@ -86,7 +86,7 @@ public class GameMedia implements IGamePlay {
 
     public void setOutTime(GameMediaBean gameMediaBean) {
 
-        //判断是否执行超时
+        
         if (gameMediaBean != null && gameMediaBean.getOutTime() != null) {
             if (outTimeRunnable == null) {
                 outTimeRunnable = new HashMap<>();

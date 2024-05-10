@@ -18,7 +18,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
 
     private static CrashHandler sCrashHandler;
     /**
-     * 系统默认UncaughtExceptionHandler
+
      */
     private Thread.UncaughtExceptionHandler mUncaughtExceptionHandler;
     /**
@@ -26,19 +26,19 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
      */
     private Context mContext;
     /**
-     * 存储异常和参数信息
+
      */
     private Map<String, String> exceptionMap = new HashMap<>();
 
     /**
-     * 私有化
+
      */
     private CrashHandler(){
 
     }
 
     /**
-     * 单例
+
      * @return
      */
     public static synchronized CrashHandler getInstance(){
@@ -53,7 +53,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     }
 
     /**
-     * 初始化
+
      * @param context
      */
     public void init(Context context){
@@ -65,7 +65,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     @Override
     public void uncaughtException(Thread t, Throwable e) {
         if(!handlerException(e) && mUncaughtExceptionHandler != null){
-            //没有处理异常
+            
             mUncaughtExceptionHandler.uncaughtException(t, e);
         }else{
             try {
@@ -78,9 +78,9 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     }
 
     /**
-     * 处理异常
+
      * @param throwable
-     * @return 处理了该异常返回true,否则false
+
      */
     public boolean handlerException(Throwable throwable){
         if(throwable == null){
@@ -93,7 +93,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     }
 
     /**
-     * 收集设备信息
+
      * @param context
      */
     private void collectDeviceInfo(Context context) {
@@ -101,12 +101,12 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         String appVersionName = AppUtil.getAppVersionName(context);
         exceptionMap.put("versionCode", String.valueOf(versionCode));
         exceptionMap.put("versionName",appVersionName);
-        //通过反射拿到错误信息
+        
 
     }
 
     /**
-     * 保存错误信息到文件中
+
      * @param throwable
      */
     private void saveCrashInfoToFile(Throwable throwable) {
@@ -132,7 +132,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
                     printWriter.print(key + "=" + value + "\n");
                 }
                 printWriter.println();
-                //将异常的跟踪栈信息输出到指定的输出流
+                
                 throwable.printStackTrace(printWriter);
                 MyLogUtil.e("throwable************:"+throwable.toString());
                 printWriter.close();
@@ -140,7 +140,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
                 MyLogUtil.d("saveCrashInfoToFile fail...");
             }
         }else{
-            MyLogUtil.d("SD卡不存在");
+
         }
     }
 

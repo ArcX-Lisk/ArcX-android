@@ -19,7 +19,7 @@ public abstract class ISocketResponseStrategy {
     }
 
     /**
-     * 是否当前需要的
+
      *
      * @param cmd
      * @return
@@ -29,7 +29,7 @@ public abstract class ISocketResponseStrategy {
     }
 
     /**
-     * 添加需要的指令
+
      */
     public abstract void addCmd();
 

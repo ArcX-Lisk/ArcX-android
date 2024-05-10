@@ -9,16 +9,16 @@ import net.daylong.baselibrary.http.view.IViewBaseView;
 import io.reactivex.Observable;
 
 /**
- * 转移钱包
+
  */
 public interface RechargeWalletContract {
     interface TransferWalletModel extends IViewBaseModel {
 
         /**
-         * 提现
+
          *
-         * @param tkTp 提现类型
-         * @param amt  提下今日
+
+
          * @return
          */
         Observable<BaseResponse<Object>> postTransferWallet(int tkTp, int amt);

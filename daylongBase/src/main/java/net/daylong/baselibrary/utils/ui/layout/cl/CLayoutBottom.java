@@ -4,7 +4,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Constraints;
 
 /**
- * 左边对齐
+
  */
 public class CLayoutBottom {
 

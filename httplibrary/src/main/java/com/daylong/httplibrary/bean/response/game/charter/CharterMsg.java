@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class CharterMsg implements Serializable {
 
-    private String chBl; //包机余额
-    private String resQt; //包机返还
-    private String tolQt; //合计获得
+    private String chBl; 
+    private String resQt; 
+    private String tolQt; 
 
     public String getBackNum() {
         return chBl;

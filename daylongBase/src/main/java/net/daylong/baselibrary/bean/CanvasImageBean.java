@@ -4,7 +4,7 @@ package net.daylong.baselibrary.bean;
 import net.daylong.baselibrary.utils.sys.AppUtil;
 
 /**
- * 绘制的Bewan
+
  */
 public class CanvasImageBean {
     private Integer width;

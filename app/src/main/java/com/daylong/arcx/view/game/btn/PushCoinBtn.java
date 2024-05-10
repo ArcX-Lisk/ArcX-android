@@ -90,7 +90,7 @@ public class PushCoinBtn extends IGameOperateView {
         if (isCharter) {
             tvCharterName = MyTextView.create(this, new ConstraintBuilder()
                     .ww().topCenterH().topMargin(3));
-            tvCharterName.initText("包机余额", 7, R.color.color_white, true);
+
             tvCharterName.setShadowLayer(3, 1, 0, getContext().getColor(R.color.color_c2001da7));
             tvCharterName.setId(View.generateViewId());
         } else {

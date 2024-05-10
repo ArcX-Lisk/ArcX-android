@@ -14,7 +14,7 @@ public interface PayApi {
 
 
     /**
-     * 阿里支付
+
      *
      * @param payRequest
      * @return

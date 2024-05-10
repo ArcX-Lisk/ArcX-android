@@ -12,7 +12,7 @@ import java.util.List;
 import io.reactivex.Observable;
 
 /**
- * 我的地址
+
  */
 public interface MyAddressContract {
     interface MyAddressModel extends IViewBaseModel {
